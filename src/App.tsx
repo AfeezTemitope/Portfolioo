@@ -3,6 +3,7 @@ import Header from "./components/Header.tsx";
 import NavBar from "./components/NavBar.tsx";
 import Footer from "./components/Footer.tsx";
 import AboutMe from "./components/AboutMe.tsx";
+import Stack from "./components/Stack.tsx";
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <NavBar />
             <Header />
             <AboutMe/>
+            <Stack/>
             <Footer/>
         </div>
     );

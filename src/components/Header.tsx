@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-4 space-y-4">
+        <div id="head" className="flex flex-col items-center justify-center min-h-screen p-4 space-y-4">
             <div className="flex items-center mb-4">
                 <img
                     className="w-82 h-82 rounded-full"
