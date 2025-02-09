@@ -7,7 +7,7 @@ import Stack from "./components/Stack.tsx";
 
 function App() {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-gradient-to-r from-[#1a202c] to-[#0D1117] text-aliceblue min-h-screen">
             <NavBar />
             <Header />
             <AboutMe/>

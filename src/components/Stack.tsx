@@ -66,7 +66,7 @@ const Stack = () => {
 
                         {/* Python */}
                         <div className="w-20 h-20 shadow-xl rounded-full flex items-center justify-center bg-white">
-                            <img src="https://th.bing.com/th/id/R.8c1719d731849436c9b734d7d65e9558?rik=bSbWm6hjVbDSPg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpython-logo-png-big-image-png-2400.png&ehk=QVy%2f7oOiTJ16YDb0ys7dyNAHnvvwPX1WAaD7AvoVnTU%3d&risl=&pid=ImgRaw&r=0" alt="Python" className="w-16 h-16" />
+                            <img src="https://i1.wp.com/qavalidation.com/wp-content/uploads/2018/02/python-logo.png" alt="Python" className="w-16 h-16" />
                         </div>
                     </div>
                 </div>
