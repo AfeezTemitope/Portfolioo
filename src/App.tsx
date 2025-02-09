@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar.tsx";
 import Footer from "./components/Footer.tsx";
 import AboutMe from "./components/AboutMe.tsx";
 import Stack from "./components/Stack.tsx";
+import Project from "./components/Project.tsx";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Header />
             <AboutMe/>
             <Stack/>
+            <Project/>
             <Footer/>
         </div>
     );
