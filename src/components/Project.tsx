@@ -60,9 +60,12 @@ const Project = () => {
                         >
                             Visit Project
                         </a>
+
                     </div>
                 ))}
+
             </div>
+
         </div>
     );
 };

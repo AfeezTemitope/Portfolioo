@@ -8,7 +8,7 @@ import Project from "./components/Project.tsx";
 
 function App() {
     return (
-        <div className="flex flex-col bg-gradient-to-r from-[#1a202c] to-[#0D1117] text-aliceblue min-h-screen">
+        <div className="flex flex-col bg-gradient-to-r from-[#1a202c] to-[#0D1117] text-aliceblue min-h-screen items-center justify-center">
             <NavBar />
             <Header />
             <AboutMe/>
