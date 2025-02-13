@@ -4,6 +4,7 @@ import { FaHome, FaInfoCircle, FaCode, FaProjectDiagram } from 'react-icons/fa';
 
 interface NavBarProps {
     siteTitle?: string;
+
 }
 
 const NavBar: React.FC<NavBarProps> = ({ siteTitle = "my portfolio" }) => {
@@ -52,7 +53,6 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "my portfolio" }) => {
                     animationDuration={0.5}
                     aria-expanded={isOpen}
                     aria-label="Toggle Navigation"
-                    role="button"
                     tabIndex={0}
                 />
             </div>
