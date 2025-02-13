@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Hamburger from 'react-hamburger-menu';
-import { FaHome, FaInfoCircle, FaCode, FaProjectDiagram } from 'react-icons/fa';
+import {FaHome, FaInfoCircle, FaCode, FaProjectDiagram, FaPhone} from 'react-icons/fa';
 
 interface NavBarProps {
     siteTitle?: string;
@@ -37,7 +37,7 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
 
     return (
         <nav
-            className="flex flex-col md:flex-row md:justify-center items-center fixed top-0 left-0 right-0 w-full shadow-md z-50 py-6 bg-[#0D1117]"
+            className="flex flex-col md:flex-row md:justify-center items-center fixed top-0 left-0 right-0 w-full shadow-md z-50 py-6 bg-gray-800"
             ref={menuRef}
         >
             {/* Hamburger Menu (Mobile) */}
@@ -56,12 +56,12 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
             </div>
 
             {/* Site Title */}
-            <div className="text-white font-bold z-50 md:mr-8"> {/* Added margin for larger screens */}
+            <div className="text-white font-bold z-50 md:mr-8">
                 {siteTitle}
             </div>
 
             {/* Navigation Links (Desktop) */}
-            <div className="hidden md:flex space-x-6 z-50"> {/* Hidden on mobile, flex on desktop, added spacing */}
+            <div className="hidden md:flex space-x-6 z-50">
                 <a href="#home" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
                     <FaHome className="mr-2" />
                     <span>Home</span>
@@ -78,13 +78,17 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
                     <FaProjectDiagram className="mr-2" />
                     <span>Project</span>
                 </a>
+                <a href="#footer" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
+                    <FaPhone className="mr-2" />
+                    <span>Connect</span>
+                </a>
             </div>
 
 
             {/* Mobile Menu */}
             <div className={`transition-all duration-300 md:hidden ${isOpen ? 'block' : 'hidden'} w-full`}> {/* Only visible on mobile */}
                 <div
-                    className={`flex flex-col p-4 rounded-md w-64 bg-[#0D1117] fixed left-8 top-16 z-20 ${isOpen ? 'block' : 'hidden'}`}
+                    className={`flex flex-col p-4 rounded-md w-64 bg-gray-800 fixed left-8 top-16 z-20 ${isOpen ? 'block' : 'hidden'}`}
                 >
                     <a href="#home" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
                         <FaHome className="mr-2" />
@@ -101,6 +105,10 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
                     <a href="#project" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
                         <FaProjectDiagram className="mr-2" />
                         <span>Project</span>
+                    </a>
+                    <a href="#footer" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
+                        <FaPhone className="mr-2" />
+                        <span>Connect</span>
                     </a>
                 </div>
             </div>

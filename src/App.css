@@ -2,6 +2,10 @@
 
 html{
   color: aliceblue;
+  /*scroll-behavior: smooth;*/
+}
+
+body{
   scroll-behavior: smooth;
 }
 

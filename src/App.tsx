@@ -8,16 +8,17 @@ import Project from "./components/Project.tsx";
 
 function App() {
     return (
-        <div className="flex flex-col bg-gradient-to-r from-[#1a202c] to-[#0D1117] text-aliceblue  items-center justify-center">
+        <div className="flex flex-col min-h-screen bg-gray-800 text-aliceblue">
             <NavBar />
-            <div className=" flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-14 py-16 shadow-md ">
-                <Header />
-                <AboutMe />
+            <div >
+                <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-14 py-16 shadow-md items-center justify-center min-h-screen">
+                    <Header />
+                    <AboutMe />
+                </div>
+                <Stack />
+                <Project />
             </div>
-
-            <Stack/>
-            <Project/>
-            <Footer/>
+            <Footer />
         </div>
     );
 }
