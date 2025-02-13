@@ -53,7 +53,7 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "my portfolio" }) => {
                     animationDuration={0.5}
                     aria-expanded={isOpen}
                     aria-label="Toggle Navigation"
-                    tabIndex={0}
+
                 />
             </div>
 
