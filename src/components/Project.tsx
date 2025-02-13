@@ -26,8 +26,8 @@ const Project: React.FC = () => {
         {
             name: "Football Club Blog",
             imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
-            link: "https://budu-elite-football-academy-blog.vercel.app/",
-            description: "A blog dedicated to a football club, featuring news, updates, and articles.",
+            link: "https://befa-blog.vercel.app/",
+            description: "A blog dedicated to budu elite football club, featuring news, updates, and articles.",
         },
         {
             name: "Credit Card Validator",
