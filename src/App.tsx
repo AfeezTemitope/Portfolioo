@@ -8,10 +8,13 @@ import Project from "./components/Project.tsx";
 
 function App() {
     return (
-        <div className="flex flex-col bg-gradient-to-r from-[#1a202c] to-[#0D1117] text-aliceblue min-h-screen items-center justify-center">
+        <div className="flex flex-col bg-gradient-to-r from-[#1a202c] to-[#0D1117] text-aliceblue  items-center justify-center">
             <NavBar />
-            <Header />
-            <AboutMe/>
+            <div className=" flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-14 py-16 shadow-md ">
+                <Header />
+                <AboutMe />
+            </div>
+
             <Stack/>
             <Project/>
             <Footer/>
