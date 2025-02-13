@@ -21,7 +21,7 @@ const Footer = () => {
         },
         {
             icon: <FaLinkedin size={20} />,
-            link: "kedin.com/in/afeez-bello-548749275/",
+            link: "https://www.linkedin.com/in/afeez-bello-548749275/",
         },
         {
             icon: <FaGithub size={20} />,
@@ -45,7 +45,7 @@ const Footer = () => {
                 ))}
             </div>
             <p className="mt-2 text-sm">
-                &copy; {new Date().getFullYear()} Bello Afeez Temitope. All rights reserved.
+                &copy; {new Date().getFullYear()} Bello Afeez Temitope
             </p>
         </footer>
     );
