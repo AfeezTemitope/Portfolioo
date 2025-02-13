@@ -17,7 +17,7 @@ const Footer = () => {
         },
         {
             icon: <FaWhatsapp size={20} />,
-            link: "wa.me/+2349014465194",
+            link: "https://wa.me/+2349014465194",
         },
         {
             icon: <FaLinkedin size={20} />,
