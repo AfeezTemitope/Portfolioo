@@ -1,11 +1,12 @@
 @import 'tailwindcss';
 
 html{
-  color: aliceblue;
+  /*color: aliceblue;*/
   /*scroll-behavior: smooth;*/
 }
 
 body{
+  color: aliceblue;
   scroll-behavior: smooth;
 }
 

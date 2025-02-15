@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Afeez from '../assets/TBELZ.png';
 
 const Header = () => {
     const { ref, inView } = useInView({ threshold: 0.5 });
@@ -9,42 +10,52 @@ const Header = () => {
         visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeInOut" } },
     };
 
-    const headingVariants = {
+    const textVariants = {
         hidden: { opacity: 0, y: -20 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" } },
     };
 
-    const subheadingVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut", delay: 0.2 } },
-    };
 
     return (
-        <motion.div
-            id="home"
-            className="flex flex-col items-center justify-center min-h-screen py-10"
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-        >
-            <motion.div className="flex items-center mb-4" variants={imageVariants}>
-                <img
-                    className="w-82 h-82 rounded-full"
-                    src="https://media.licdn.com/dms/image/v2/D4D03AQG-Qi5BedVLVA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1726575108301?e=1744243200&v=beta&t=PIq17poNakKQ09bNtOomhimOzWxtOqNMm_BBE66mPWI"
-                    alt="Profile"
-                />
-            </motion.div>
-            <motion.h1
-                className="text-4xl font-bold font-italic text-center"
-                variants={headingVariants}
+        <div>
+
+            <motion.div
+                id="home"
+                className="flex items-center justify-center min-h-screen py-10"
+                ref={ref}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
             >
-                <span>BELLO AFEEZ</span><br />
-                <motion.span className="text-2xl" variants={subheadingVariants}>
-                    TEMITOPE
-                    <p className="text-xl mt-2">Software Engineer</p>
-                </motion.span>
-            </motion.h1>
-        </motion.div>
+                <div className="flex flex-col md:flex-row items-center text-center md:text-left">
+                    <motion.div variants={imageVariants} className="mb-4 md:mb-0 md:mr-8">
+                        <img
+                            className="w-98 md:w-120 lg:w-80 xl:w-96 rounded-lg glow"
+                            src={Afeez}
+                            alt="Profile"
+                        />
+                    </motion.div>
+                    <motion.div variants={textVariants} className="md:w-1/2">
+                        <h1 className="text-4xl md:text-5xl font-bold font-italic">
+                            BELLO AFEEZ<br />
+                            <span className="text-2xl md:text-3xl">
+                                TEMITOPE
+                            </span>
+                        </h1>
+                        <a href="#about" className="text-md md:text-lg mt-1 text-gray-500 block md:inline">
+                            A passionate software engineer
+                        </a>
+                        <div className="flex space-x-4 mt-6 justify-center md:justify-start">
+                            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+                                Button 1
+                            </button>
+                            <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+                                Button 2
+                            </button>
+                        </div>
+                    </motion.div>
+                </div>
+            </motion.div>
+        </div>
     );
 };
 
