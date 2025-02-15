@@ -2,12 +2,12 @@
 
 html{
   /*color: aliceblue;*/
-  /*scroll-behavior: smooth;*/
+  scroll-behavior: smooth;
 }
 
 body{
   color: aliceblue;
-  scroll-behavior: smooth;
+  /*scroll-behavior: smooth;*/
 }
 
 /*#about {*/

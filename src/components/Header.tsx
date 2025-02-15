@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Afeez from '../assets/TBELZ.png';
+import MyImage from '../assets/TBELZ.png';
 
 const Header = () => {
     const { ref, inView } = useInView({ threshold: 0.5 });
@@ -30,7 +30,7 @@ const Header = () => {
                     <motion.div variants={imageVariants} className="mb-4 md:mb-0 md:mr-8">
                         <img
                             className="w-98 md:w-120 lg:w-80 xl:w-96 rounded-lg glow"
-                            src={Afeez}
+                            src={MyImage}
                             alt="Profile"
                         />
                     </motion.div>
