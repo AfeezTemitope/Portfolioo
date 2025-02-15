@@ -5,6 +5,7 @@ import Footer from "./components/Footer.tsx";
 import AboutMe from "./components/AboutMe.tsx";
 import Stack from "./components/Stack.tsx";
 import Project from "./components/Project.tsx";
+import ReviewFormWithStyles from "./components/ReviewForm.tsx";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                 <Stack />
                 <Project />
             </div>
+            <ReviewFormWithStyles/>
             <Footer />
         </div>
     );

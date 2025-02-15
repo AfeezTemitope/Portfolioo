@@ -29,7 +29,7 @@ const Header = () => {
                 <div className="flex flex-col md:flex-row items-center text-center md:text-left">
                     <motion.div variants={imageVariants} className="mb-4 md:mb-0 md:mr-8">
                         <img
-                            className="w-98 md:w-120 lg:w-80 xl:w-96 rounded-lg glow"
+                            className="w-98 md:w-120 lg:w-100 xl:w-116 rounded-lg"
                             src={MyImage}
                             alt="Profile"
                         />
@@ -45,12 +45,12 @@ const Header = () => {
                             A passionate software engineer
                         </a>
                         <div className="flex space-x-4 mt-6 justify-center md:justify-start">
-                            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
-                                Button 1
-                            </button>
-                            <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
-                                Button 2
-                            </button>
+                            <a href="mailto:belloafeez28@gmail.com" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+                                Hire Me!
+                            </a>
+                            <a href="#footer" className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+                                Contact
+                            </a>
                         </div>
                     </motion.div>
                 </div>
