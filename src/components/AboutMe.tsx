@@ -1,57 +1,95 @@
-
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { FaGraduationCap, FaCode, FaPaintBrush } from "react-icons/fa";
 
 const AboutMe = () => {
-    const { ref, inView } = useInView({ threshold: 0.5 });
-
-    const containerVariants = {
-        hidden: {},
-        visible: { transition: { staggerChildren: 0.3 } },
-    };
-
-    const headingVariants = {
-        hidden: { opacity: 0, y: -20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" } },
-    };
-
-    const paragraphVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" } },
-    };
+    const educationData = [
+        {
+            icon: <FaGraduationCap className="text-3xl mr-4 text-white" />,
+            title: "Lagos State University",
+            subtitle: "Project Management Technology",
+            date: "2015 - 2020",
+        },
+        {
+            icon: <FaCode className="text-3xl mr-4 text-white" />,
+            title: "Semicolon Africa",
+            subtitle: "Software Engineering Diploma",
+            date: "2024 - 2025",
+        },
+        {
+            icon: <FaPaintBrush className="text-3xl mr-4 text-white" />,
+            title: "Wadyson Printing Production",
+            subtitle: "Graphic Design (Corel Draw)",
+            date: "2009 - 2014",
+        },
+        {
+            icon: <FaGraduationCap className="text-3xl mr-4 text-white" />,
+            title: "National Youth Service Corps (NYSC)",
+            subtitle: "",
+            date: "2022 - 2023",
+        },
+    ];
 
     return (
-        <motion.div
+        <div
             id="about"
-            className="flex flex-col justify-center items-center relative py-4 min-h-screen"
-            ref={ref}
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            className="flex flex-col justify-center items-center relative py-10 min-h-screen bg-gray-800 text-white px-4 md:px-0"
         >
-            <motion.h2
+            <h2
                 className="text-4xl font-bold text-center mb-6"
-                variants={headingVariants}
             >
                 About Me
-            </motion.h2>
-            <motion.p
-                className="text-lg max-w-2xl text-center px-4"
-                variants={paragraphVariants}
-            >
-                Hello! I'm Bello Afeez Temitope, a passionate software engineer with a
-                deep interest in web development and technology. I specialize in
-                creating seamless and efficient user experiences, and I am always
-                eager to learn new skills and technologies. I enjoy building
-                impactful projects and solving real-world problems through coding.
-                <br />
-                <br />
-                I'm skilled in various programming languages and frameworks, and I'm
-                continuously improving my skills to keep up with the latest trends in
-                the tech world. When I'm not coding, you can find me exploring new
-                technologies, reading, or working on personal projects.
-            </motion.p>
-        </motion.div>
+            </h2>
+            <div className="container mx-auto px-4 md:px-0">
+                <p className="text-lg mb-4">
+                    Hello! I'm Bello Afeez Temitope, a passionate software engineer with a
+                    deep interest in web development and technology. I specialize in
+                    creating seamless and efficient user experiences, and I am always
+                    eager to learn new skills and technologies. I enjoy building
+                    impactful projects and solving real-world problems through coding.
+                </p>
+
+                <p className="text-lg mb-4">
+                    My academic background in Project Management Technology from Lagos State University (2015-2020), coupled with my ongoing Software Engineering Diploma at Semicolon Africa (2024-2025), has equipped me with a unique blend of skills.  I'm able to approach technical challenges with a structured, analytical mindset, leveraging critical thinking and problem-solving abilities honed through both disciplines.  My NYSC service (2022-2023) further developed my teamwork and adaptability skills.
+                </p>
+
+                <p className="text-lg mb-4">
+                    Prior to focusing on software development, I honed my graphic design skills working at Wadyson Printing Production from 2009 to 2014, where I became proficient in Corel Draw. This experience instilled in me a strong attention to detail and a keen eye for aesthetics, which I now apply to my web development projects.
+                </p>
+
+                <div className="mt-8 relative">
+                    {educationData.map((item, index) => (
+                        <div
+                            key={index}
+                            className="flex items-start mb-6 relative pl-8"
+                        >
+                            <div className="absolute top-4 bottom-4 left-4 w-px bg-gray-600"></div>
+                            {item.icon}
+                            <div className="ml-4">
+                                <h3 className="text-xl font-semibold">{item.title}</h3>
+                                <p className="text-lg text-gray-300">{item.subtitle}</p>
+                                <p className="text-lg text-gray-300">{item.date}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <p className="text-lg mt-8">
+                    I'm skilled in various programming languages and frameworks, including:
+                </p>
+                <ul className="list-disc pl-6 text-lg mb-4">
+                    <li>Web Development</li>
+                    <li>Frontend Development (React, HTML, CSS, JavaScript)</li>
+                    <li>Backend Development (Node.js, Python, Java)</li>
+                    <li>Database Management (MongoDB, MySQL, PostgreSQL)</li>
+                    <li>Graphic Design (Corel Draw)</li>
+                    {/* Add more skills */}
+                </ul>
+
+                <p className="text-lg">
+                    When I'm not coding, you can find me exploring new
+                    technologies, reading, or working on personal projects.
+                </p>
+            </div>
+        </div>
     );
 };
 

@@ -11,11 +11,9 @@ function App() {
     return (
         <div className="flex flex-col min-h-screen bg-gray-800 text-aliceblue">
             <NavBar />
-            <div >
-                {/*<div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-14 py-16 shadow-md items-center justify-center min-h-screen">*/}
-                    <Header />
-                    <AboutMe />
-                {/*</div>*/}
+            <div className="container mx-auto px-4 md:px-0"> {/* Added responsive container */}
+                <Header />
+                <AboutMe />
                 <Stack />
                 <Project />
             </div>
