@@ -56,13 +56,16 @@ const AboutMe = () => {
                 </p>
 
                 <div className="mt-8 relative">
+                    <h1>Education</h1>
                     {educationData.map((item, index) => (
                         <div
                             key={index}
                             className="flex items-start mb-6 relative pl-8"
                         >
+
                             <div className="absolute top-4 bottom-4 left-4 w-px bg-gray-600"></div>
                             {item.icon}
+
                             <div className="ml-4">
                                 <h3 className="text-xl font-semibold">{item.title}</h3>
                                 <p className="text-lg text-gray-300">{item.subtitle}</p>
@@ -76,8 +79,8 @@ const AboutMe = () => {
                     I'm skilled in various programming languages and frameworks, including:
                 </p>
                 <ul className="list-disc pl-6 text-lg mb-4">
-                    <li>Web Development</li>
-                    <li>Frontend Development (React, HTML, CSS, JavaScript)</li>
+                    {/*<li>Web Development</li>*/}
+                    <li>Frontend Development (React, HTML, CSS, JavaScript, React Native)</li>
                     <li>Backend Development (Node.js, Python, Java)</li>
                     <li>Database Management (MongoDB, MySQL, PostgreSQL)</li>
                     <li>Graphic Design (Corel Draw)</li>
@@ -86,7 +89,7 @@ const AboutMe = () => {
 
                 <p className="text-lg">
                     When I'm not coding, you can find me exploring new
-                    technologies, reading, or working on personal projects.
+                    technologies, reading, football or working on personal projects.
                 </p>
             </div>
         </div>

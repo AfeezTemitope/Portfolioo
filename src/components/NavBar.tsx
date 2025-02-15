@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Hamburger from 'react-hamburger-menu';
-import {FaHome, FaInfoCircle, FaCode, FaProjectDiagram, FaPhone} from 'react-icons/fa';
+import { FaHome, FaInfoCircle, FaCode, FaProjectDiagram, FaPhone } from 'react-icons/fa';
 
 interface NavBarProps {
     siteTitle?: string;
@@ -37,7 +37,7 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
 
     return (
         <nav
-            className="flex flex-col md:flex-row md:justify-center items-center fixed top-0 left-0 right-0 w-full shadow-md z-50 py-6 bg-gray-800"
+            className="flex flex-col md:flex-row md:justify-center items-center fixed top-0 left-0 right-0 w-full shadow-md z-50 py-6 bg-gray-800 px-4 md:px-0"
             ref={menuRef}
         >
             {/* Hamburger Menu (Mobile) */}
@@ -55,13 +55,13 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
                 />
             </div>
 
-            {/* Site Title */}
-            <div className="text-white font-bold z-50 md:mr-8">
+            {/* Site Title (Mobile Only) */}
+            <div className="text-white font-bold z-50 md:hidden">
                 {siteTitle}
             </div>
 
             {/* Navigation Links (Desktop) */}
-            <div className="hidden md:flex space-x-6 z-50">
+            <div className="hidden md:flex space-x-6 z-50 md:justify-center">
                 <a href="#home" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
                     <FaHome className="mr-2" />
                     <span>Home</span>
@@ -84,9 +84,8 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
                 </a>
             </div>
 
-
             {/* Mobile Menu */}
-            <div className={`transition-all duration-300 md:hidden ${isOpen ? 'block' : 'hidden'} w-full`}> {/* Only visible on mobile */}
+            <div className={`transition-all duration-300 md:hidden ${isOpen ? 'block' : 'hidden'} w-full`}>
                 <div
                     className={`flex flex-col p-4 rounded-md w-64 bg-gray-800 fixed left-8 top-16 z-20 ${isOpen ? 'block' : 'hidden'}`}
                 >
