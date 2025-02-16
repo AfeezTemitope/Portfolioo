@@ -11,10 +11,11 @@ function App() {
     return (
         <div className="flex flex-col min-h-screen bg-gray-800 text-aliceblue">
             <NavBar />
-            <div className="container mx-auto px-4 md:px-0"> {/* Added responsive container */}
+            <div className="container mx-auto px-4 md:px-0">
                 <Header />
-                <AboutMe />
                 <Stack />
+                <AboutMe />
+
                 <Project />
             </div>
             <ReviewFormWithStyles/>

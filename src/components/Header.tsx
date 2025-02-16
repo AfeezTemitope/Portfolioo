@@ -42,6 +42,7 @@ const Header = () => {
                             </span>
                         </h1>
                         <a href="#about" className="text-md md:text-lg mt-1 text-gray-500 block md:inline">
+                            A versatile software engineer, specializing in both frontend and backend development.
                             I`m not passionate about tech i came to make money, and to do that i had to be the best
                         </a>
                         <div className="flex space-x-4 mt-6 justify-center md:justify-start">

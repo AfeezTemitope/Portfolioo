@@ -19,13 +19,13 @@ const Stack = () => {
     };
 
     const techData = {
-        frontend: [
+        FRONTEND: [
             { icon: <FaReact className="text-blue-500 text-6xl drop-shadow-md" />, name: "React" },
             { icon: <FaHtml5 className="text-orange-500 text-6xl drop-shadow-md" />, name: "HTML" },
             { icon: <FaCss3Alt className="text-blue-400 text-6xl drop-shadow-md" />, name: "CSS" },
             { icon: <SiTypescript className="text-blue-600 text-6xl drop-shadow-md" />, name: "TypeScript" },
         ],
-        backend: [
+        BACKEND: [
             { icon: <IoLogoNodejs className="text-green-500 text-6xl drop-shadow-md" />, name: "Node.js" },
             { icon: <SiDjango className="text-green-700 text-6xl drop-shadow-md" />, name: "Django" },
             { icon: <SiFlask className="text-red-600 text-6xl drop-shadow-md" />, name: "Flask" },
@@ -33,8 +33,8 @@ const Stack = () => {
             { icon: <FaJava className="text-red-700 text-6xl drop-shadow-md" />, name: "Java" },
             { icon: <DiPython className="text-blue-500 text-6xl drop-shadow-md" />, name: "Python" },
         ],
-        mobile: [{ icon: <FaReact className="text-blue-500 text-6xl drop-shadow-md" />, name: "React Native" }],
-        database: [
+        MOBILE: [{ icon: <FaReact className="text-blue-500 text-6xl drop-shadow-md" />, name: "React Native" }],
+        DATABASE: [
             { icon: <DiMongodb className="text-green-600 text-6xl drop-shadow-md" />, name: "MongoDB" },
             { icon: <DiMysql className="text-blue-600 text-6xl drop-shadow-md" />, name: "MySQL" },
             { icon: <DiPostgresql className="text-blue-700 text-6xl drop-shadow-md" />, name: "PostgreSQL" },
@@ -50,13 +50,15 @@ const Stack = () => {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
         >
-            <h2 className="text-4xl font-bold text-center mb-8 text-white">My Tech Stack</h2>
-            <div className="flex flex-col md:flex-row flex-wrap gap-20 items-center justify-center">
-                <div className="md:w-1/2">
-                    <motion.div className="text-center" variants={itemVariants}>
-                        <h3 className="text-2xl font-semibold mb-4 text-white">Frontend</h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center">
-                            {techData.frontend.map(({ icon, name }) => (
+            <div className="container mx-auto px-4">
+                <h2 className="text-4xl font-bold text-center mb-8 text-white">My Tech Stack</h2>
+
+
+                {Object.keys(techData).map((category) => (
+                    <motion.div key={category} className="mb-30" variants={itemVariants}>
+                        <h3 className="text-2xl font-semibold mb-10 mt-10 text-white text-center italic">{category}</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center items-center">
+                            {techData[category].map(({ icon, name }) => (
                                 <motion.div key={name} className="flex flex-col items-center text-white" variants={itemVariants}>
                                     {icon}
                                     <span className="mt-2 text-lg">{name}</span>
@@ -64,42 +66,8 @@ const Stack = () => {
                             ))}
                         </div>
                     </motion.div>
-                    <motion.div className="text-center mt-20 md:mt-0" variants={itemVariants}>
-                        <h3 className="text-2xl font-semibold mb-4 text-white">Backend</h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center">
-                            {techData.backend.map(({ icon, name }) => (
-                                <motion.div key={name} className="flex flex-col items-center text-white" variants={itemVariants}>
-                                    {icon}
-                                    <span className="mt-2 text-lg">{name}</span>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
-                </div>
-                <div className="md:w-1/2">
-                    <motion.div className="text-center" variants={itemVariants}>
-                        <h3 className="text-2xl font-semibold mb-4 text-white">Mobile</h3>
-                        <div className="flex justify-center">
-                            {techData.mobile.map(({ icon, name }) => (
-                                <motion.div key={name} className="flex flex-col items-center text-white" variants={itemVariants}>
-                                    {icon}
-                                    <span className="mt-2 text-lg">{name}</span>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
-                    <motion.div className="text-center mt-20 md:mt-0" variants={itemVariants}>
-                        <h3 className="text-2xl font-semibold mb-4 text-white">Database</h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center">
-                            {techData.database.map(({ icon, name }) => (
-                                <motion.div key={name} className="flex flex-col items-center text-white" variants={itemVariants}>
-                                    {icon}
-                                    <span className="mt-2 text-lg">{name}</span>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
-                </div>
+                ))}
+
             </div>
         </motion.div>
     );
