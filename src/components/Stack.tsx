@@ -4,8 +4,18 @@ import { IoLogoNodejs } from "react-icons/io";
 import { DiMongodb, DiMysql, DiPostgresql, DiPython } from "react-icons/di";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import {JSX} from "react";
 
-const Stack = () => {
+interface TechItem {
+    icon: JSX.Element;
+    name: string;
+}
+
+interface TechData {
+    [key: string]: TechItem[];
+}
+
+const Stack: React.FC = () => {
     const { ref, inView } = useInView({ threshold: 0.2 });
 
     const containerVariants = {
@@ -18,7 +28,7 @@ const Stack = () => {
         visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeInOut" } },
     };
 
-    const techData = {
+    const techData: TechData = {
         FRONTEND: [
             { icon: <FaReact className="text-blue-500 text-6xl drop-shadow-md" />, name: "React" },
             { icon: <FaHtml5 className="text-orange-500 text-6xl drop-shadow-md" />, name: "HTML" },
@@ -33,7 +43,9 @@ const Stack = () => {
             { icon: <FaJava className="text-red-700 text-6xl drop-shadow-md" />, name: "Java" },
             { icon: <DiPython className="text-blue-500 text-6xl drop-shadow-md" />, name: "Python" },
         ],
-        MOBILE: [{ icon: <FaReact className="text-blue-500 text-6xl drop-shadow-md" />, name: "React Native" }],
+        MOBILE: [
+            { icon: <FaReact className="text-blue-500 text-6xl drop-shadow-md" />, name: "React Native" },
+        ],
         DATABASE: [
             { icon: <DiMongodb className="text-green-600 text-6xl drop-shadow-md" />, name: "MongoDB" },
             { icon: <DiMysql className="text-blue-600 text-6xl drop-shadow-md" />, name: "MySQL" },
@@ -53,7 +65,6 @@ const Stack = () => {
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-bold text-center mb-8 text-white">My Tech Stack</h2>
 
-
                 {Object.keys(techData).map((category) => (
                     <motion.div key={category} className="mb-30" variants={itemVariants}>
                         <h3 className="text-2xl font-semibold mb-10 mt-10 text-white text-center italic">{category}</h3>
@@ -67,7 +78,6 @@ const Stack = () => {
                         </div>
                     </motion.div>
                 ))}
-
             </div>
         </motion.div>
     );

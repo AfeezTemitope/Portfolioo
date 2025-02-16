@@ -42,7 +42,7 @@ const AboutMe = () => {
                 <p className="text-lg mb-4">
                     Hello! I'm Bello Afeez Temitope, a software engineer with a
                     deep interest in how technology works.My journey into coding began with a deep curiosity about how websites function behind the scenes.
-                    With over a year intense Training @ SEMICOLON AFRICA 2024-2025. i developed a habit
+                    With over a year intense Training @ SEMICOLON AFRICA 2024-2025. i developed a strong habit
                     creating seamless and efficient user experiences, and I am always
                     eager to learn new skills and technologies. I enjoy building
                     impactful projects and solving real-world problems through coding.
