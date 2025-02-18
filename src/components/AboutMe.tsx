@@ -5,7 +5,7 @@ const AboutMe = () => {
         {
             icon: <FaPaintBrush className="text-3xl mr-4 text-white" />,
             title: "Wadyson Printing Production",
-            subtitle: "Graphic Design (Corel Draw)",
+            subtitle: "Corel Draw",
             date: "2009 - 2014",
         },
         {
