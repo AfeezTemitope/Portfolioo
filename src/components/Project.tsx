@@ -18,10 +18,10 @@ const Project: React.FC = () => {
             description: "A backend API for a fitness application, handling user registration and data management.",
         },
         {
-            name: "Weather App",
-            imageUrl: "https://cdn-icons-png.flaticon.com/512/3845/3845731.png",
-            link: "https://weather-app-frontend-tan.vercel.app/",
-            description: "A web application providing current weather information for various locations.",
+            name: "Avengers Blog App",
+            imageUrl: "https://www.pngplay.com/wp-content/uploads/12/Avengers-Transparent-Free-PNG.png",
+            link: "https://avengers-blog.vercel.app/",
+            description: "(incomplete and backend was not deployed)This was my first project in a team of 4 just in my 5th month of learning programming",
         },
         {
             name: "Football Club Blog",
@@ -42,11 +42,18 @@ const Project: React.FC = () => {
             description: "A web application for browsing and discovering movies.",
         },
         {
+            name: "Weather App",
+            imageUrl: "https://cdn-icons-png.flaticon.com/512/3845/3845731.png",
+            link: "https://weather-app-frontend-tan.vercel.app/",
+            description: "A web application providing current weather information for various locations.",
+        },
+        {
             name: "Password Generator",
             imageUrl: "https://th.bing.com/th/id/R.cc45ea6c8ba00fd6e94b2932b3a3694e?rik=sBTUA3EM4X0tyQ&pid=ImgRaw&r=0",
             link: "https://password-generator-web-seven.vercel.app/",
             description: "A tool to generate strong and secure passwords.",
         },
+
     ];
 
     return (

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import MyImage from '../assets/TBELZ.png';
+
+
 
 const Header = () => {
     const { ref, inView } = useInView({ threshold: 0.5 });
@@ -30,7 +31,7 @@ const Header = () => {
                     <motion.div variants={imageVariants} className="mb-4 md:mb-0 md:mr-8">
                         <img
                             className="w-98 md:w-120 lg:w-100 xl:w-116 rounded-lg"
-                            src={MyImage}
+                            src="https://res.cloudinary.com/dgvjxhqjd/image/upload/v1740759130/TBELZ_aftqo7.png"
                             alt="Profile"
                         />
                     </motion.div>
@@ -42,7 +43,7 @@ const Header = () => {
                             </span>
                         </h1>
                         <a href="#about" className="text-md md:text-lg mt-1 text-gray-200 block md:inline">
-                            "I'm a full-stack software engineer driven by results. I prioritize expertise to maximize my earning potential."
+                            I'm a full-stack software engineer driven by results. I prioritize expertise to maximize my skillset.
                         </a>
                         <div className="flex space-x-4 mt-6 justify-center md:justify-start">
                             <a href="mailto:belloafeez28@gmail.com" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
@@ -52,6 +53,7 @@ const Header = () => {
                                 Download CV
                             </a>
                         </div>
+
                     </motion.div>
                 </div>
             </motion.div>
