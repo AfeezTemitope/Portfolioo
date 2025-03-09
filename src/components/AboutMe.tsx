@@ -22,7 +22,7 @@ const AboutMe = () => {
         },
         {
             icon: <FaCode className="text-3xl mr-4 text-white" />,
-            title: "Semicolon Africa",
+            title: "Semicolon - Africa",
             subtitle: "Software Engineering Diploma",
             date: "2024 - 2025",
         },
