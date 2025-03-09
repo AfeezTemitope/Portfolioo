@@ -37,7 +37,7 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
 
     return (
         <nav
-            className="flex flex-col md:flex-row md:justify-center items-center fixed top-0 left-0 right-0 w-full shadow-md z-50 py-6  px-4 md:px-0"
+            className="flex flex-col md:flex-row md:justify-center items-center fixed top-0 left-0 right-0 w-full shadow-md z-50 py-6  px-4 md:px-0 bg-gray-800"
             ref={menuRef}
         >
             {/* Hamburger Menu (Mobile) */}
@@ -61,7 +61,7 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
             </div>
 
             {/* Navigation Links (Desktop) */}
-            <div className="hidden md:flex space-x-6 z-50 md:justify-center">
+            <div className="hidden md:flex space-x-6 z-50 md:justify-center ">
                 <a href="#home" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
                     <FaHome className="mr-2" />
                     <span>Home</span>
