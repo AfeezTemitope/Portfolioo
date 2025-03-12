@@ -49,7 +49,7 @@ const Header = () => {
                             <a href="mailto:belloafeez28@gmail.com" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
                                 Hire Me!
                             </a>
-                            <a href="https://drive.google.com/uc?export=download&id=1PYFaqfpR4l6_TK3y-mIhLl0yuUy8WxrZ"  className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+                            <a href="https://drive.google.com/uc?export=download&id=1paDtugliRLY3Oprsee2D5mrWlvZPevO2"  className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
                                 Download CV
                             </a>
                         </div>
@@ -62,3 +62,4 @@ const Header = () => {
 };
 
 export default Header;
+// https://drive.google.com/file/d/1paDtugliRLY3Oprsee2D5mrWlvZPevO2/view?usp=drive_link
