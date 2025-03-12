@@ -1,4 +1,4 @@
-import { FaCss3Alt, FaHtml5, FaJava, FaReact } from "react-icons/fa";
+import {FaCss3Alt, FaHtml5, FaJava, FaReact, FaAws, FaDocker, FaGithub, FaJs} from "react-icons/fa";
 import { SiFlask, SiSpring, SiTypescript, SiDjango } from "react-icons/si";
 import { IoLogoNodejs } from "react-icons/io";
 import { DiMongodb, DiMysql, DiPostgresql, DiPython } from "react-icons/di";
@@ -30,21 +30,27 @@ const Stack: React.FC = () => {
 
     const techData: TechData = {
         FRONTEND: [
+            { icon: <FaJs className="text-green-300 text-6xl drop-shadow-md" />, name: "JavaScript" },
             { icon: <FaReact className="text-blue-500 text-6xl drop-shadow-md" />, name: "React" },
             { icon: <FaHtml5 className="text-orange-500 text-6xl drop-shadow-md" />, name: "HTML" },
             { icon: <FaCss3Alt className="text-blue-400 text-6xl drop-shadow-md" />, name: "CSS" },
             { icon: <SiTypescript className="text-blue-600 text-6xl drop-shadow-md" />, name: "TypeScript" },
         ],
         BACKEND: [
-            { icon: <IoLogoNodejs className="text-green-500 text-6xl drop-shadow-md" />, name: "Node.js" },
             { icon: <SiDjango className="text-green-700 text-6xl drop-shadow-md" />, name: "Django" },
-            { icon: <SiFlask className="text-red-600 text-6xl drop-shadow-md" />, name: "Flask" },
-            { icon: <SiSpring className="text-green-500 text-6xl drop-shadow-md" />, name: "Spring" },
+            { icon: <SiFlask className="text-blue-300 text-6xl drop-shadow-md" />, name: "Flask" },
+            { icon: <SiSpring className="text-green-300 text-6xl drop-shadow-md" />, name: "Spring Boot" },
             { icon: <FaJava className="text-red-700 text-6xl drop-shadow-md" />, name: "Java" },
-            { icon: <DiPython className="text-blue-500 text-6xl drop-shadow-md" />, name: "Python" },
+            { icon: <DiPython className="text-green-400 text-6xl drop-shadow-md" />, name: "Python" },
+            { icon: <IoLogoNodejs className="text-green-500 text-6xl drop-shadow-md" />, name: "Node.js" },
         ],
         MOBILE: [
             { icon: <FaReact className="text-blue-500 text-6xl drop-shadow-md" />, name: "React Native" },
+        ],
+        CLOUD_SERVICE: [
+            { icon: <FaAws className="text-orange-500 text-6xl drop-shadow-md" />, name: "Amazon Web Service" },
+            { icon: <FaDocker className="text-blue-500 text-6xl drop-shadow-md" />, name: "Docker" },
+            { icon: <FaGithub className="text-white text-6xl drop-shadow-md" />, name: "GitHub Actions" },
         ],
         DATABASE: [
             { icon: <DiMongodb className="text-green-600 text-6xl drop-shadow-md" />, name: "MongoDB" },
