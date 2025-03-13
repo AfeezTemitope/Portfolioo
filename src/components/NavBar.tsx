@@ -37,7 +37,7 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
 
     return (
         <nav
-            className="flex flex-col md:flex-row md:justify-center items-center fixed top-0 left-0 right-0 w-full shadow-md z-50 py-6  px-4 md:px-0 bg-gray-800"
+            className="flex flex-col md:flex-row md:justify-center items-center fixed top-0 left-0 right-0 w-full shadow-md z-50 py-2  px-4 md:px-0 bg-gray-800"
             ref={menuRef}
         >
             {/* Hamburger Menu (Mobile) */}
@@ -61,25 +61,40 @@ const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
             </div>
 
             {/* Navigation Links (Desktop) */}
-            <div className="hidden md:flex space-x-6 z-50 md:justify-center ">
-                <a href="#home" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
-                    <FaHome className="mr-2" />
+            <div className="hidden md:flex space-x-6 z-50 md:justify-center">
+                <a
+                    href="#home"
+                    className="text-l hover:text-blue-500 transition-all duration-300 flex flex-col items-center text-white cursor-pointer hover:scale-105 active:scale-95"
+                >
+                    <FaHome className="mb-1" />
                     <span>Home</span>
                 </a>
-                <a href="#about" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
-                    <FaInfoCircle className="mr-2" />
+                <a
+                    href="#about"
+                    className="text-l hover:text-blue-500 transition-all duration-300 flex flex-col items-center text-white cursor-pointer hover:scale-105 active:scale-95"
+                >
+                    <FaInfoCircle className="mb-1" />
                     <span>About</span>
                 </a>
-                <a href="#stack" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
-                    <FaCode className="mr-2" />
+                <a
+                    href="#stack"
+                    className="text-l hover:text-blue-500 transition-all duration-300 flex flex-col items-center text-white cursor-pointer hover:scale-105 active:scale-95"
+                >
+                    <FaCode className="mb-1" />
                     <span>Stack</span>
                 </a>
-                <a href="#project" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
-                    <FaProjectDiagram className="mr-2" />
+                <a
+                    href="#project"
+                    className="text-l hover:text-blue-500 transition-all duration-300 flex flex-col items-center text-white cursor-pointer hover:scale-105 active:scale-95"
+                >
+                    <FaProjectDiagram className="mb-1" />
                     <span>Project</span>
                 </a>
-                <a href="#footer" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
-                    <FaPhone className="mr-2" />
+                <a
+                    href="#footer"
+                    className="text-l hover:text-blue-500 transition-all duration-300 flex flex-col items-center text-white cursor-pointer hover:scale-105 active:scale-95"
+                >
+                    <FaPhone className="mb-1" />
                     <span>Connect</span>
                 </a>
             </div>

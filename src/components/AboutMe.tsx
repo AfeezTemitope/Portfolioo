@@ -50,14 +50,6 @@ const AboutMe = () => {
                     I also have experience in styling with CSS and TailwindCSS, and deploying projects.
                 </p>
 
-                {/*<p className="text-lg mb-4">*/}
-                {/*    My academic background in Project Management Technology from Lagos State University (2015-2020), coupled with my ongoing Software Engineering Diploma at Semicolon Africa (2024-2025), has equipped me with a unique blend of skills.  I'm able to approach technical challenges with a structured, analytical mindset, leveraging critical thinking and problem-solving abilities honed through both disciplines.  My NYSC service (2022-2023) further developed my teamwork and adaptability skills.*/}
-                {/*</p>*/}
-
-                {/*<p className="text-lg mb-4">*/}
-                {/*    Prior to focusing on software development, I honed my graphic design skills working at Wadyson Printing Production from 2009 to 2014, where I became proficient in Corel Draw. This experience instilled in me a strong attention to detail and a keen eye for aesthetics, which I now apply to my web development projects.*/}
-                {/*</p>*/}
-
                 <div className="mt-8 relative">
                     <h1>Education</h1>
                     {educationData.map((item, index) => (
@@ -82,12 +74,7 @@ const AboutMe = () => {
                     I'm skilled in other tech related skills like :
                 </p>
                 <ul className="list-disc pl-6 text-lg mb-4">
-                    {/*<li>Web Development</li>*/}
-                    {/*<li>Frontend Development (React, HTML, CSS, JavaScript, React Native)</li>*/}
-                    {/*<li>Backend Development (Node.js, Python, Java)</li>*/}
-                    {/*<li>Database Management (MongoDB, MySQL, PostgreSQL)</li>*/}
                     <li>Graphic Design (Corel Draw)</li>
-                    {/* Add more skills */}
                 </ul>
 
                 <p className="text-lg">
