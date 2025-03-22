@@ -14,8 +14,8 @@ const Project: React.FC = () => {
         {
             name: "Fitness App (Backend)",
             imageUrl: "https://th.bing.com/th/id/OIP.cxJWyP3a9SOU8CJjnu1YAQHaE0?rs=1&pid=ImgDetMain",
-            link: "https://workoutandgetfit-production.up.railway.app/api/register/",
-            description: "A backend API for a fitness application, handling user registration and data management.",
+            link: "https://core-fitness-app-mauve.vercel.app/auth/register/",
+            description: "A backend API for a fitness application, link to react native would be available soon",
         },
         {
             name: "Avengers Blog App",
