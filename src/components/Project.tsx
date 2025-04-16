@@ -12,10 +12,10 @@ const Project: React.FC = () => {
 
     const projects: ProjectType[] = [
         {
-            name: "Fitness App (Backend)",
-            imageUrl: "https://th.bing.com/th/id/OIP.cxJWyP3a9SOU8CJjnu1YAQHaE0?rs=1&pid=ImgDetMain",
-            link: "https://core-fitness-app-mauve.vercel.app/auth/register/",
-            description: "A backend API for a fitness application, link to react native would be available soon",
+            name: "Attendance(MERN STACK)",
+            imageUrl: "https://www.bvp-connects.com/attendance-logo.png",
+            link: "https://attendance-ivory.vercel.app/",
+            description: "An embedded system designed to solve issues related to tampered attendance sheets. This system incorporates an inbuilt timer to verify when users arrive at work."
         },
         {
             name: "Avengers Blog App",
