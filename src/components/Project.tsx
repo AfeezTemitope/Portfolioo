@@ -14,7 +14,7 @@ const Project: React.FC = () => {
         {
             name: "Attendance(MERN STACK)",
             imageUrl: "https://www.bvp-connects.com/attendance-logo.png",
-            link: "https://attendance-ivory.vercel.app/",
+            link: "https://attendance-0xf8.onrender.com/admin/login",
             description: "An embedded system designed to solve issues related to tampered attendance sheets. This system incorporates an inbuilt timer to verify when users arrive at work."
         },
         {
