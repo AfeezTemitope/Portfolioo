@@ -24,13 +24,13 @@ const Project: React.FC = () => {
             description: "(incomplete and backend was not deployed)This was my first project in a team of 4 just in my 5th month of learning programming",
         },
         {
-            name: "Football Club Blog",
+            name: "Football Club Blog(Django&ViteReact)",
             imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
             link: "https://befa-blog.vercel.app/",
-            description: "A blog dedicated to budu elite football club, featuring news, updates, and articles.",
+            description: "A blog dedicated to budu elite football club, featuring club news, club announcement, and articles.",
         },
         {
-            name: "Credit Card Validator",
+            name: "Credit Card Validator(Python Flask)",
             imageUrl: "https://th.bing.com/th/id/OIP.iBGmFz2jxm0jssqbQCyJNwHaHa?pid=ImgDet&w=474&h=474&rs=1",
             link: "https://credit-card-validator-seven.vercel.app/",
             description: "A tool to validate credit card numbers using the Luhn algorithm.",
@@ -42,13 +42,13 @@ const Project: React.FC = () => {
             description: "A web application for browsing and discovering movies.",
         },
         {
-            name: "Weather App",
+            name: "Weather App(Flask&React)",
             imageUrl: "https://cdn-icons-png.flaticon.com/512/3845/3845731.png",
             link: "https://weather-app-frontend-tan.vercel.app/",
             description: "A web application providing current weather information for various locations.",
         },
         {
-            name: "Password Generator",
+            name: "Password Generator(NodeJS)",
             imageUrl: "https://th.bing.com/th/id/R.cc45ea6c8ba00fd6e94b2932b3a3694e?rik=sBTUA3EM4X0tyQ&pid=ImgRaw&r=0",
             link: "https://password-generator-web-seven.vercel.app/",
             description: "A tool to generate strong and secure passwords.",
