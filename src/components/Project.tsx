@@ -14,20 +14,20 @@ const Project: React.FC = () => {
         {
             name: "Attendance(MERN STACK)",
             imageUrl: "https://www.bvp-connects.com/attendance-logo.png",
-            link: "https://attendance-0xf8.onrender.com/admin/login",
+            link: "https://attendanceapp-uok5.onrender.com/",
             description: "An embedded system designed to solve issues related to tampered attendance sheets. This system incorporates an inbuilt timer to verify when users arrive at work."
         },
         {
-            name: "Avengers Blog App",
-            imageUrl: "https://www.pngplay.com/wp-content/uploads/12/Avengers-Transparent-Free-PNG.png",
-            link: "https://avengers-blog.vercel.app/",
-            description: "(incomplete and backend was not deployed)This was my first project in a team of 4 just in my 5th month of learning programming",
+            name: "Badify Music App",
+            imageUrl: "https://th.bing.com/th/id/R.9c51bbc96a108e023f49e1421af11b5b?rik=kNq8m5NVL34Mew&pid=ImgRaw&r=0",
+            link: "https://badify-music-app.onrender.com/",
+            description: "A Flask-based web app for searching and previewing songs using the Deezer API",
         },
         {
-            name: "Football Club Blog(Django&ViteReact)",
+            name: "Football Club Blog",
             imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
-            link: "https://befa-blog.vercel.app/",
-            description: "A blog dedicated to budu elite football club, featuring club news, club announcement, and articles.",
+            link: "https://befav2.onrender.com/",
+            description: "A MERN STACk blog dedicated to budu elite football club, featuring club news, club announcement, and articles.",
         },
         {
             name: "Credit Card Validator(Python Flask)",
