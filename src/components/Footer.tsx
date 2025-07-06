@@ -16,7 +16,7 @@ const socialLinks = [
     },
     {
         icon: Instagram,
-        link: "https://www.instagram.com/badafeez?igsh=MWgwNTZlODI1d3k5NQ%3D%3D&utm_source=qr",
+        link: "https://www.instagram.com/boyalone_01?igsh=MWgwNTZlODI1d3k5NQ%3D%3D&utm_source=qr",
         label: "Instagram",
         color: "hover:text-pink-400",
     },
