@@ -1,27 +1,29 @@
-import './App.css';
+
+import "./App.css"
+import NavBar from "./components/NavBar"
 import Header from "./components/Header.tsx";
-import NavBar from "./components/NavBar.tsx";
-import Footer from "./components/Footer.tsx";
-import AboutMe from "./components/AboutMe.tsx";
 import Stack from "./components/Stack.tsx";
+import AboutMe from "./components/AboutMe.tsx";
 import Project from "./components/Project.tsx";
-import ReviewFormWithStyles from "./components/ReviewForm.tsx";
+import ReviewForm from "./components/ReviewForm.tsx";
+import Footer from "./components/Footer.tsx";
 
 function App() {
     return (
-        <div className="flex flex-col min-h-screen bg-gray-800 text-aliceblue">
+        <div className="flex flex-col min-h-screen bg-black text-white">
             <NavBar />
-            <div className="container mx-auto px-4 md:px-0">
+            <main className="flex-1">
                 <Header />
-                <Stack />
-                <AboutMe />
-
-                <Project />
-            </div>
-            <ReviewFormWithStyles/>
+                <div className="container mx-auto px-4 lg:px-8">
+                    <Stack />
+                    <AboutMe />
+                    <Project />
+                </div>
+                <ReviewForm />
+            </main>
             <Footer />
         </div>
-    );
+    )
 }
 
-export default App;
+export default App

@@ -1,133 +1,129 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Hamburger from 'react-hamburger-menu';
-import { FaHome, FaInfoCircle, FaCode, FaProjectDiagram, FaPhone } from 'react-icons/fa';
+"use client"
 
-interface NavBarProps {
-    siteTitle?: string;
-}
+import { useState, useEffect } from "react"
+import { Menu, Home, User, Code, FolderOpen, Phone, X } from "lucide-react"
 
-const NavBar: React.FC<NavBarProps> = ({ siteTitle = "Portfolio" }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const menuRef = useRef<HTMLDivElement>(null);
+const navItems = [
+    { href: "#home", label: "Home", icon: Home },
+    { href: "#about", label: "About", icon: User },
+    { href: "#stack", label: "Stack", icon: Code },
+    { href: "#projects", label: "Projects", icon: FolderOpen },
+    { href: "#contact", label: "Contact", icon: Phone },
+]
+
+export default function NavBar() {
+    const [isScrolled, setIsScrolled] = useState(false)
+    const [activeSection, setActiveSection] = useState("home")
+    const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-                setIsOpen(false);
-            }
-        };
-
-        document.addEventListener('click', handleClickOutside);
-
         const handleScroll = () => {
-            setIsOpen(false);
-        };
+            setIsScrolled(window.scrollY > 50)
 
-        window.addEventListener('scroll', handleScroll);
+            // Update active section based on scroll position
+            const sections = navItems.map((item) => item.href.substring(1))
+            const scrollPosition = window.scrollY + 100
 
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [isOpen]);
+            for (const section of sections) {
+                const element = document.getElementById(section)
+                if (element) {
+                    const { offsetTop, offsetHeight } = element
+                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                        setActiveSection(section)
+                        break
+                    }
+                }
+            }
+        }
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
+    const scrollToSection = (href: string) => {
+        const element = document.getElementById(href.substring(1))
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" })
+        }
+        setIsOpen(false)
+    }
 
     return (
-        <nav
-            className="flex flex-col md:flex-row md:justify-center items-center fixed top-0 left-0 right-0 w-full shadow-md z-50 py-2  px-4 md:px-0 bg-gray-800"
-            ref={menuRef}
-        >
-            {/* Hamburger Menu (Mobile) */}
-            <div className="md:hidden absolute left-4 top-4 z-50">
-                <Hamburger
-                    isOpen={isOpen}
-                    menuClicked={toggleMenu}
-                    width={30}
-                    height={25}
-                    strokeWidth={3}
-                    color="aliceblue"
-                    animationDuration={0.5}
-                    aria-expanded={isOpen}
-                    aria-label="Toggle Navigation"
-                />
-            </div>
+        <>
+            <nav
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+                    isScrolled ? "bg-black/90 backdrop-blur-md border-b border-white/10 shadow-lg" : "bg-transparent"
+                }`}
+            >
+                <div className="container mx-auto px-4 lg:px-8">
+                    <div className="flex items-center justify-between h-16">
+                        {/* Logo */}
+                        <div className="flex items-center">
+                            <button
+                                onClick={() => scrollToSection("#home")}
+                                className="text-xl font-bold text-white hover:text-blue-400 transition-colors"
+                            >
+                                Afeez T.
+                            </button>
+                        </div>
 
-            {/* Site Title (Mobile Only) */}
-            <div className="text-white font-bold z-50 md:hidden">
-                {siteTitle}
-            </div>
+                        {/* Desktop Navigation */}
+                        <div className="hidden md:flex items-center space-x-8">
+                            {navItems.map((item) => {
+                                const Icon = item.icon
+                                return (
+                                    <button
+                                        key={item.href}
+                                        onClick={() => scrollToSection(item.href)}
+                                        className={`flex flex-col items-center gap-1 px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-blue-400 hover:scale-105 ${
+                                            activeSection === item.href.substring(1) ? "text-blue-400" : "text-white/80"
+                                        }`}
+                                    >
+                                        <Icon size={18} />
+                                        {item.label}
+                                    </button>
+                                )
+                            })}
+                        </div>
 
-            {/* Navigation Links (Desktop) */}
-            <div className="hidden md:flex space-x-6 z-50 md:justify-center">
-                <a
-                    href="#home"
-                    className="text-l hover:text-blue-500 transition-all duration-300 flex flex-col items-center text-white cursor-pointer hover:scale-105 active:scale-95"
-                >
-                    <FaHome className="mb-1" />
-                    <span>Home</span>
-                </a>
-                <a
-                    href="#about"
-                    className="text-l hover:text-blue-500 transition-all duration-300 flex flex-col items-center text-white cursor-pointer hover:scale-105 active:scale-95"
-                >
-                    <FaInfoCircle className="mb-1" />
-                    <span>About</span>
-                </a>
-                <a
-                    href="#stack"
-                    className="text-l hover:text-blue-500 transition-all duration-300 flex flex-col items-center text-white cursor-pointer hover:scale-105 active:scale-95"
-                >
-                    <FaCode className="mb-1" />
-                    <span>Stack</span>
-                </a>
-                <a
-                    href="#project"
-                    className="text-l hover:text-blue-500 transition-all duration-300 flex flex-col items-center text-white cursor-pointer hover:scale-105 active:scale-95"
-                >
-                    <FaProjectDiagram className="mb-1" />
-                    <span>Project</span>
-                </a>
-                <a
-                    href="#footer"
-                    className="text-l hover:text-blue-500 transition-all duration-300 flex flex-col items-center text-white cursor-pointer hover:scale-105 active:scale-95"
-                >
-                    <FaPhone className="mb-1" />
-                    <span>Connect</span>
-                </a>
-            </div>
-
-            {/* Mobile Menu */}
-            <div className={`transition-all duration-300 md:hidden ${isOpen ? 'block' : 'hidden'} w-full`}>
-                <div
-                    className={`flex flex-col p-4 rounded-md w-64 bg-gray-800 fixed left-8 top-16 z-20 ${isOpen ? 'block' : 'hidden'}`}
-                >
-                    <a href="#home" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
-                        <FaHome className="mr-2" />
-                        <span>Home</span>
-                    </a>
-                    <a href="#about" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
-                        <FaInfoCircle className="mr-2" />
-                        <span>About</span>
-                    </a>
-                    <a href="#stack" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
-                        <FaCode className="mr-2" />
-                        <span>Stack</span>
-                    </a>
-                    <a href="#project" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
-                        <FaProjectDiagram className="mr-2" />
-                        <span>Project</span>
-                    </a>
-                    <a href="#footer" className="text-xl hover:text-blue-500 transition-all duration-300 flex items-center text-white">
-                        <FaPhone className="mr-2" />
-                        <span>Connect</span>
-                    </a>
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="md:hidden text-white hover:bg-white/10 p-2 rounded-lg transition-colors"
+                        >
+                            {isOpen ? <X size={24} /> : <Menu size={24} />}
+                            <span className="sr-only">Toggle menu</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    );
-};
+            </nav>
 
-export default NavBar;
+            {/* Mobile Menu Overlay */}
+            {isOpen && (
+                <div className="fixed inset-0 z-40 md:hidden">
+                    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
+                    <div className="fixed right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300">
+                        <div className="flex flex-col p-6 pt-20">
+                            <h3 className="text-white text-xl font-semibold mb-8">Navigation</h3>
+                            {navItems.map((item) => {
+                                const Icon = item.icon
+                                return (
+                                    <button
+                                        key={item.href}
+                                        onClick={() => scrollToSection(item.href)}
+                                        className={`flex items-center gap-3 px-4 py-4 text-left text-lg font-medium transition-all duration-200 rounded-lg hover:bg-white/10 ${
+                                            activeSection === item.href.substring(1) ? "text-blue-400 bg-blue-400/10" : "text-white/80"
+                                        }`}
+                                    >
+                                        <Icon size={20} />
+                                        {item.label}
+                                    </button>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+            )}
+        </>
+    )
+}
