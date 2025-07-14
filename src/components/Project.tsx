@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { ExternalLink } from "lucide-react"
@@ -24,10 +22,10 @@ const projects = [
     {
         name: "Football Club Blog",
         imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
-        link: "https://befav2.onrender.com/",
+        link: "https://befa-five.vercel.app/",
         description:
-            "A MERN STACk blog dedicated to budu elite football club, featuring club news, club announcement, and articles.",
-        tags: ["React", "Node.js", "MongoDB", "Express"],
+            "A live blog platform for Budu Elite Football Club, crafted with Django and Vite-powered React. It delivers club news, announcements, and feature articles, all controlled through a personalized admin dashboard. The site leverages a cloud-hosted database via Render and is currently undergoing active user testing ahead of full-scale development.",
+        tags: ["Django", "React", "Vite", "Render"],
     },
     {
         name: "Badify Music App",

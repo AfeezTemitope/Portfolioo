@@ -93,7 +93,7 @@ export default function AboutMe() {
                             In 2025, I ventured into blockchain development, participating in the SUI x Semicolon Hackathon where I
                             built <span className="text-blue-400 font-semibold">HopeChain</span>—a decentralized fundraising platform
                             using <em>Sui Move</em> smart contracts. It bridges on-chain transaction integrity with off-chain privacy
-                            and is now live at{" "}
+                            and is now live{" "}
                             <a
                                 href="https://hope-chain-2025-sui-hackerton.vercel.app/"
                                 target="_blank"
