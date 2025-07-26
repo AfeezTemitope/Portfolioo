@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { Download, Mail } from "lucide-react"
@@ -57,9 +55,9 @@ export default function Header() {
                         <div className="relative">
                             <div className="w-60 h-60 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-1">
                                 <img
-                                    src="https://res.cloudinary.com/dgvjxhqjd/image/upload/v1751823822/DSC06734-2_rx9rap.jpg"
+                                    src="https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg"
                                     alt="Profile"
-                                    className="w-full h-full object-contain rounded-2xl"
+                                    className="w-60 h-70 object-cover rounded-2xl"
                                 />
                             </div>
                             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 animate-pulse"></div>

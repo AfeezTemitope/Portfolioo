@@ -4,6 +4,28 @@ import { ExternalLink } from "lucide-react"
 
 const projects = [
     {
+        name: "Tenderville School Portal",
+        imageUrl: "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753304581/TVS_LOGOS_dlkdd4.jpg",
+        link: "https://tenderville.onrender.com/",
+        description: "A comprehensive school portal for Tenderville School in Lekki, Lagos. This preview version is hosted on Render for development tracking and will go live officially upon client launch.",
+        tags: ["React", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "TypeScript"]
+    },
+    {
+        name: "First Mission NGO Portal",
+        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/002/826/640/small_2x/ngos-concept-icon-development-program-abstract-idea-thin-line-illustration-community-mobilization-environment-protection-stimulating-employment-isolated-outline-color-drawing-vector.jpg",
+        link: "https://first-mission-humanitarian-aid-with-five.vercel.app",
+        description: "An intuitive web platform designed for First Mission Humanitarian Aid NGO. Currently deployed to Vercel for development visibility, with final production release planned post-client approval.",
+        tags: ["React", "TypeScript", "Vite", "Django", "Cloudinary", "Tailwind CSS", "Render", "Vercel"]
+    },
+    {
+        name: "Football Club Blog",
+        imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
+        link: "https://befa-five.vercel.app/",
+        description:
+            "A live blog platform for Budu Elite Football Club, crafted with Django and Vite-powered React. It delivers club news, announcements, and feature articles, all controlled through a personalized admin dashboard. The site leverages a cloud-hosted database via Render and is currently undergoing active user testing ahead of full-scale development.",
+        tags: ["Django", "React", "Vite", "Render"],
+    },
+    {
         name: "Attendance(MERN STACK)",
         imageUrl: "https://www.bvp-connects.com/attendance-logo.png",
         link: "https://attendanceapp-uok5.onrender.com/",
@@ -18,14 +40,6 @@ const projects = [
         description:
             "HopeChain is a decentralized fundraising platform built with Sui Move smart contracts. It ensures secure on-chain transactions while keeping user data private off-chain. Designed for nonprofits and local communities, HopeChain brings transparency, trust, and scalability to impact-driven initiatives using Web3 architecture.",
         tags: ["Web3", "Sui Move", "Blockchain", "React"],
-    },
-    {
-        name: "Football Club Blog",
-        imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
-        link: "https://befa-five.vercel.app/",
-        description:
-            "A live blog platform for Budu Elite Football Club, crafted with Django and Vite-powered React. It delivers club news, announcements, and feature articles, all controlled through a personalized admin dashboard. The site leverages a cloud-hosted database via Render and is currently undergoing active user testing ahead of full-scale development.",
-        tags: ["Django", "React", "Vite", "Render"],
     },
     {
         name: "Badify Music App",
