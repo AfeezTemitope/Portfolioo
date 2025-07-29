@@ -57,7 +57,7 @@ export default function Header() {
                                 <img
                                     src="https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg"
                                     alt="Profile"
-                                    className="w-60 h-70 object-cover rounded-2xl"
+                                    className="w-full h-full object-contain rounded-2xl"
                                 />
                             </div>
                             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 animate-pulse"></div>
@@ -92,9 +92,7 @@ export default function Header() {
                             <button
                                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 bg-transparent flex items-center justify-center gap-2"
                                 onClick={() =>
-                                    window.open(
-                                        "https://docs.google.com/document/d/16dkQXvXoZPlg-F34MR2M0g7kgNloUxHPeXlHSjlMoAE/export?format=pdf",
-                                    )
+                                    window.open("https://drive.google.com/file/d/1EaO2I89DpHW_YfcIw5gq7O0PkZSDPbBG/view?usp=sharing")
                                 }
                             >
                                 <Download size={20} />
