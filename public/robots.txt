@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://portfolioo-self-ten.vercel.app/sitemap.xml

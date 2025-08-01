@@ -1,4 +1,3 @@
-
 import "./App.css"
 import NavBar from "./components/NavBar"
 import Header from "./components/Header.tsx";
@@ -10,7 +9,7 @@ import Footer from "./components/Footer.tsx";
 
 function App() {
     return (
-        <div className="flex flex-col min-h-screen bg-black text-white">
+        <div className="flex flex-col min-h-screen bg-gray-950 text-white">
             <NavBar />
             <main className="flex-1">
                 <Header />
