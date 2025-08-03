@@ -120,7 +120,8 @@ export default function Project() {
                                 <div className="bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group h-full flex flex-col rounded-lg p-6">
                                     <div className="aspect-square rounded-lg overflow-hidden mb-4 bg-white/10">
                                         <img
-                                            src={project.imageUrl || "/placeholder.svg"}
+                                            loading={'lazy'}
+                                            src={project.imageUrl || "/fallback.jpg"}
                                             alt={project.name}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                         />

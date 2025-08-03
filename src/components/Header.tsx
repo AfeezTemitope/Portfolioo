@@ -1,9 +1,25 @@
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { Download, Mail } from "lucide-react"
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
+import { Download, Mail } from "lucide-react";
+
+const IMAGE_URL =
+    "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg";
 
 export default function Header() {
-    const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true })
+    const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
+    const [profileImage, setProfileImage] = useState("");
+
+    // Store image URL in localStorage if not already set
+    useEffect(() => {
+        const cached = localStorage.getItem("profileImage");
+        if (!cached) {
+            localStorage.setItem("profileImage", IMAGE_URL);
+            setProfileImage(IMAGE_URL);
+        } else {
+            setProfileImage(cached);
+        }
+    }, []);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -14,7 +30,7 @@ export default function Header() {
                 delayChildren: 0.2,
             },
         },
-    }
+    };
 
     const itemVariants = {
         hidden: { opacity: 0, y: 30 },
@@ -26,7 +42,7 @@ export default function Header() {
                 ease: "easeOut",
             },
         },
-    }
+    };
 
     const imageVariants = {
         hidden: { opacity: 0, scale: 0.8 },
@@ -38,7 +54,7 @@ export default function Header() {
                 ease: "easeOut",
             },
         },
-    }
+    };
 
     return (
         <section id="home" className="min-h-screen flex items-center justify-center pt-16">
@@ -55,8 +71,9 @@ export default function Header() {
                         <div className="relative">
                             <div className="w-60 h-60 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-1">
                                 <img
-                                    src="https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg"
+                                    src={profileImage}
                                     alt="Profile"
+                                    loading="lazy"
                                     className="w-full h-full object-contain rounded-2xl"
                                 />
                             </div>
@@ -86,22 +103,20 @@ export default function Header() {
                                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 flex items-center justify-center gap-2"
                                 onClick={() => window.open("mailto:belloafeez28@gmail.com")}
                             >
-                                <Mail size={20} />
-                                Hire Me!
+                                <Mail className="w-5 h-5" />
+                                Contact Me
                             </button>
                             <button
-                                className="border border-white/20 text-white hover:bg-white/10 px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 bg-transparent flex items-center justify-center gap-2"
-                                onClick={() =>
-                                    window.open("https://drive.google.com/file/d/1EaO2I89DpHW_YfcIw5gq7O0PkZSDPbBG/view?usp=sharing")
-                                }
+                                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 flex items-center justify-center gap-2"
+                                onClick={() => window.open("/resume.pdf")}
                             >
-                                <Download size={20} />
-                                Download CV
+                                <Download className="w-5 h-5" />
+                                Resume
                             </button>
                         </motion.div>
                     </motion.div>
                 </motion.div>
             </div>
         </section>
-    )
+    );
 }
