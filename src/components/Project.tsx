@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion, easeOut } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { ExternalLink } from "lucide-react"
 
@@ -99,7 +99,7 @@ export default function Project() {
             y: 0,
             transition: {
                 duration: 0.6,
-                ease: "easeOut",
+                ease: easeOut,
             },
         },
     }

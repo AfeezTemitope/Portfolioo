@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import { Download, Mail } from "lucide-react";
@@ -39,7 +39,7 @@ export default function Header() {
             y: 0,
             transition: {
                 duration: 0.8,
-                ease: "easeOut",
+                ease: easeOut,
             },
         },
     };
@@ -51,7 +51,7 @@ export default function Header() {
             scale: 1,
             transition: {
                 duration: 1,
-                ease: "easeOut",
+                ease: easeOut,
             },
         },
     };

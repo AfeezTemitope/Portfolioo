@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 
@@ -82,7 +82,7 @@ export default function Stack() {
             y: 0,
             transition: {
                 duration: 0.6,
-                ease: "easeOut",
+                ease: easeOut,
             },
         },
     };
@@ -94,7 +94,7 @@ export default function Stack() {
             scale: 1,
             transition: {
                 duration: 0.4,
-                ease: "easeOut",
+                ease: easeOut,
             },
         },
     };

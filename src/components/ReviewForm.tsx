@@ -1,6 +1,6 @@
 import type React from "react"
 import { useState } from "react"
-import { motion } from "framer-motion"
+import { motion, easeOut } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { Send, Check } from "lucide-react"
 import emailjs from "@emailjs/browser"
@@ -50,7 +50,7 @@ export default function ReviewForm() {
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.6, ease: "easeOut" },
+            transition: { duration: 0.6, ease: easeOut },
         },
     }
 
