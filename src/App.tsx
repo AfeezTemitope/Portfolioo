@@ -13,7 +13,7 @@ function App() {
             <NavBar />
             <main className="flex-1 bg-gray-950">
                 <Header />
-                <div className=" py-20 lg:py-32">
+                <div className="section-spacing">
                     <Stack />
                     <AboutMe />
                     <Project />
