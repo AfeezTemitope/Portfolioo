@@ -8,6 +8,8 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
     target: 'es2020',
+    outDir: 'dist',
+    chunkSizeWarningLimit: 750
 
   }
 })
