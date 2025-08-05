@@ -55,7 +55,7 @@ export default function ReviewForm() {
     }
 
     return (
-        <section id="contact" className="py-20 lg:py-32 bg-gray-950">
+        <section id="contact" className="py-20 lg:py-32 bg-gray-950 border-white/2 ">
             <div className="container mx-auto px-4 lg:px-8">
                 <motion.div
                     ref={ref}
