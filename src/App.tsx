@@ -11,15 +11,15 @@ function App() {
     return (
         <div className="flex flex-col min-h-screen bg-gray-950 text-white">
             <NavBar />
-            <main className="flex-1">
+            {/*<main className="flex-1">*/}
                 <Header />
-                <div className="py-20 lg:py-32 container mx-auto px-4 lg:px-8">
+                {/*<div className="container mx-auto px-4 lg:px-8">*/}
                     <Stack />
                     <AboutMe />
                     <Project />
-                </div>
+                {/*</div>*/}
                 <ReviewForm />
-            </main>
+            {/*// </main>*/}
             <Footer />
         </div>
     )

@@ -57,7 +57,7 @@ export default function Header() {
     };
 
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center pt-16">
+        <section id="home" className="min-h-screen flex items-center justify-center pt-16 py-20 lg:py-32">
             <div className="container mx-auto px-4 lg:px-8">
                 <motion.div
                     ref={ref}
