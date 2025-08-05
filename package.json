@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "clean-build": "rm -rf dist && npm run build",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "clean-build": "rimraf dist && npm run build"
+    "preview": "vite preview"
   },
   "browserslist": [
     "defaults",
