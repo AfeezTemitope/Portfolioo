@@ -60,7 +60,7 @@ export default function Footer() {
 
     return (
         <footer className="bg-gray-950 border-t border-white/10 backdrop-blur-sm">
-            <div className="container mx-auto px-4 lg:px-8 py-12">
+            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -93,10 +93,10 @@ export default function Footer() {
                         })}
                     </motion.div>
 
-                    <motion.div variants={itemVariants} className="border-t border-white/10 pt-8 text-white/50">
-                        <p className="text-sm">&copy; {new Date().getFullYear()} Bello Afeez Temitope. All rights reserved.</p>
-                        <p className="text-xs mt-2">Built with React, Vite, Tailwind CSS, and Framer Motion</p>
-                    </motion.div>
+                    {/*<motion.div variants={itemVariants} className="border-t border-white/10 pt-8 text-white/50">*/}
+                    {/*    <p className="text-sm">&copy; {new Date().getFullYear()} Bello Afeez Temitope. All rights reserved.</p>*/}
+                    {/*    <p className="text-xs mt-2">Built with React, Vite, Tailwind CSS, and Framer Motion</p>*/}
+                    {/*</motion.div>*/}
                 </motion.div>
             </div>
         </footer>

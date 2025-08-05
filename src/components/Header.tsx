@@ -1,25 +1,24 @@
-import { motion, easeOut } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
-import { Download, Mail } from "lucide-react";
+import { motion, easeOut } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { useEffect, useState } from "react"
+import { Download, Mail } from "lucide-react"
 
-const IMAGE_URL =
-    "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg";
-
+const IMAGE_URL = "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg"
+const fallback = './Afeez.png'
 export default function Header() {
-    const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
-    const [profileImage, setProfileImage] = useState("");
+    const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true })
+    const [profileImage, setProfileImage] = useState("")
 
     // Store image URL in localStorage if not already set
     useEffect(() => {
-        const cached = localStorage.getItem("profileImage");
+        const cached = localStorage.getItem("profileImage")
         if (!cached) {
-            localStorage.setItem("profileImage", IMAGE_URL);
-            setProfileImage(IMAGE_URL);
+            localStorage.setItem("profileImage", IMAGE_URL)
+            setProfileImage(IMAGE_URL)
         } else {
-            setProfileImage(cached);
+            setProfileImage(cached)
         }
-    }, []);
+    }, [])
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -30,7 +29,7 @@ export default function Header() {
                 delayChildren: 0.2,
             },
         },
-    };
+    }
 
     const itemVariants = {
         hidden: { opacity: 0, y: 30 },
@@ -42,7 +41,7 @@ export default function Header() {
                 ease: easeOut,
             },
         },
-    };
+    }
 
     const imageVariants = {
         hidden: { opacity: 0, scale: 0.8 },
@@ -54,24 +53,24 @@ export default function Header() {
                 ease: easeOut,
             },
         },
-    };
+    }
 
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center pt-16 py-20 lg:py-32">
-            <div className="container mx-auto px-4 lg:px-8">
+        <section id="home" className="min-h-screen flex items-center justify-center pt-16">
+            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
                 <motion.div
                     ref={ref}
                     variants={containerVariants}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16"
+                    className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
                 >
                     {/* Profile Image */}
                     <motion.div variants={imageVariants} className="flex-shrink-0 order-1 lg:order-2">
                         <div className="relative">
-                            <div className="w-60 h-60 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-1">
+                            <div className="w-64 h-64 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-1">
                                 <img
-                                    src={profileImage}
+                                    src={profileImage || fallback }
                                     alt="Profile"
                                     loading="lazy"
                                     className="w-full h-full object-contain rounded-2xl"
@@ -83,7 +82,7 @@ export default function Header() {
 
                     {/* Content */}
                     <motion.div variants={itemVariants} className="flex-1 text-center lg:text-left order-2 lg:order-1">
-                        <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                        <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 BELLO AFEEZ
               </span>
@@ -91,7 +90,10 @@ export default function Header() {
                             <span className="text-2xl md:text-3xl lg:text-4xl text-white/90">TEMITOPE</span>
                         </motion.h1>
 
-                        <motion.p variants={itemVariants} className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl">
+                        <motion.p
+                            variants={itemVariants}
+                            className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto lg:mx-0"
+                        >
                             I'm a full-stack software engineer driven by results. I prioritize expertise to maximize my skillset.
                         </motion.p>
 
@@ -118,5 +120,5 @@ export default function Header() {
                 </motion.div>
             </div>
         </section>
-    );
+    )
 }

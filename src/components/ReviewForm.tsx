@@ -30,7 +30,7 @@ export default function ReviewForm() {
                 import.meta.env.VITE_EMAILJS_SERVICE_ID!,
                 import.meta.env.VITE_EMAILJS_TEMPLATE_ID!,
                 templateParams,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY!
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY!,
             )
             .then(() => {
                 setIsSubmitted(true)
@@ -56,7 +56,7 @@ export default function ReviewForm() {
 
     return (
         <section id="contact" className="py-20 lg:py-32 bg-gray-950 border-white/2 ">
-            <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                 <motion.div
                     ref={ref}
                     variants={containerVariants}
@@ -70,12 +70,10 @@ export default function ReviewForm() {
                 Leave a Review
               </span>
                         </h2>
-                        <p className="text-white/70 text-lg">
-                            I'd love to hear your thoughts and feedback
-                        </p>
+                        <p className="text-white/70 text-lg">I'd love to hear your thoughts and feedback</p>
                     </div>
 
-                    <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-lg p-8">
+                    <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-lg p-6 sm:p-8">
                         {isSubmitted ? (
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
@@ -86,9 +84,7 @@ export default function ReviewForm() {
                                     <Check size={32} className="text-green-400" />
                                 </div>
                                 <h3 className="text-2xl font-semibold text-white mb-2">Thank you!</h3>
-                                <p className="text-white/70">
-                                    Your review has been sent successfully.
-                                </p>
+                                <p className="text-white/70">Your review has been sent successfully.</p>
                             </motion.div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">

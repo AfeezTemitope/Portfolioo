@@ -68,7 +68,7 @@ export default function AboutMe() {
 
     return (
         <section id="about" className="py-20 lg:py-32">
-            <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                 <motion.div
                     ref={ref}
                     variants={containerVariants}

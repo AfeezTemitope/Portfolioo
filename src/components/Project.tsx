@@ -7,15 +7,18 @@ const projects = [
         name: "Tenderville School Portal",
         imageUrl: "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753304581/TVS_LOGOS_dlkdd4.jpg",
         link: "https://tenderville.onrender.com/",
-        description: "A comprehensive school portal for Tenderville School in Lekki, Lagos. This preview version is hosted on Render for development tracking and will go live officially upon client launch.",
-        tags: ["React", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "TypeScript"]
+        description:
+            "A comprehensive school portal for Tenderville School in Lekki, Lagos. This preview version is hosted on Render for development tracking and will go live officially upon client launch.",
+        tags: ["React", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "TypeScript"],
     },
     {
         name: "First Mission NGO Portal",
-        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/002/826/640/small_2x/ngos-concept-icon-development-program-abstract-idea-thin-line-illustration-community-mobilization-environment-protection-stimulating-employment-isolated-outline-color-drawing-vector.jpg",
+        imageUrl:
+            "https://static.vecteezy.com/system/resources/thumbnails/002/826/640/small_2x/ngos-concept-icon-development-program-abstract-idea-thin-line-illustration-community-mobilization-environment-protection-stimulating-employment-isolated-outline-color-drawing-vector.jpg",
         link: "https://first-mission-humanitarian-aid-with-five.vercel.app",
-        description: "An intuitive web platform designed for First Mission Humanitarian Aid NGO. Currently deployed to Vercel for development visibility, with final production release planned post-client approval.",
-        tags: ["React", "TypeScript", "Vite", "Django", "Cloudinary", "Tailwind CSS", "Render", "Vercel"]
+        description:
+            "An intuitive web platform designed for First Mission Humanitarian Aid NGO. Currently deployed to Vercel for development visibility, with final production release planned post-client approval.",
+        tags: ["React", "TypeScript", "Vite", "Django", "Cloudinary", "Tailwind CSS", "Render", "Vercel"],
     },
     {
         name: "Football Club Blog",
@@ -106,7 +109,7 @@ export default function Project() {
 
     return (
         <section id="projects" className="py-20 lg:py-32">
-            <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                 <motion.div ref={ref} variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
                     <motion.h2 variants={itemVariants} className="text-4xl lg:text-5xl font-bold text-center mb-16">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -120,7 +123,7 @@ export default function Project() {
                                 <div className="bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group h-full flex flex-col rounded-lg p-6">
                                     <div className="aspect-square rounded-lg overflow-hidden mb-4 bg-white/10">
                                         <img
-                                            loading={'lazy'}
+                                            loading={"lazy"}
                                             src={project.imageUrl || "/fallback.jpg"}
                                             alt={project.name}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

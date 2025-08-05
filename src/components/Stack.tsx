@@ -1,16 +1,7 @@
-import { motion, easeOut } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, easeOut } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
-
-import {
-    FaHtml5,
-    FaCss3Alt,
-    FaPython,
-    FaAws,
-    FaDocker,
-    FaReact,
-    FaGithub,
-} from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaPython, FaAws, FaDocker, FaReact, FaGithub } from "react-icons/fa"
 
 import {
     SiJavascript,
@@ -23,10 +14,10 @@ import {
     SiMongodb,
     SiMysql,
     SiNodedotjs,
-} from "react-icons/si";
+} from "react-icons/si"
 import { Smartphone } from "lucide-react"
-import { BiLogoFlask } from "react-icons/bi";
-import { FaJava } from "react-icons/fa6";
+import { BiLogoFlask } from "react-icons/bi"
+import { FaJava } from "react-icons/fa6"
 
 const techData = {
     FRONTEND: [
@@ -45,9 +36,7 @@ const techData = {
         { name: "Node.js", icon: <SiNodedotjs size={32} />, color: "from-green-400 to-green-600" },
         { name: "Supabase", icon: <SiSupabase size={32} />, color: "from-teal-400 to-teal-600" },
     ],
-    MOBILE: [
-        { name: "React Native", icon: <Smartphone size={32} />, color: "from-blue-400 to-purple-600" },
-    ],
+    MOBILE: [{ name: "React Native", icon: <Smartphone size={32} />, color: "from-blue-400 to-purple-600" }],
     CLOUD_SERVICE: [
         { name: "Amazon Web Service", icon: <FaAws size={32} />, color: "from-orange-400 to-orange-600" },
         { name: "Firebase", icon: <SiFirebase size={32} />, color: "from-orange-500 to-red-500" },
@@ -59,10 +48,10 @@ const techData = {
         { name: "MySQL", icon: <SiMysql size={32} />, color: "from-blue-400 to-blue-600" },
         { name: "PostgreSQL", icon: <SiPostgresql size={32} />, color: "from-blue-500 to-blue-700" },
     ],
-};
+}
 
 export default function Stack() {
-    const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
+    const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true })
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -73,7 +62,7 @@ export default function Stack() {
                 delayChildren: 0.3,
             },
         },
-    };
+    }
 
     const itemVariants = {
         hidden: { opacity: 0, y: 30 },
@@ -85,7 +74,7 @@ export default function Stack() {
                 ease: easeOut,
             },
         },
-    };
+    }
 
     const cardVariants = {
         hidden: { opacity: 0, scale: 0.9 },
@@ -97,21 +86,13 @@ export default function Stack() {
                 ease: easeOut,
             },
         },
-    };
+    }
 
     return (
         <section id="stack" className="py-20 lg:py-32">
-            <div className="container mx-auto px-4 lg:px-8">
-                <motion.div
-                    ref={ref}
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={inView ? "visible" : "hidden"}
-                >
-                    <motion.h2
-                        variants={itemVariants}
-                        className="text-4xl lg:text-5xl font-bold text-center mb-16"
-                    >
+            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+                <motion.div ref={ref} variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
+                    <motion.h2 variants={itemVariants} className="text-4xl lg:text-5xl font-bold text-center mb-16">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               My Tech Stack
             </span>
@@ -123,7 +104,7 @@ export default function Stack() {
                                 <h3 className="text-2xl lg:text-3xl font-semibold mb-8 text-center text-white/90 italic">
                                     {category.replace(/_/g, " ")}
                                 </h3>
-                                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 lg:gap-6">
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 lg:gap-6">
                                     {technologies.map((tech) => (
                                         <motion.div
                                             key={tech.name}
@@ -132,13 +113,13 @@ export default function Stack() {
                                             whileTap={{ scale: 0.95 }}
                                         >
                                             <div
-                                                className={`bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group cursor-pointer rounded-lg p-6 flex flex-col items-center text-center`}
+                                                className={`bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group cursor-pointer rounded-lg p-4 sm:p-6 flex flex-col items-center text-center min-h-[120px] justify-center`}
                                                 title={tech.name}
                                             >
                                                 <div className={`mb-3 text-white group-hover:scale-110 transition-transform duration-300`}>
                                                     {tech.icon}
                                                 </div>
-                                                <h4 className="text-sm lg:text-base font-medium text-white group-hover:text-blue-400 transition-colors">
+                                                <h4 className="text-xs sm:text-sm lg:text-base font-medium text-white group-hover:text-blue-400 transition-colors">
                                                     {tech.name}
                                                 </h4>
                                             </div>
@@ -151,5 +132,5 @@ export default function Stack() {
                 </motion.div>
             </div>
         </section>
-    );
+    )
 }

@@ -1,6 +1,2 @@
 @import "tailwindcss";
 
-.section-spacing {
-    @apply py-20 lg:py-32;
-}
-
