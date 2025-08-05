@@ -9,17 +9,17 @@ import Footer from "./components/Footer.tsx";
 
 function App() {
     return (
-        <div className="flex flex-col min-h-screen bg-gray-950 text-white">
+        <div className="flex-1 flex-col min-h-screen bg-gray-950 text-white">
             <NavBar />
-            {/*<main className="flex-1">*/}
+            <main className="flex-1 bg-gray-950">
                 <Header />
-                {/*<div className="container mx-auto px-4 lg:px-8">*/}
+                <div className=" py-20 lg:py-32">
                     <Stack />
                     <AboutMe />
                     <Project />
-                {/*</div>*/}
+                </div>
                 <ReviewForm />
-            {/*// </main>*/}
+             </main>
             <Footer />
         </div>
     )

@@ -59,7 +59,7 @@ export default function Footer() {
     }
 
     return (
-        <footer className="bg-white/5 border-t border-white/10 backdrop-blur-sm">
+        <footer className="bg-gray-950 border-t border-white/10 backdrop-blur-sm">
             <div className="container mx-auto px-4 lg:px-8 py-12">
                 <motion.div
                     variants={containerVariants}
