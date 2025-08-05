@@ -1,6 +1,0 @@
-[build]
-command = "npm run clean-build"
-publish = "dist"
-
-#[context.production.environment]
-#NODE_ENV = "production"
