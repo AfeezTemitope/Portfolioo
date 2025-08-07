@@ -22,11 +22,10 @@ const projects = [
     },
     {
         name: "Football Club Blog",
-        imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
-        link: "https://befa-five.vercel.app/",
-        description:
-            "A live blog platform for Budu Elite Football Club, crafted with Django and Vite-powered React. It delivers club news, announcements, and feature articles, all controlled through a personalized admin dashboard. The site leverages a cloud-hosted database via Render and is currently undergoing active user testing ahead of full-scale development.",
-        tags: ["Django", "React", "Vite", "Render"],
+        imageUrl: "https://yourdomain.com/images/budu-elite-preview.jpg", // Replace with a stable image
+        link: "https://buduelite.netlify.app/",
+        description: "A dynamic blog platform for Budu Elite Football Club, built with Django and React (powered by Vite). It features club news, player highlights, and admin-controlled content. The app uses a cloud-hosted database via Render and is currently in active testing ahead of full-scale deployment.",
+        tags: ["Django", "React", "Vite", "Render", "Netlify", "Cloudinary", "Cloudflare", "Google SEO", "Redis", "Zustand"]
     },
     {
         name: "Attendance(MERN STACK)",
