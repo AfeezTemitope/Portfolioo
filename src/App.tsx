@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar"
 import Header from "./components/Header"
 import Stack from "./components/Stack"
 import AboutMe from "./components/AboutMe"
-import Project from "./components/Project"
+import {Project} from "./components/Project"
 import ReviewForm from "./components/ReviewForm"
 import Footer from "./components/Footer"
 

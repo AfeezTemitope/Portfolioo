@@ -77,23 +77,16 @@ export default function AboutMe() {
                     className="max-w-4xl mx-auto"
                 >
                     <motion.h2 variants={itemVariants} className="text-4xl lg:text-5xl font-bold text-center mb-12">
-                        <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">About Me</span>
+                        <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">tbelzbby</span>
                     </motion.h2>
 
                     <motion.div variants={itemVariants} className="space-y-6 text-lg text-white/80 mb-16">
                         <p>
-                            Hello! I'm <span className="text-blue-400 font-semibold">Bello Afeez Temitope</span>, a versatile software
-                            engineer passionate about solving real-world problems using technology. My journey started with curiosity
-                            about how digital products work—evolving into full-stack development and backend systems design. With over
-                            3 years of hands-on experience, I craft scalable and performance-driven solutions using Java, Python, and
-                            JavaScript, and frameworks like Spring Boot, Django, and React.js.
+                            I’m <span className="text-blue-400 font-semibold">Bello Afeez Temitope</span>—but my tech friends call me BadAfeez. I’m a curious, caffeine-fueled software engineer who loves turning wild ideas into working code. My tech journey kicked off with a simple question: “How do apps even work?” Fast-forward a few years, and now I’m building full-stack magic with Java, Python, JavaScript, and frameworks like Spring Boot, Django, and React.
                         </p>
 
                         <p>
-                            In 2025, I ventured into blockchain development, participating in the SUI x Semicolon Hackathon where I
-                            built <span className="text-blue-400 font-semibold">HopeChain</span>—a decentralized fundraising platform
-                            using <em>Sui Move</em> smart contracts. It bridges on-chain transaction integrity with off-chain privacy
-                            and is now live{" "}
+                            In 2025, I dove into the blockchain rabbit hole and joined the SUI x Semicolon Hackathon. That’s where <span className="text-blue-400 font-semibold">HopeChain</span> was born—a decentralized fundraising platform powered by <em>Sui Move</em> smart contracts. It’s all about secure transactions and private giving. Wanna see it in action? Check out{" "}
                             <a
                                 href="https://hope-chain-2025-sui-hackerton.vercel.app/"
                                 target="_blank"
@@ -102,18 +95,16 @@ export default function AboutMe() {
                             >
                                 HopeChain
                             </a>
-                            . This project reinforced my passion for ethical tech and community-centered innovation.
+                            .
                         </p>
 
                         <p>
-                            My toolbelt also includes CI/CD with Docker and AWS, testing frameworks like JUnit and Pytest, and styling
-                            tools like TailwindCSS. I thrive on continuous learning, agile team collaboration, and building solutions
-                            with social impact.
+                            My toolkit includes Docker, AWS, TailwindCSS, JUnit, Pytest, and a sprinkle of CI/CD magic. I’m big on teamwork, continuous learning, and building stuff that actually helps people.
                         </p>
                     </motion.div>
 
                     <motion.div variants={itemVariants}>
-                        <h3 className="text-2xl lg:text-3xl font-semibold mb-8 text-center">Education</h3>
+                        <h3 className="text-2xl lg:text-3xl font-semibold mb-8 text-center">🎓 Education</h3>
                         <div className="grid gap-6 md:gap-8">
                             {educationData.map((item, index) => {
                                 const Icon = item.icon
@@ -121,9 +112,7 @@ export default function AboutMe() {
                                     <motion.div key={index} variants={itemVariants} className="relative">
                                         <div className="bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group rounded-lg p-6">
                                             <div className="flex items-start gap-4">
-                                                <div
-                                                    className={`${item.color} bg-white/10 p-3 rounded-lg group-hover:scale-110 transition-transform duration-300`}
-                                                >
+                                                <div className={`${item.color} bg-white/10 p-3 rounded-lg group-hover:scale-110 transition-transform duration-300`}>
                                                     <Icon size={24} />
                                                 </div>
                                                 <div className="flex-1">
@@ -141,16 +130,15 @@ export default function AboutMe() {
 
                     <motion.div variants={itemVariants} className="mt-16 space-y-6 text-lg text-white/80">
                         <div>
-                            <h4 className="text-xl font-semibold text-white mb-4">I also have hands-on experience in:</h4>
+                            <h4 className="text-xl font-semibold text-white mb-4">🛠️ Other cool stuff I do:</h4>
                             <ul className="list-disc pl-6 space-y-2">
                                 <li>Graphic Design (Photoshop, Corel Draw, Canva)</li>
-                                <li>Decentralized Applications (Web3, Sui Move Language)</li>
+                                <li>Decentralized Apps (Web3, Sui Move Language)</li>
                             </ul>
                         </div>
 
                         <p>
-                            Outside of code, I enjoy exploring emerging technologies, playing football, and working on purpose-driven
-                            side projects. Let's build something meaningful.
+                            When I’m not coding, you’ll find me chasing footballs, exploring new tech trends, or tinkering with side projects that make the world a little better. Let’s build something awesome together.
                         </p>
                     </motion.div>
                 </motion.div>

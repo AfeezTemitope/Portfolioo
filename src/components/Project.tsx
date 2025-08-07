@@ -1,6 +1,6 @@
-import { motion, easeOut } from "framer-motion"
+import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { ExternalLink } from "lucide-react"
+import { ArrowUpRight } from 'lucide-react'
 
 const projects = [
     {
@@ -9,7 +9,7 @@ const projects = [
         link: "https://tenderville.onrender.com/",
         description:
             "A comprehensive school portal for Tenderville School in Lekki, Lagos. This preview version is hosted on Render for development tracking and will go live officially upon client launch.",
-        tags: ["React", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "TypeScript"],
+        tags: ["React", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "TypeScript", "indexeddb"],
     },
     {
         name: "First Mission NGO Portal",
@@ -22,7 +22,7 @@ const projects = [
     },
     {
         name: "Football Club Blog",
-        imageUrl: "https://yourdomain.com/images/budu-elite-preview.jpg", // Replace with a stable image
+        imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
         link: "https://buduelite.netlify.app/",
         description: "A dynamic blog platform for Budu Elite Football Club, built with Django and React (powered by Vite). It features club news, player highlights, and admin-controlled content. The app uses a cloud-hosted database via Render and is currently in active testing ahead of full-scale deployment.",
         tags: ["Django", "React", "Vite", "Render", "Netlify", "Cloudinary", "Cloudflare", "Google SEO", "Redis", "Zustand"]
@@ -80,77 +80,120 @@ const projects = [
     },
 ]
 
-export default function Project() {
-    const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true })
+export function Project() {
+    const {ref, inView} = useInView({threshold: 0.1, triggerOnce: true})
 
     const containerVariants = {
-        hidden: { opacity: 0 },
+        hidden: {opacity: 0},
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.3,
+                staggerChildren: 0.08,
+                delayChildren: 0.2,
             },
         },
     }
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: {opacity: 0, y: 40, scale: 0.95},
         visible: {
             opacity: 1,
             y: 0,
+            scale: 1,
             transition: {
-                duration: 0.6,
-                ease: easeOut,
+                duration: 0.7,
+                ease: [0.25, 0.46, 0.45, 0.94],
             },
         },
     }
 
     return (
-        <section id="projects" className="py-20 lg:py-32">
+        <section id="projects" className="py-20 lg:py-32 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-                <motion.div ref={ref} variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
-                    <motion.h2 variants={itemVariants} className="text-4xl lg:text-5xl font-bold text-center mb-16">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              My Projects
-            </span>
-                    </motion.h2>
+                <motion.div ref={ref} variants={containerVariants} initial="hidden"
+                            animate={inView ? "visible" : "hidden"}>
+                    <motion.div variants={itemVariants} className="text-center mb-20">
+                        <p className="text-4xl lg:text-6xl font-bold mb-4">
+                            <span
+                                className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                                Projects i`ve worked on
+                            </span>
+                        </p>
+                        <p className="text-white/60 text-lg max-w-2xl mx-auto">
+                            A collection of projects that showcase my passion for creating meaningful digital
+                            experiences
+                        </p>
+                    </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="columns-1 md:columns-2 lg:columns-3 gap-6 lg:gap-8 space-y-6 lg:space-y-8">
                         {projects.map((project, index) => (
-                            <motion.div key={index} variants={itemVariants} whileHover={{ y: -10 }} className="h-full">
-                                <div className="bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group h-full flex flex-col rounded-lg p-6">
-                                    <div className="aspect-square rounded-lg overflow-hidden mb-4 bg-white/10">
-                                        <img
-                                            loading={"lazy"}
-                                            src={project.imageUrl || "/fallback.jpg"}
-                                            alt={project.name}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                        />
+                            <motion.div
+                                key={index}
+                                variants={itemVariants}
+                                className="break-inside-avoid"
+                            >
+                                <motion.div
+                                    className="group relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 backdrop-blur-xl rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500"
+                                    whileHover={{
+                                        y: -8,
+                                        transition: {duration: 0.3, ease: "easeOut"}
+                                    }}
+                                >
+                                    {/* Floating gradient orb */}
+                                    <div
+                                        className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"/>
+
+                                    <div className="relative p-6">
+                                        <div className="relative mb-6 rounded-xl overflow-hidden bg-white/5">
+                                            <img
+                                                loading="lazy"
+                                                src={project.imageUrl || "/fallback.jpg"}
+                                                alt={project.name}
+                                                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
+                                            />
+                                            <div
+                                                className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+                                        </div>
+
+                                        <div className="space-y-4">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                                                {project.name}
+                                            </h3>
+
+                                            <p className="text-white/70 text-sm leading-relaxed">
+                                                {project.description}
+                                            </p>
+
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.tags.slice(0, 4).map((tag, tagIndex) => (
+                                                    <span
+                                                        key={tagIndex}
+                                                        className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-xs rounded-full border border-blue-500/20 backdrop-blur-sm"
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                                {project.tags.length > 4 && (
+                                                    <span
+                                                        className="px-3 py-1 bg-white/10 text-white/60 text-xs rounded-full">
+                                                        +{project.tags.length - 4}
+                                                    </span>
+                                                )}
+                                            </div>
+
+                                            <motion.button
+                                                onClick={() => window.open(project.link, "_blank")}
+                                                className="w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-lg hover:shadow-blue-500/25"
+                                                whileHover={{scale: 1.02}}
+                                                whileTap={{scale: 0.98}}
+                                            >
+                                                <span>Explore Project</span>
+                                                <ArrowUpRight size={16}
+                                                              className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300"/>
+                                            </motion.button>
+                                        </div>
                                     </div>
-
-                                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                                        {project.name}
-                                    </h3>
-
-                                    <p className="text-white/70 text-sm mb-4 flex-grow">{project.description}</p>
-
-                                    <div className="flex flex-wrap gap-2 mb-4">
-                                        {project.tags.map((tag, tagIndex) => (
-                                            <span key={tagIndex} className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
-                        {tag}
-                      </span>
-                                        ))}
-                                    </div>
-
-                                    <button
-                                        onClick={() => window.open(project.link, "_blank")}
-                                        className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 flex items-center justify-center gap-2 group/btn"
-                                    >
-                                        <ExternalLink size={16} className="group-hover/btn:translate-x-1 transition-transform" />
-                                        Visit Project
-                                    </button>
-                                </div>
+                                </motion.div>
                             </motion.div>
                         ))}
                     </div>
