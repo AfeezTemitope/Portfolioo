@@ -6,9 +6,9 @@ const projects = [
     {
         name: "Tenderville School Portal",
         imageUrl: "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753304581/TVS_LOGOS_dlkdd4.jpg",
-        link: "https://tenderville.onrender.com/",
+        link: "https://tenderville.net/",
         description:
-            "A comprehensive school portal for Tenderville School in Lekki, Lagos. This preview version is hosted on Render for development tracking and will go live officially upon client launch.",
+            "Tenderville School Portal is now live—crafted with care and cutting-edge tech to empower students, staff, and parents in Lekki, Lagos. From seamless logins to dynamic dashboards, this full-featured platform makes academic life smoother, smarter, and more connected. Built with React, Supabase, and a sprinkle of dev magic, it’s the result of countless hours of design, debugging, and dreaming big. Welcome to the future of school management—delivered with joy, and built to last.",
         tags: ["React", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "TypeScript", "indexeddb"],
     },
     {

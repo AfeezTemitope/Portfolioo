@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Menu, Home, User, Code, FolderOpen, Phone, X } from "lucide-react"
+import {Menu, Home, User, Code, FolderOpen, Phone, X, Palette} from "lucide-react"
 
 const navItems = [
     { href: "#home", label: "Home", icon: Home },
@@ -7,6 +7,7 @@ const navItems = [
     { href: "#stack", label: "Stack", icon: Code },
     { href: "#projects", label: "Projects", icon: FolderOpen },
     { href: "#contact", label: "Contact", icon: Phone },
+    { href: "#graphics", label: "Graphics", icon: Palette }
 ]
 
 export default function NavBar() {
