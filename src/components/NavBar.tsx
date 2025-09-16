@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
-import {Menu, Home, User, Code, FolderOpen, Phone, X, Palette} from "lucide-react"
+import { motion } from "framer-motion"
+import {Menu, Home, User, Code, FolderOpen, Phone, X } from "lucide-react"
 
 const navItems = [
     { href: "#home", label: "Home", icon: Home },
@@ -7,7 +8,7 @@ const navItems = [
     { href: "#stack", label: "Stack", icon: Code },
     { href: "#projects", label: "Projects", icon: FolderOpen },
     { href: "#contact", label: "Contact", icon: Phone },
-    { href: "#graphics", label: "Graphics", icon: Palette }
+    // { href: "#graphics", label: "Graphics", icon: Palette }
 ]
 
 export default function NavBar() {
@@ -18,11 +19,8 @@ export default function NavBar() {
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50)
-
-            // Update active section based on scroll position
             const sections = navItems.map((item) => item.href.substring(1))
             const scrollPosition = window.scrollY + 100
-
             for (const section of sections) {
                 const element = document.getElementById(section)
                 if (element) {
@@ -34,7 +32,6 @@ export default function NavBar() {
                 }
             }
         }
-
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
@@ -56,13 +53,18 @@ export default function NavBar() {
             >
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                     <div className="flex items-center justify-between h-16">
-                        {/* Logo */}
+                        {/* Logo with Animation */}
                         <div className="flex items-center">
                             <button
                                 onClick={() => scrollToSection("#home")}
                                 className="text-xl font-bold text-white hover:text-blue-400 transition-colors"
                             >
-                                💻Tbelzbby😍❤️
+                                <motion.span
+                                    whileHover={{ scale: 1.05, rotate: 2 }}
+                                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                                >
+                                    💻Tbelzbby😍❤️
+                                </motion.span>
                             </button>
                         </div>
 

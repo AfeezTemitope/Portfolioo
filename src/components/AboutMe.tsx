@@ -84,7 +84,6 @@ export default function AboutMe() {
                         <p>
                             I’m <span className="text-blue-400 font-semibold">Bello Afeez Temitope</span>—but my tech friends call me BadAfeez. I’m a curious, caffeine-fueled software engineer who loves turning wild ideas into working code. My tech journey kicked off with a simple question: “How do apps even work?” Fast-forward a few years, and now I’m building full-stack magic with Java, Python, JavaScript, and frameworks like Spring Boot, Django, and React.
                         </p>
-
                         <p>
                             In 2025, I dove into the blockchain rabbit hole and joined the SUI x Semicolon Hackathon. That’s where <span className="text-blue-400 font-semibold">HopeChain</span> was born—a decentralized fundraising platform powered by <em>Sui Move</em> smart contracts. It’s all about secure transactions and private giving. Wanna see it in action? Check out{" "}
                             <a
@@ -97,7 +96,6 @@ export default function AboutMe() {
                             </a>
                             .
                         </p>
-
                         <p>
                             My toolkit includes Docker, AWS, TailwindCSS, JUnit, Pytest, and a sprinkle of CI/CD magic. I’m big on teamwork, continuous learning, and building stuff that actually helps people.
                         </p>
@@ -109,8 +107,8 @@ export default function AboutMe() {
                             {educationData.map((item, index) => {
                                 const Icon = item.icon
                                 return (
-                                    <motion.div key={index} variants={itemVariants} className="relative">
-                                        <div className="bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group rounded-lg p-6">
+                                    <article key={index} className="relative"> {/* Semantic HTML */}
+                                        <motion.div variants={itemVariants} className="bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group rounded-lg p-6">
                                             <div className="flex items-start gap-4">
                                                 <div className={`${item.color} bg-white/10 p-3 rounded-lg group-hover:scale-110 transition-transform duration-300`}>
                                                     <Icon size={24} />
@@ -121,8 +119,8 @@ export default function AboutMe() {
                                                     <p className="text-sm text-white/50">{item.date}</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </motion.div>
+                                        </motion.div>
+                                    </article>
                                 )
                             })}
                         </div>
@@ -136,7 +134,6 @@ export default function AboutMe() {
                                 <li>Decentralized Apps (Web3, Sui Move Language)</li>
                             </ul>
                         </div>
-
                         <p>
                             When I’m not coding, you’ll find me chasing footballs, exploring new tech trends, or tinkering with side projects that make the world a little better. Let’s build something awesome together.
                         </p>

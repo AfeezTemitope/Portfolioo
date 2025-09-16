@@ -6,7 +6,7 @@ import AboutMe from "./components/AboutMe"
 import {Project} from "./components/Project"
 import ReviewForm from "./components/ReviewForm"
 import Footer from "./components/Footer"
-import GraphicDesignCarousel from "./components/GraphicDesign.tsx";
+// import GraphicDesignCarousel from "./components/GraphicDesign.tsx";
 
 function App() {
     return (
@@ -18,7 +18,7 @@ function App() {
                     <Stack />
                     <AboutMe />
                     <Project />
-                    <GraphicDesignCarousel/>
+                    {/*<GraphicDesignCarousel/>*/}
                 </div>
                 <ReviewForm />
             </main>

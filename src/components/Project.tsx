@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { ArrowUpRight } from 'lucide-react'
 
@@ -8,7 +8,7 @@ const projects = [
         imageUrl: "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753304581/TVS_LOGOS_dlkdd4.jpg",
         link: "https://tenderville.net/",
         description:
-            "Tenderville School Portal is now live—crafted with care and cutting-edge tech to empower students, staff, and parents in Lekki, Lagos. From seamless logins to dynamic dashboards, this full-featured platform makes academic life smoother, smarter, and more connected. Built with React, Supabase, and a sprinkle of dev magic, it’s the result of countless hours of design, debugging, and dreaming big. Welcome to the future of school management—delivered with joy, and built to last.",
+            "Tenderville School Portal is now live—crafted with care and awesome tech to empower students, staff, and parents in Lekki, Lagos. From seamless logins to dynamic dashboards, this full-featured platform makes academic life smoother, smarter, and more connected. Built with React, Supabase, and a sprinkle of dev magic, it’s the result of countless hours of design, debugging, and dreaming big. Welcome to the future of school management—delivered with joy, and built to last.",
         tags: ["React", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "TypeScript", "indexeddb"],
     },
     {
@@ -83,18 +83,18 @@ const projects = [
 export function Project() {
     const {ref, inView} = useInView({threshold: 0.1, triggerOnce: true})
 
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: {opacity: 0},
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.08,
+                staggerChildren: 0.15,
                 delayChildren: 0.2,
             },
         },
     }
 
-    const itemVariants = {
+    const itemVariants : Variants = {
         hidden: {opacity: 0, y: 40, scale: 0.95},
         visible: {
             opacity: 1,
@@ -116,7 +116,7 @@ export function Project() {
                         <p className="text-4xl lg:text-6xl font-bold mb-4">
                             <span
                                 className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                                Projects i`ve worked on
+                                Projects I've Worked On {/* Fixed Grammar */}
                             </span>
                         </p>
                         <p className="text-white/60 text-lg max-w-2xl mx-auto">
@@ -124,7 +124,6 @@ export function Project() {
                             experiences
                         </p>
                     </motion.div>
-
                     <div className="columns-1 md:columns-2 lg:columns-3 gap-6 lg:gap-8 space-y-6 lg:space-y-8">
                         {projects.map((project, index) => (
                             <motion.div
@@ -142,28 +141,24 @@ export function Project() {
                                     {/* Floating gradient orb */}
                                     <div
                                         className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"/>
-
                                     <div className="relative p-6">
                                         <div className="relative mb-6 rounded-xl overflow-hidden bg-white/5">
                                             <img
                                                 loading="lazy"
                                                 src={project.imageUrl || "/fallback.jpg"}
-                                                alt={project.name}
+                                                alt={`Screenshot of ${project.name} project`}
                                                 className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
                                             />
                                             <div
                                                 className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
                                         </div>
-
                                         <div className="space-y-4">
                                             <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
                                                 {project.name}
                                             </h3>
-
                                             <p className="text-white/70 text-sm leading-relaxed">
                                                 {project.description}
                                             </p>
-
                                             <div className="flex flex-wrap gap-2">
                                                 {project.tags.slice(0, 4).map((tag, tagIndex) => (
                                                     <span
@@ -180,12 +175,11 @@ export function Project() {
                                                     </span>
                                                 )}
                                             </div>
-
                                             <motion.button
-                                                onClick={() => window.open(project.link, "_blank")}
+                                                onClick={() => window.open(project.link, "_blank", "noopener noreferrer")} // Added rel for security
                                                 className="w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-lg hover:shadow-blue-500/25"
-                                                whileHover={{scale: 1.02}}
-                                                whileTap={{scale: 0.98}}
+                                                whileHover={{scale: 1.03}} // Enhanced press effect
+                                                whileTap={{scale: 0.95}}
                                             >
                                                 <span>Explore Project</span>
                                                 <ArrowUpRight size={16}
