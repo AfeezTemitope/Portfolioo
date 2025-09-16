@@ -18,7 +18,7 @@ function App() {
                     <Stack />
                     <AboutMe />
                     <Project />
-                    <GraphicDesignCarousel/>
+{/*                     <GraphicDesignCarousel/> */}
                 </div>
                 <ReviewForm />
             </main>
