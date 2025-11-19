@@ -182,7 +182,7 @@ export default function Header() {
                             </motion.a>
 
                             <motion.a
-                                href="https://docs.google.com/document/d/1nynK90gXyy7PvUxoJkJeaXIukuZNBJ1QPC8a0YEy_X8/export?format=pdf"
+                                href="https://docs.google.com/document/d/1EaO2I89DpHW_YfcIw5gq7O0PkZSDPbBG/export?format=pdf"
                                 download="Bello_Afeez_Temitope_Resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
