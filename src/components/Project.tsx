@@ -1,196 +1,253 @@
 import { motion, Variants } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, ExternalLink } from 'lucide-react'
 
 const projects = [
+    {
+        name: "Molek School Portal",
+        imageUrl: "https://www.molekschool.com/logo.webp",
+        link: "https://www.molekschool.com/",
+        description: "Comprehensive school management system featuring online portal with offline CBT (Computer-Based Testing) exam capabilities. Includes admin interface, student registration, exam scheduling, real-time monitoring, and automatic synchronization.",
+        tags: ["Python", "Django", "JavaScript", "React", "Vite", "Node.js", "Supabase", "Cloudinary", "Tailwind CSS"],
+        featured: true
+    },
     {
         name: "Tenderville School Portal",
         imageUrl: "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753304581/TVS_LOGOS_dlkdd4.jpg",
         link: "https://tenderville.net/",
-        description:
-            "Tenderville School Portal is now live—crafted with care and awesome tech to empower students, staff, and parents in Lekki, Lagos. From seamless logins to dynamic dashboards, this full-featured platform makes academic life smoother, smarter, and more connected. Built with React, Supabase, and a sprinkle of dev magic, it’s the result of countless hours of design, debugging, and dreaming big. Welcome to the future of school management—delivered with joy, and built to last.",
-        tags: ["React", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "TypeScript", "indexeddb"],
+        description: "Full-featured educational platform empowering students, staff, and parents in Lekki, Lagos. Features seamless authentication, dynamic dashboards, academic management, and real-time communication tools built with modern web technologies.",
+        tags: ["React", "TypeScript", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "IndexedDB"],
+        featured: true
+    },
+    {
+        name: "HopeChain: Web3 Fundraising",
+        imageUrl: "https://img.freepik.com/premium-vector/heart-logo_1068907-159.jpg",
+        link: "https://hope-chain-2025-sui-hackerton.vercel.app/",
+        description: "Decentralized fundraising platform built with Sui Move smart contracts. Ensures secure on-chain transactions while keeping user data private off-chain. Winner of SUI x Semicolon Hackathon 2025, designed for nonprofits and community empowerment.",
+        tags: ["Web3", "Sui Move", "Blockchain", "React", "TypeScript", "Smart Contracts"],
+        featured: true
     },
     {
         name: "First Mission NGO Portal",
-        imageUrl:
-            "https://static.vecteezy.com/system/resources/thumbnails/002/826/640/small_2x/ngos-concept-icon-development-program-abstract-idea-thin-line-illustration-community-mobilization-environment-protection-stimulating-employment-isolated-outline-color-drawing-vector.jpg",
+        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/002/826/640/small_2x/ngos-concept-icon-development-program-abstract-idea-thin-line-illustration-community-mobilization-environment-protection-stimulating-employment-isolated-outline-color-drawing-vector.jpg",
         link: "https://first-mission-humanitarian-aid-with-five.vercel.app",
-        description:
-            "An intuitive web platform designed for First Mission Humanitarian Aid NGO. Currently deployed to Vercel for development visibility, with final production release planned post-client approval.",
+        description: "Intuitive web platform designed for First Mission Humanitarian Aid NGO. Features donor management, campaign tracking, volunteer coordination, and impact reporting. Currently in development with production deployment pending client approval.",
         tags: ["React", "TypeScript", "Vite", "Django", "Cloudinary", "Tailwind CSS", "Render", "Vercel"],
     },
     {
-        name: "Football Club Blog",
+        name: "Budu Elite Football Club Blog",
         imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
         link: "https://buduelite.netlify.app/",
-        description: "A dynamic blog platform for Budu Elite Football Club, built with Django and React (powered by Vite). It features club news, player highlights, and admin-controlled content. The app uses a cloud-hosted database via Render and is currently in active testing ahead of full-scale deployment.",
-        tags: ["Django", "React", "Vite", "Render", "Netlify", "Cloudinary", "Cloudflare", "Google SEO", "Redis", "Zustand"]
+        description: "Dynamic blog platform featuring club news, player highlights, match reports, and admin-controlled content management. Built with cloud-hosted database and optimized for SEO, currently in active testing phase.",
+        tags: ["Django", "React", "Vite", "Render", "Netlify", "Cloudinary", "Redis", "Zustand", "Google SEO"],
     },
     {
-        name: "Attendance(MERN STACK)",
+        name: "Attendance Management System",
         imageUrl: "https://www.bvp-connects.com/attendance-logo.png",
         link: "https://attendanceapp-uok5.onrender.com/",
-        description:
-            "An embedded system designed to solve issues related to tampered attendance sheets. This system incorporates an inbuilt timer to verify when users arrive at work.",
-        tags: ["React", "Node.js", "MongoDB", "Express"],
-    },
-    {
-        name: "HopeChain: Web3 for Community Empowerment",
-        imageUrl: "https://img.freepik.com/premium-vector/heart-logo_1068907-159.jpg",
-        link: "https://hope-chain-2025-sui-hackerton.vercel.app/",
-        description:
-            "HopeChain is a decentralized fundraising platform built with Sui Move smart contracts. It ensures secure on-chain transactions while keeping user data private off-chain. Designed for nonprofits and local communities, HopeChain brings transparency, trust, and scalability to impact-driven initiatives using Web3 architecture.",
-        tags: ["Web3", "Sui Move", "Blockchain", "React"],
+        description: "Embedded system designed to eliminate attendance fraud with built-in timer verification. Features real-time tracking, automated reporting, and secure authentication for workplace attendance management.",
+        tags: ["React", "Node.js", "MongoDB", "Express", "MERN Stack"],
     },
     {
         name: "Badify Music App",
         imageUrl: "https://th.bing.com/th/id/R.9c51bbc96a108e023f49e1421af11b5b?rik=kNq8m5NVL34Mew&pid=ImgRaw&r=0",
         link: "https://badify-music-app.onrender.com/",
-        description: "A Flask-based web app for searching and previewing songs using the Deezer API",
-        tags: ["Flask", "Python", "API", "Music"],
+        description: "Flask-based music discovery application integrated with Deezer API. Features song search, preview playback, artist information, and curated playlists for an enhanced music exploration experience.",
+        tags: ["Flask", "Python", "Deezer API", "Music"],
     },
     {
-        name: "Credit Card Validator(Python Flask)",
-        imageUrl: "https://th.bing.com/th/id/OIP.iBGmFz2jxm0jssqbQCyJNwHaHa?pid=ImgDet&w=474&h=474&rs=1",
-        link: "https://credit-card-validator-seven.vercel.app/",
-        description: "A tool to validate credit card numbers using the Luhn algorithm.",
-        tags: ["Python", "Flask", "Algorithm", "Security"],
-    },
-    {
-        name: "Movie App",
+        name: "Movie Discovery Hub",
         imageUrl: "https://logodix.com/logo/818943.png",
         link: "https://our-fav-hub.vercel.app/",
-        description: "A web application for browsing and discovering movies.",
-        tags: ["React", "API", "Entertainment", "UI/UX"],
+        description: "Intuitive web application for browsing and discovering movies. Features advanced search, filtering by genre and rating, detailed movie information, and personalized recommendations.",
+        tags: ["React", "TMDB API", "Entertainment", "UI/UX"],
     },
     {
-        name: "Weather App(Flask&React)",
+        name: "Weather Intelligence App",
         imageUrl: "https://cdn-icons-png.flaticon.com/512/3845/3845731.png",
         link: "https://weather-app-frontend-tan.vercel.app/",
-        description: "A web application providing current weather information for various locations.",
-        tags: ["Flask", "React", "Weather API", "Responsive"],
+        description: "Real-time weather application providing current conditions, forecasts, and weather alerts for locations worldwide. Features responsive design and intuitive data visualization.",
+        tags: ["Flask", "React", "OpenWeather API", "Responsive Design"],
     },
     {
-        name: "Password Generator(NodeJS)",
+        name: "Credit Card Validator",
+        imageUrl: "https://th.bing.com/th/id/OIP.iBGmFz2jxm0jssqbQCyJNwHaHa?pid=ImgDet&w=474&h=474&rs=1",
+        link: "https://credit-card-validator-seven.vercel.app/",
+        description: "Secure validation tool implementing the Luhn algorithm to verify credit card numbers. Features instant validation feedback and support for major card networks.",
+        tags: ["Python", "Flask", "Luhn Algorithm", "Security"],
+    },
+    {
+        name: "Secure Password Generator",
         imageUrl: "https://th.bing.com/th/id/R.cc45ea6c8ba00fd6e94b2932b3a3694e?rik=sBTUA3EM4X0tyQ&pid=ImgRaw&r=0",
         link: "https://password-generator-web-seven.vercel.app/",
-        description: "A tool to generate strong and secure passwords.",
-        tags: ["Node.js", "Security", "Tool", "JavaScript"],
+        description: "Advanced password generation tool creating cryptographically secure passwords. Features customizable length, character sets, and strength indicators for enhanced security.",
+        tags: ["Node.js", "Security", "Cryptography", "JavaScript"],
     },
 ]
 
 export function Project() {
-    const {ref, inView} = useInView({threshold: 0.1, triggerOnce: true})
+    const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true })
 
     const containerVariants: Variants = {
-        hidden: {opacity: 0},
+        hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.15,
+                staggerChildren: 0.1,
                 delayChildren: 0.2,
             },
         },
     }
 
-    const itemVariants : Variants = {
-        hidden: {opacity: 0, y: 40, scale: 0.95},
+    const itemVariants: Variants = {
+        hidden: { opacity: 0, y: 50, scale: 0.95 },
         visible: {
             opacity: 1,
             y: 0,
             scale: 1,
             transition: {
-                duration: 0.7,
+                duration: 0.6,
                 ease: [0.25, 0.46, 0.45, 0.94],
             },
         },
     }
 
     return (
-        <section id="projects" className="py-20 lg:py-32 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-                <motion.div ref={ref} variants={containerVariants} initial="hidden"
-                            animate={inView ? "visible" : "hidden"}>
-                    <motion.div variants={itemVariants} className="text-center mb-20">
-                        <p className="text-4xl lg:text-6xl font-bold mb-4">
-                            <span
-                                className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                                Projects I've Worked On {/* Fixed Grammar */}
+        <section id="projects" className="py-24 lg:py-32 relative overflow-hidden" aria-labelledby="projects-heading">
+            {/* Background decoration */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-1/3 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+            </div>
+
+            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+                <motion.div
+                    ref={ref}
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                >
+                    {/* Section Header */}
+                    <motion.div variants={itemVariants} className="text-center mb-20 space-y-6">
+                        <h2 id="projects-heading" className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+                            <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-400 bg-clip-text text-transparent">
+                                Featured Projects
                             </span>
-                        </p>
-                        <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                            A collection of projects that showcase my passion for creating meaningful digital
-                            experiences
+                        </h2>
+                        <p className="text-base sm:text-lg text-white/60 max-w-3xl mx-auto leading-relaxed">
+                            A showcase of real-world applications spanning education, Web3, NGO management, and more.
+                            Each project demonstrates my commitment to building scalable, user-centric solutions.
                         </p>
                     </motion.div>
-                    <div className="columns-1 md:columns-2 lg:columns-3 gap-6 lg:gap-8 space-y-6 lg:space-y-8">
+
+                    {/* Projects Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         {projects.map((project, index) => (
-                            <motion.div
+                            <motion.article
                                 key={index}
                                 variants={itemVariants}
-                                className="break-inside-avoid"
+                                className="group relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 backdrop-blur-xl rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500"
+                                whileHover={{
+                                    y: -12,
+                                    transition: { duration: 0.3, ease: "easeOut" }
+                                }}
                             >
-                                <motion.div
-                                    className="group relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 backdrop-blur-xl rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500"
-                                    whileHover={{
-                                        y: -8,
-                                        transition: {duration: 0.3, ease: "easeOut"}
-                                    }}
-                                >
-                                    {/* Floating gradient orb */}
-                                    <div
-                                        className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"/>
-                                    <div className="relative p-6">
-                                        <div className="relative mb-6 rounded-xl overflow-hidden bg-white/5">
-                                            <img
-                                                loading="lazy"
-                                                src={project.imageUrl || "/fallback.jpg"}
-                                                alt={`Screenshot of ${project.name} project`}
-                                                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
-                                            />
-                                            <div
-                                                className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                                        </div>
-                                        <div className="space-y-4">
-                                            <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-                                                {project.name}
-                                            </h3>
-                                            <p className="text-white/70 text-sm leading-relaxed">
-                                                {project.description}
-                                            </p>
-                                            <div className="flex flex-wrap gap-2">
-                                                {project.tags.slice(0, 4).map((tag, tagIndex) => (
-                                                    <span
-                                                        key={tagIndex}
-                                                        className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-xs rounded-full border border-blue-500/20 backdrop-blur-sm"
-                                                    >
-                                                        {tag}
-                                                    </span>
-                                                ))}
-                                                {project.tags.length > 4 && (
-                                                    <span
-                                                        className="px-3 py-1 bg-white/10 text-white/60 text-xs rounded-full">
-                                                        +{project.tags.length - 4}
-                                                    </span>
-                                                )}
+                                {/* Featured Badge */}
+                                {project.featured && (
+                                    <div className="absolute top-4 right-4 z-20">
+                                        <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                                            ⭐ Featured
+                                        </span>
+                                    </div>
+                                )}
+
+                                {/* Animated gradient overlay */}
+                                <div className="absolute -top-32 -right-32 w-64 h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+
+                                <div className="relative p-6 flex flex-col h-full">
+                                    {/* Project Image */}
+                                    <div className="relative mb-6 rounded-xl overflow-hidden bg-white/5 aspect-video">
+                                        <img
+                                            loading="lazy"
+                                            src={project.imageUrl || "/fallback.jpg"}
+                                            alt={`${project.name} - Project screenshot showcasing features and interface`}
+                                            width="400"
+                                            height="225"
+                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                                        {/* Quick view overlay */}
+                                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
+                                                <ExternalLink className="w-6 h-6 text-white" />
                                             </div>
-                                            <motion.button
-                                                onClick={() => window.open(project.link, "_blank", "noopener noreferrer")} // Added rel for security
-                                                className="w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-lg hover:shadow-blue-500/25"
-                                                whileHover={{scale: 1.03}} // Enhanced press effect
-                                                whileTap={{scale: 0.95}}
-                                            >
-                                                <span>Explore Project</span>
-                                                <ArrowUpRight size={16}
-                                                              className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300"/>
-                                            </motion.button>
                                         </div>
                                     </div>
-                                </motion.div>
-                            </motion.div>
+
+                                    {/* Project Content */}
+                                    <div className="flex-1 flex flex-col space-y-4">
+                                        <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300 leading-tight">
+                                            {project.name}
+                                        </h3>
+
+                                        <p className="text-white/70 text-sm sm:text-base leading-relaxed flex-1">
+                                            {project.description}
+                                        </p>
+
+                                        {/* Tech Tags */}
+                                        <div className="flex flex-wrap gap-2">
+                                            {project.tags.slice(0, 4).map((tag, tagIndex) => (
+                                                <span
+                                                    key={tagIndex}
+                                                    className="px-3 py-1.5 bg-gradient-to-r from-blue-500/15 to-purple-500/15 text-blue-300 text-xs font-medium rounded-lg border border-blue-500/20 backdrop-blur-sm"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                            {project.tags.length > 4 && (
+                                                <span className="px-3 py-1.5 bg-white/10 text-white/60 text-xs font-medium rounded-lg border border-white/20">
+                                                    +{project.tags.length - 4} more
+                                                </span>
+                                            )}
+                                        </div>
+
+                                        {/* CTA Button */}
+                                        <motion.a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-3.5 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-lg hover:shadow-blue-500/30"
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
+                                            aria-label={`View ${project.name} project live demo`}
+                                        >
+                                            <span>Explore Project</span>
+                                            <ArrowUpRight size={18} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300" />
+                                        </motion.a>
+                                    </div>
+                                </div>
+                            </motion.article>
                         ))}
                     </div>
+
+                    {/* Bottom CTA */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="mt-20 text-center"
+                    >
+                        <motion.div
+                            className="inline-block bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl px-8 py-6"
+                            whileHover={{ scale: 1.02 }}
+                        >
+                            <p className="text-white/80 text-lg mb-4">
+                                These projects represent real-world solutions deployed in production environments
+                            </p>
+                            <p className="text-blue-400 font-semibold">
+                                Want to collaborate? Let's build something amazing together!
+                            </p>
+                        </motion.div>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>
