@@ -4,11 +4,12 @@ import { ArrowUpRight, ExternalLink } from 'lucide-react'
 
 const projects = [
     {
-        "name": "Molek CBT System",
-        "imageUrl": "https://www.molekschool.com/logo.webp",
-        "link": "https://github.com/moh-Adedamola/molek-monolithic-cbt-system",
-        "description": "[Production Ready] 🎓 Molek CBT – A comprehensive offline Computer-Based Testing system for Nigerian schools. Built with Electron, React, and Node.js.",
-        "tags": ["electron", "react", "nodejs", "sqlite3", "express", "vite", "tailwindcss", "offline-first"]
+        name: "Molek CBT System",
+        imageUrl: "https://www.molekschool.com/logo.webp",
+        link: "https://github.com/moh-Adedamola/molek-monolithic-cbt-system",
+        description: "[Production Ready] 🎓 Molek CBT – A comprehensive offline Computer-Based Testing system for Nigerian schools. Built with Electron, React, and Node.js.",
+        tags: ["electron", "react", "nodejs", "sqlite3", "express", "vite", "tailwindcss", "offline-first"],
+        featured: true
     },
     {
         name: "Eco Warrior Africa",
