@@ -4,6 +4,20 @@ import { ArrowUpRight, ExternalLink } from 'lucide-react'
 
 const projects = [
     {
+        "name": "Molek CBT System",
+        "imageUrl": "https://www.molekschool.com/logo.webp",
+        "link": "https://github.com/moh-Adedamola/molek-monolithic-cbt-system",
+        "description": "[Production Ready] 🎓 Molek CBT – A comprehensive offline Computer-Based Testing system for Nigerian schools. Built with Electron, React, and Node.js.",
+        "tags": ["electron", "react", "nodejs", "sqlite3", "express", "vite", "tailwindcss", "offline-first"]
+    },
+    {
+        name: "Eco Warrior Africa",
+        imageUrl: "https://eco-warrior-8041.onrender.com/logo.png",
+        link: "https://eco-warrior-8041.onrender.com/",
+        description: "[Beta Testing Phase] 🌱 Eco Warrior – A MERN-based platform for climate-conscious storytelling.",
+        tags: ["node", "react", "tailwindcss", "supabase", "cloudinary", "render", "vite"]
+    },
+    {
         name: "Molek School Portal",
         imageUrl: "https://www.molekschool.com/logo.webp",
         link: "https://www.molekschool.com/",
@@ -17,7 +31,7 @@ const projects = [
         link: "https://tenderville.net/",
         description: "Full-featured educational platform empowering students, staff, and parents in Lekki, Lagos. Features seamless authentication, dynamic dashboards, academic management, and real-time communication tools built with modern web technologies.",
         tags: ["React", "TypeScript", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "IndexedDB"],
-        featured: true
+        // featured: true
     },
     {
         name: "HopeChain: Web3 Fundraising",
