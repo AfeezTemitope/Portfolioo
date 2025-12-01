@@ -109,7 +109,7 @@ export default function AboutMe() {
                     <motion.div variants={itemVariants} className="space-y-6 text-base sm:text-lg leading-relaxed text-white/80 mb-20">
                         <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6">
                             <p className="text-white/90 leading-relaxed">
-                                I'm <span className="text-blue-400 font-semibold">Bello Afeez Temitope</span>—known in the tech
+                                I'm <span className="text-blue-400 font-semibold">Afeez Temitope Bello</span>—known in the tech
                                 community as <span className="text-purple-400 font-semibold">BadAfeez</span>. I'm a passionate
                                 software engineer with <span className="font-semibold text-white">3+ years of experience</span> turning
                                 complex challenges into elegant solutions. My journey began with a simple question: "How do apps actually work?"

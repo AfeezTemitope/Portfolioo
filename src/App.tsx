@@ -11,20 +11,20 @@ import Footer from "./components/Footer"
 function App() {
     useEffect(() => {
         // Set document title and meta tags for SEO
-        document.title = "Bello Afeez Temitope - Full Stack Software Engineer | React, Django, Spring Boot"
+        document.title = "Afeez Temitope Bello - Full Stack Software Engineer | React, Django, Spring Boot"
 
         // Update or create meta tags
         const metaTags = {
             description: "Full-stack software engineer with 3+ years of experience building scalable web applications. Expert in React, Django, Spring Boot, Node.js, and Web3 technologies. Based in Lagos, Nigeria.",
-            keywords: "Bello Afeez Temitope, BadAfeez, Full Stack Developer, Software Engineer, React Developer, Django Developer, Spring Boot, Node.js, Web3, Blockchain Developer, Lagos Nigeria, JavaScript, Python, Java, TypeScript",
-            author: "Bello Afeez Temitope",
-            "og:title": "Bello Afeez Temitope - Full Stack Software Engineer",
+            keywords: "Afeez Temitope Bello, BadAfeez, Full Stack Developer, Software Engineer, React Developer, Django Developer, Spring Boot, Node.js, Web3, Blockchain Developer, Lagos Nigeria, JavaScript, Python, Java, TypeScript",
+            author: "Afeez Temitope Bello",
+            "og:title": "Afeez Temitope Bello - Full Stack Software Engineer",
             "og:description": "Passionate software engineer specializing in building scalable applications with React, Django, Spring Boot, and Web3 technologies.",
             "og:type": "website",
             "og:url": window.location.href,
             "og:image": "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Bello Afeez Temitope - Full Stack Software Engineer",
+            "twitter:title": "Afeez Temitope Bello - Full Stack Software Engineer",
             "twitter:description": "Full-stack engineer building scalable applications with modern technologies",
             "twitter:image": "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg",
         }

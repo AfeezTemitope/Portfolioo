@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Mail, MessageCircle, Instagram, Linkedin, Github, Heart } from "lucide-react"
+import { Mail, MessageCircle, Instagram, Linkedin, Github} from "lucide-react"
 
 const TikTokIcon = ({ size = 24, color = "#fff" }) => (
     <svg
@@ -119,7 +119,7 @@ export default function Footer() {
                         <motion.div variants={itemVariants} className="space-y-6">
                             <div>
                                 <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                                    Bello Afeez Temitope
+                                    Afeez Temitope Bello
                                 </h3>
                                 <p className="text-white/70 leading-relaxed">
                                     Full-Stack Software Engineer passionate about building scalable solutions
@@ -169,7 +169,7 @@ export default function Footer() {
                                             className={`group relative p-3.5 bg-white/5 border border-white/10 rounded-xl text-white/70 ${social.color} ${social.hoverBg} transition-all duration-300 hover:scale-110 hover:border-white/20`}
                                             whileHover={{ scale: 1.1, rotate: 5 }}
                                             whileTap={{ scale: 0.95 }}
-                                            aria-label={`Connect with Bello Afeez Temitope on ${social.label}`}
+                                            aria-label={`Connect with Afeez Temitope Bello on ${social.label}`}
                                         >
                                             <Icon size={22} />
                                             <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 px-3 py-1.5 bg-gray-900 text-white text-xs font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none shadow-lg">
@@ -194,46 +194,46 @@ export default function Footer() {
                                 variants={itemVariants}
                             >
                                 <p className="flex items-center justify-center md:justify-start gap-2 flex-wrap">
-                                    <span>&copy; {new Date().getFullYear()} Bello Afeez Temitope.</span>
+                                    <span>&copy; {new Date().getFullYear()} Afeez Temitope Bello.</span>
                                     <span className="hidden sm:inline">•</span>
                                     <span>All rights reserved.</span>
                                 </p>
                             </motion.div>
 
                             {/* Made with love */}
-                            <motion.div
-                                className="flex items-center gap-2 text-white/60 text-sm"
-                                variants={itemVariants}
-                            >
-                                <span>Built with</span>
-                                <motion.div
-                                    animate={{
-                                        scale: [1, 1.2, 1],
-                                    }}
-                                    transition={{
-                                        duration: 1.5,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    }}
-                                >
-                                    <Heart size={16} className="text-red-400 fill-red-400" />
-                                </motion.div>
-                                <span>using React & TypeScript</span>
-                            </motion.div>
+                            {/*<motion.div*/}
+                            {/*    className="flex items-center gap-2 text-white/60 text-sm"*/}
+                            {/*    variants={itemVariants}*/}
+                            {/*>*/}
+                            {/*    <span>Built with</span>*/}
+                            {/*    <motion.div*/}
+                            {/*        animate={{*/}
+                            {/*            scale: [1, 1.2, 1],*/}
+                            {/*        }}*/}
+                            {/*        transition={{*/}
+                            {/*            duration: 1.5,*/}
+                            {/*            repeat: Infinity,*/}
+                            {/*            ease: "easeInOut"*/}
+                            {/*        }}*/}
+                            {/*    >*/}
+                            {/*        <Heart size={16} className="text-red-400 fill-red-400" />*/}
+                            {/*    </motion.div>*/}
+                            {/*    <span>using React & TypeScript</span>*/}
+                            {/*</motion.div>*/}
                         </div>
                     </motion.div>
 
                     {/* Additional Info */}
-                    <motion.div
-                        variants={itemVariants}
-                        className="mt-8 text-center"
-                    >
-                        <p className="text-white/50 text-xs leading-relaxed">
-                            Constantly learning, building, and sharing knowledge with the developer community.
-                            <br className="hidden sm:block" />
-                            Open to exciting opportunities and collaborations.
-                        </p>
-                    </motion.div>
+                {/*    <motion.div*/}
+                {/*        variants={itemVariants}*/}
+                {/*        className="mt-8 text-center"*/}
+                {/*    >*/}
+                {/*        <p className="text-white/50 text-xs leading-relaxed">*/}
+                {/*            Constantly learning, building, and sharing knowledge with the developer community.*/}
+                {/*            <br className="hidden sm:block" />*/}
+                {/*            Open to exciting opportunities and collaborations.*/}
+                {/*        </p>*/}
+                {/*    </motion.div>*/}
                 </motion.div>
             </div>
         </footer>

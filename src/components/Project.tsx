@@ -1,6 +1,5 @@
-import { motion, Variants } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { ArrowUpRight, ExternalLink } from 'lucide-react'
+import { useInView } from "react-intersection-observer";
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
 
 const projects = [
     {
@@ -10,6 +9,13 @@ const projects = [
         description: "[Production Ready] 🎓 Molek CBT – A comprehensive offline Computer-Based Testing system for Nigerian schools. Built with Electron, React, and Node.js.",
         tags: ["electron", "react", "nodejs", "sqlite3", "express", "vite", "tailwindcss", "offline-first"],
         featured: true
+    },
+    {
+        name: "Budu Elite Football Club Blog",
+        imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
+        link: "https://buduelite.netlify.app/",
+        description: "Dynamic blog platform featuring club news, player highlights, match reports, and admin-controlled content management. Built with cloud-hosted database and optimized for SEO, currently in active testing phase.",
+        tags: ["Django", "React", "Vite", "Render", "Netlify", "Cloudinary", "Redis", "Zustand", "Google SEO"],
     },
     {
         name: "Eco Warrior Africa",
@@ -32,7 +38,6 @@ const projects = [
         link: "https://tenderville.net/",
         description: "Full-featured educational platform empowering students, staff, and parents in Lekki, Lagos. Features seamless authentication, dynamic dashboards, academic management, and real-time communication tools built with modern web technologies.",
         tags: ["React", "TypeScript", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "IndexedDB"],
-        // featured: true
     },
     {
         name: "HopeChain: Web3 Fundraising",
@@ -48,13 +53,6 @@ const projects = [
         link: "https://first-mission-humanitarian-aid-with-five.vercel.app",
         description: "Intuitive web platform designed for First Mission Humanitarian Aid NGO. Features donor management, campaign tracking, volunteer coordination, and impact reporting. Currently in development with production deployment pending client approval.",
         tags: ["React", "TypeScript", "Vite", "Django", "Cloudinary", "Tailwind CSS", "Render", "Vercel"],
-    },
-    {
-        name: "Budu Elite Football Club Blog",
-        imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
-        link: "https://buduelite.netlify.app/",
-        description: "Dynamic blog platform featuring club news, player highlights, match reports, and admin-controlled content management. Built with cloud-hosted database and optimized for SEO, currently in active testing phase.",
-        tags: ["Django", "React", "Vite", "Render", "Netlify", "Cloudinary", "Redis", "Zustand", "Google SEO"],
     },
     {
         name: "Attendance Management System",
@@ -101,31 +99,7 @@ const projects = [
 ]
 
 export function Project() {
-    const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true })
-
-    const containerVariants: Variants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2,
-            },
-        },
-    }
-
-    const itemVariants: Variants = {
-        hidden: { opacity: 0, y: 50, scale: 0.95 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: {
-                duration: 0.6,
-                ease: [0.25, 0.46, 0.45, 0.94],
-            },
-        },
-    }
+    const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
     return (
         <section id="projects" className="py-24 lg:py-32 relative overflow-hidden" aria-labelledby="projects-heading">
@@ -136,135 +110,110 @@ export function Project() {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-                <motion.div
-                    ref={ref}
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={inView ? "visible" : "hidden"}
-                >
-                    {/* Section Header */}
-                    <motion.div variants={itemVariants} className="text-center mb-20 space-y-6">
-                        <h2 id="projects-heading" className="text-4xl sm:text-5xl lg:text-6xl font-bold">
-                            <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-400 bg-clip-text text-transparent">
-                                Featured Projects
-                            </span>
-                        </h2>
-                        <p className="text-base sm:text-lg text-white/60 max-w-3xl mx-auto leading-relaxed">
-                            A showcase of real-world applications spanning education, Web3, NGO management, and more.
-                            Each project demonstrates my commitment to building scalable, user-centric solutions.
-                        </p>
-                    </motion.div>
+                {inView && (
+                    <>
+                        {/* Section Header */}
+                        <div className="text-center mb-20 space-y-6">
+                            <h2 id="projects-heading" className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+                                <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-400 bg-clip-text text-transparent">
+                                    Featured Projects
+                                </span>
+                            </h2>
+                            <p className="text-base sm:text-lg text-white/60 max-w-3xl mx-auto leading-relaxed">
+                                A showcase of real-world applications spanning education, Web3, NGO management, and more.
+                                Each project demonstrates my commitment to building scalable, user-centric solutions.
+                            </p>
+                        </div>
 
-                    {/* Projects Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                        {projects.map((project, index) => (
-                            <motion.article
-                                key={index}
-                                variants={itemVariants}
-                                className="group relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 backdrop-blur-xl rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500"
-                                whileHover={{
-                                    y: -12,
-                                    transition: { duration: 0.3, ease: "easeOut" }
-                                }}
-                            >
-                                {/* Featured Badge */}
-                                {project.featured && (
-                                    <div className="absolute top-4 right-4 z-20">
-                                        <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-                                            ⭐ Featured
-                                        </span>
-                                    </div>
-                                )}
+                        {/* Projects Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                            {projects.map((project, index) => (
+                                <article
+                                    key={index}
+                                    className="group relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 backdrop-blur-xl rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300"
+                                >
+                                    {/* Featured Badge */}
+                                    {project.featured && (
+                                        <div className="absolute top-4 right-4 z-20">
+                                            <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                                                ⭐ Featured
+                                            </span>
+                                        </div>
+                                    )}
 
-                                {/* Animated gradient overlay */}
-                                <div className="absolute -top-32 -right-32 w-64 h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
-
-                                <div className="relative p-6 flex flex-col h-full">
-                                    {/* Project Image */}
-                                    <div className="relative mb-6 rounded-xl overflow-hidden bg-white/5 aspect-video">
-                                        <img
-                                            loading="lazy"
-                                            src={project.imageUrl || "/fallback.jpg"}
-                                            alt={`${project.name} - Project screenshot showcasing features and interface`}
-                                            width="400"
-                                            height="225"
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                                        {/* Quick view overlay */}
-                                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
-                                                <ExternalLink className="w-6 h-6 text-white" />
+                                    <div className="relative p-6 flex flex-col h-full">
+                                        {/* Project Image */}
+                                        <div className="relative mb-6 rounded-xl overflow-hidden bg-white/5 aspect-video">
+                                            <img
+                                                loading="lazy"
+                                                src={project.imageUrl || "/fallback.jpg"}
+                                                alt={`${project.name} - Project screenshot showcasing features and interface`}
+                                                width="400"
+                                                height="225"
+                                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                <div className="bg-white/20 backdrop-blur-sm p-2.5 rounded-full">
+                                                    <ExternalLink className="w-5 h-5 text-white" />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    {/* Project Content */}
-                                    <div className="flex-1 flex flex-col space-y-4">
-                                        <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300 leading-tight">
-                                            {project.name}
-                                        </h3>
-
-                                        <p className="text-white/70 text-sm sm:text-base leading-relaxed flex-1">
-                                            {project.description}
-                                        </p>
-
-                                        {/* Tech Tags */}
-                                        <div className="flex flex-wrap gap-2">
-                                            {project.tags.slice(0, 4).map((tag, tagIndex) => (
-                                                <span
-                                                    key={tagIndex}
-                                                    className="px-3 py-1.5 bg-gradient-to-r from-blue-500/15 to-purple-500/15 text-blue-300 text-xs font-medium rounded-lg border border-blue-500/20 backdrop-blur-sm"
-                                                >
-                                                    {tag}
-                                                </span>
-                                            ))}
-                                            {project.tags.length > 4 && (
-                                                <span className="px-3 py-1.5 bg-white/10 text-white/60 text-xs font-medium rounded-lg border border-white/20">
-                                                    +{project.tags.length - 4} more
-                                                </span>
-                                            )}
+                                        {/* Project Content */}
+                                        <div className="flex-1 flex flex-col space-y-4">
+                                            <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300 leading-tight">
+                                                {project.name}
+                                            </h3>
+                                            <p className="text-white/70 text-sm sm:text-base leading-relaxed flex-1">
+                                                {project.description}
+                                            </p>
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.tags.slice(0, 4).map((tag, tagIndex) => (
+                                                    <span
+                                                        key={tagIndex}
+                                                        className="px-2.5 py-1 bg-gradient-to-r from-blue-500/15 to-purple-500/15 text-blue-300 text-xs font-medium rounded-md border border-blue-500/20"
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                                {project.tags.length > 4 && (
+                                                    <span className="px-2.5 py-1 bg-white/10 text-white/60 text-xs font-medium rounded-md border border-white/20">
+                                                        +{project.tags.length - 4} more
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <a
+                                                href={project.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+                                                aria-label={`View ${project.name} project live demo`}
+                                            >
+                                                <span>Explore Project</span>
+                                                <ArrowUpRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                                            </a>
                                         </div>
-
-                                        {/* CTA Button */}
-                                        <motion.a
-                                            href={project.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-3.5 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-lg hover:shadow-blue-500/30"
-                                            whileHover={{ scale: 1.02 }}
-                                            whileTap={{ scale: 0.98 }}
-                                            aria-label={`View ${project.name} project live demo`}
-                                        >
-                                            <span>Explore Project</span>
-                                            <ArrowUpRight size={18} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300" />
-                                        </motion.a>
                                     </div>
-                                </div>
-                            </motion.article>
-                        ))}
-                    </div>
+                                </article>
+                            ))}
+                        </div>
 
-                    {/* Bottom CTA */}
-                    <motion.div
-                        variants={itemVariants}
-                        className="mt-20 text-center"
-                    >
-                        <motion.div
-                            className="inline-block bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl px-8 py-6"
-                            whileHover={{ scale: 1.02 }}
-                        >
-                            <p className="text-white/80 text-lg mb-4">
-                                These projects represent real-world solutions deployed in production environments
-                            </p>
-                            <p className="text-blue-400 font-semibold">
-                                Want to collaborate? Let's build something amazing together!
-                            </p>
-                        </motion.div>
-                    </motion.div>
-                </motion.div>
+                        {/* Bottom CTA */}
+                        <div className="mt-20 text-center">
+                            <div className="inline-block bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl px-8 py-6">
+                                <p className="text-white/80 text-lg mb-4">
+                                    These projects represent real-world solutions deployed in production environments
+                                </p>
+                                <p className="text-blue-400 font-semibold">
+                                    Want to collaborate? Let's build something amazing together!
+                                </p>
+                            </div>
+                        </div>
+                    </>
+                )}
+                {!inView && <div ref={ref} />}
             </div>
         </section>
-    )
+    );
 }
