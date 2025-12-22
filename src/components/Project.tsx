@@ -3,11 +3,11 @@ import { ArrowUpRight, ExternalLink } from 'lucide-react';
 
 const projects = [
     {
-        name: "Molek CBT System",
+        name: "Molek School Portal",
         imageUrl: "https://www.molekschool.com/logo.webp",
-        link: "https://github.com/moh-Adedamola/molek-monolithic-cbt-system",
-        description: "[Production Ready] 🎓 Molek CBT – A comprehensive offline Computer-Based Testing system for Nigerian schools. Built with Electron, React, and Node.js.",
-        tags: ["electron", "react", "nodejs", "sqlite3", "express", "vite", "tailwindcss", "offline-first"],
+        link: "https://www.molekschool.com/",
+        description: "Comprehensive school management system",
+        tags: ["Python", "Django", "JavaScript", "React", "Vite", "Node.js", "Cloudinary", "Tailwind CSS"],
         featured: true
     },
     {
@@ -18,18 +18,25 @@ const projects = [
         tags: ["Django", "React", "Vite", "Render", "Netlify", "Cloudinary", "Redis", "Zustand", "Google SEO"],
     },
     {
+        name: "First Mission NGO Portal",
+        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/002/826/640/small_2x/ngos-concept-icon-development-program-abstract-idea-thin-line-illustration-community-mobilization-environment-protection-stimulating-employment-isolated-outline-color-drawing-vector.jpg",
+        link: "https://www.firstmission-ng.org",
+        description: "Intuitive web platform designed for First Mission Humanitarian Aid NGO. Features donor management, campaign tracking, volunteer coordination, and impact reporting.",
+        tags: ["React", "TypeScript", "Vite", "Cloudinary", "Tailwind CSS", "namecheap", "Vercel"],
+    },
+    {
         name: "Eco Warrior Africa",
         imageUrl: "https://eco-warrior-8041.onrender.com/logo.png",
         link: "https://eco-warrior-8041.onrender.com/",
         description: "[Beta Testing Phase] 🌱 Eco Warrior – A MERN-based platform for climate-conscious storytelling.",
-        tags: ["node", "react", "tailwindcss", "supabase", "cloudinary", "render", "vite"]
+        tags: ["node", "react", "tailwindcss", "cloudinary", "render", "vite"]
     },
     {
-        name: "Molek School Portal",
+        name: "Molek CBT System",
         imageUrl: "https://www.molekschool.com/logo.webp",
-        link: "https://www.molekschool.com/",
-        description: "Comprehensive school management system featuring online portal with offline CBT (Computer-Based Testing) exam capabilities. Includes admin interface, student registration, exam scheduling, real-time monitoring, and automatic synchronization.",
-        tags: ["Python", "Django", "JavaScript", "React", "Vite", "Node.js", "Supabase", "Cloudinary", "Tailwind CSS"],
+        link: "https://github.com/moh-Adedamola/molek-monolithic-cbt-system",
+        description: "[Production Ready] 🎓 Molek CBT – A comprehensive offline Computer-Based Testing system for Nigerian schools. Built with Electron, React, and Node.js.",
+        tags: ["electron", "react", "nodejs", "sqlite3", "express", "vite", "tailwindcss", "offline-first"],
         featured: true
     },
     {
@@ -46,13 +53,6 @@ const projects = [
         description: "Decentralized fundraising platform built with Sui Move smart contracts. Ensures secure on-chain transactions while keeping user data private off-chain. Winner of SUI x Semicolon Hackathon 2025, designed for nonprofits and community empowerment.",
         tags: ["Web3", "Sui Move", "Blockchain", "React", "TypeScript", "Smart Contracts"],
         featured: true
-    },
-    {
-        name: "First Mission NGO Portal",
-        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/002/826/640/small_2x/ngos-concept-icon-development-program-abstract-idea-thin-line-illustration-community-mobilization-environment-protection-stimulating-employment-isolated-outline-color-drawing-vector.jpg",
-        link: "https://first-mission-humanitarian-aid-with-five.vercel.app",
-        description: "Intuitive web platform designed for First Mission Humanitarian Aid NGO. Features donor management, campaign tracking, volunteer coordination, and impact reporting. Currently in development with production deployment pending client approval.",
-        tags: ["React", "TypeScript", "Vite", "Django", "Cloudinary", "Tailwind CSS", "Render", "Vercel"],
     },
     {
         name: "Attendance Management System",
