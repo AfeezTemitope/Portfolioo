@@ -103,7 +103,7 @@ export default function Header() {
                         </div>
 
                         <p className="text-base sm:text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                            Passionate full-stack engineer with 3+ years of experience building scalable applications.
+                            full-stack software engineer with 3+ years of experience, providing solutions and applications.
                             Specialized in <span className="text-blue-400 font-semibold">Java</span>, <span className="text-blue-400 font-semibold">Python</span>,
                             and <span className="text-blue-400 font-semibold">JavaScript</span> ecosystems.
                         </p>

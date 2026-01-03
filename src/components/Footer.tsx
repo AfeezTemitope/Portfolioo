@@ -122,7 +122,7 @@ export default function Footer() {
                                     Afeez Temitope Bello
                                 </h3>
                                 <p className="text-white/70 leading-relaxed">
-                                    Full-Stack Software Engineer passionate about building scalable solutions
+                                    Full-Stack Software Engineer happy building scalable solutions
                                     and exploring cutting-edge technologies.
                                 </p>
                             </div>

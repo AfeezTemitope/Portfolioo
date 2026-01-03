@@ -110,7 +110,7 @@ export default function AboutMe() {
                         <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6">
                             <p className="text-white/90 leading-relaxed">
                                 I'm <span className="text-blue-400 font-semibold">Afeez Temitope Bello</span>—known in the tech
-                                community as <span className="text-purple-400 font-semibold">BadAfeez</span>. I'm a passionate
+                                community as <span className="text-purple-400 font-semibold">BadAfeez😄</span>. I'm a
                                 software engineer with <span className="font-semibold text-white">3+ years of experience</span> turning
                                 complex challenges into elegant solutions. My journey began with a simple question: "How do apps actually work?"
                                 That curiosity has evolved into expertise across the full stack—from crafting intuitive frontends with
@@ -123,7 +123,7 @@ export default function AboutMe() {
 
                             <p className="text-white/90 leading-relaxed">
                                 In 2025, I dove into the blockchain ecosystem and participated in the
-                                <span className="text-purple-400 font-semibold"> SUI x Semicolon Hackathon</span>, where I built
+                                <span className="text-purple-400 font-semibold"> SUI x Semicolon Hackathon</span>, where I worked with smart minds and  built
                                 <span className="text-blue-400 font-semibold"> HopeChain</span>—a decentralized fundraising platform
                                 powered by Sui Move smart contracts. This project demonstrates my ability to architect hybrid systems that
                                 store sensitive data off-chain for privacy while leveraging blockchain for transparent, immutable transactions.
