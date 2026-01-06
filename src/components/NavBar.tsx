@@ -6,6 +6,7 @@ const navItems = [
     { href: "#home", label: "Home", icon: Home },
     { href: "#about", label: "About", icon: User },
     { href: "#stack", label: "Stack", icon: Code },
+    // { href: "#graphics", label: "Graphics", icon: Palette },
     { href: "#projects", label: "Projects", icon: FolderOpen },
     { href: "#contact", label: "Contact", icon: Phone },
 ]
@@ -183,19 +184,6 @@ export default function NavBar() {
                             }}
                         >
                             <div className="flex flex-col h-full p-8 pt-24">
-                                {/* Menu Header */}
-                                {/*<motion.div*/}
-                                {/*    className="mb-8"*/}
-                                {/*    initial={{ opacity: 0, y: -20 }}*/}
-                                {/*    animate={{ opacity: 1, y: 0 }}*/}
-                                {/*    transition={{ delay: 0.1 }}*/}
-                                {/*>*/}
-                                {/*    <h3 className="text-white text-2xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">*/}
-                                {/*        Navigation*/}
-                                {/*    </h3>*/}
-                                {/*    <p className="text-white/60 text-sm">Explore my portfolio</p>*/}
-                                {/*</motion.div>*/}
-
                                 {/* Menu Items */}
                                 <nav className="flex-1 space-y-2">
                                     {navItems.map((item, index) => {
@@ -234,18 +222,6 @@ export default function NavBar() {
                                         )
                                     })}
                                 </nav>
-
-                                {/* Footer Text */}
-                                {/*<motion.div*/}
-                                {/*    className="mt-auto pt-6 border-t border-white/10"*/}
-                                {/*    initial={{ opacity: 0 }}*/}
-                                {/*    animate={{ opacity: 1 }}*/}
-                                {/*    transition={{ delay: 0.4 }}*/}
-                                {/*>*/}
-                                {/*    <p className="text-white/50 text-sm text-center">*/}
-                                {/*        Made with 💙 by BadAfeez*/}
-                                {/*    </p>*/}
-                                {/*</motion.div>*/}
                             </div>
                         </motion.div>
                     </>

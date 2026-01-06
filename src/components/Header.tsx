@@ -33,8 +33,7 @@ export default function Header() {
 
     return (
         <header id="home" className="relative min-h-screen flex items-center justify-center pt-20 pb-12 overflow-hidden">
-
-            {/* Background orbs (still animated — tell me if you want them removed too) */}
+            {/* Background orbs */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <motion.div
                     className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
@@ -51,8 +50,7 @@ export default function Header() {
 
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
                 <div ref={ref} className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-
-                    {/* IMAGE SECTION — the ONLY area still using Framer Motion */}
+                    {/* IMAGE SECTION */}
                     <motion.div
                         variants={imageVariants}
                         initial="hidden"
@@ -67,14 +65,14 @@ export default function Header() {
                             >
                                 <img
                                     src={profileImage || fallback}
-                                    alt="Afeez Temitope Bello - Full Stack Software Engineer"
+                                    alt="Afeez Temitope Bello - Software Engineer"
                                     width="420"
                                     height="420"
                                     className="w-full h-full object-cover rounded-3xl"
                                 />
                             </motion.div>
 
-                            {/* Glow animation (kept) */}
+                            {/* Glow animation */}
                             <motion.div
                                 className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 -z-10 blur-2xl"
                                 animate={{ opacity: [0.5, 0.8, 0.5] }}
@@ -83,9 +81,8 @@ export default function Header() {
                         </div>
                     </motion.div>
 
-                    {/* TEXT SECTION — ALL plain HTML now */}
+                    {/* TEXT SECTION */}
                     <div className="flex-1 text-center lg:text-left order-2 lg:order-1 space-y-8">
-
                         <div className="space-y-4">
                             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                                 <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-400 bg-clip-text text-transparent">
@@ -98,14 +95,16 @@ export default function Header() {
                             </h1>
 
                             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white/80">
-                                Full-Stack Software Engineer
+                                Software Engineer
                             </h2>
                         </div>
 
                         <p className="text-base sm:text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                            full-stack software engineer with 3+ years of experience, providing solutions and applications.
-                            Specialized in <span className="text-blue-400 font-semibold">Java</span>, <span className="text-blue-400 font-semibold">Python</span>,
-                            and <span className="text-blue-400 font-semibold">JavaScript</span> ecosystems.
+                            Software engineer with 3+ years of experience designing and maintaining scalable applications 
+                            across Web2 and Web3 environments. Skilled in <span className="text-blue-400 font-semibold">Java</span>, 
+                            <span className="text-green-400 font-semibold"> Python</span>, and 
+                            <span className="text-yellow-400 font-semibold"> JavaScript</span>, building solutions with 
+                            Spring Boot, Django, and React.js.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
@@ -142,7 +141,7 @@ export default function Header() {
                     </div>
                 </div>
 
-                {/* Floating Scroll Indicator (still animated) */}
+                {/* Floating Scroll Indicator */}
                 <motion.div
                     variants={floatingVariants}
                     animate="animate"
