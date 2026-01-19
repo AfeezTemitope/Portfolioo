@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Mail, MessageCircle, Instagram, Linkedin, Github} from "lucide-react"
+import { Mail, MessageCircle, Instagram, Linkedin, Github, X} from "lucide-react"
 
 const TikTokIcon = ({ size = 24, color = "#fff" }) => (
     <svg
@@ -28,6 +28,13 @@ const socialLinks = [
         label: "WhatsApp",
         color: "hover:text-green-400",
         hoverBg: "hover:bg-green-500/10",
+    },
+    {
+        icon: X,
+        link: "https://x.com/Temitop58657799",
+        label: "X (Twitter)",
+        color: "hover:text-blue-400",
+        hoverBg: "hover:bg-blue-500/10",
     },
     {
         icon: Instagram,

@@ -1,5 +1,4 @@
 import { useEffect } from "react"
-import "./App.css"
 import NavBar from "./components/NavBar"
 import Header from "./components/Header"
 import Stack from "./components/Stack"
