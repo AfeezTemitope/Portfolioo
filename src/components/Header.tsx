@@ -1,10 +1,47 @@
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { useEffect, useState } from "react"
-import { Download, Mail, ArrowDown } from "lucide-react"
+import { Download, Mail, ArrowDown, MessageCircle, Instagram, Linkedin, Github } from "lucide-react"
 
 const IMAGE_URL = "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg"
 const fallback = "./Afeez.png"
+
+function TikTokIcon({ size = 20 }: { size?: number }) {
+    return (
+        <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 448 512" 
+            width={size} 
+            height={size} 
+            fill="currentColor"
+        >
+            <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
+        </svg>
+    )
+}
+
+function XIcon({ size = 20 }: { size?: number }) {
+    return (
+        <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 512 512" 
+            width={size} 
+            height={size} 
+            fill="currentColor"
+        >
+            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+        </svg>
+    )
+}
+
+const socialLinks = [
+    { Icon: Github, link: "https://github.com/AfeezTemitope", label: "GitHub" },
+    { Icon: Linkedin, link: "https://www.linkedin.com/in/afeez-bello-548749275/", label: "LinkedIn" },
+    { Icon: XIcon, link: "https://x.com/Temitop58657799", label: "X" },
+    { Icon: Instagram, link: "https://www.instagram.com/tbelzbby08", label: "Instagram" },
+    { Icon: TikTokIcon, link: "https://www.tiktok.com/@tbelzbby2", label: "TikTok" },
+    { Icon: MessageCircle, link: "https://wa.me/+2349014465194", label: "WhatsApp" },
+]
 
 export default function Header() {
     const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true })
@@ -40,7 +77,6 @@ export default function Header() {
                     animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                 />
-
                 <motion.div
                     className="absolute bottom-1/4 -right-32 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
                     animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] }}
@@ -50,6 +86,7 @@ export default function Header() {
 
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
                 <div ref={ref} className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    
                     {/* IMAGE SECTION */}
                     <motion.div
                         variants={imageVariants}
@@ -66,13 +103,11 @@ export default function Header() {
                                 <img
                                     src={profileImage || fallback}
                                     alt="Afeez Temitope Bello - Software Engineer"
-                                    width="420"
-                                    height="420"
+                                    width={420}
+                                    height={420}
                                     className="w-full h-full object-cover rounded-3xl"
                                 />
                             </motion.div>
-
-                            {/* Glow animation */}
                             <motion.div
                                 className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 -z-10 blur-2xl"
                                 animate={{ opacity: [0.5, 0.8, 0.5] }}
@@ -82,28 +117,43 @@ export default function Header() {
                     </motion.div>
 
                     {/* TEXT SECTION */}
-                    <div className="flex-1 text-center lg:text-left order-2 lg:order-1 space-y-8">
+                    <div className="flex-1 text-center lg:text-left order-2 lg:order-1 space-y-6">
                         <div className="space-y-4">
-                            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                                <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-400 bg-clip-text text-transparent">
-                                    Bello Afeez
-                                </span>
-                                <br />
-                                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white/90 font-semibold">
-                                    Temitope
-                                </span>
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white/90">
+                                Afeez Temitope
                             </h1>
-
                             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white/80">
                                 Software Engineer
                             </h2>
+
+                            {/* Social Icons */}
+                            <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
+                                {socialLinks.map((social, index) => (
+                                    <motion.a
+                                        key={social.label}
+                                        href={social.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-3 bg-white/10 hover:bg-blue-500/20 border border-white/10 hover:border-blue-400/50 rounded-full transition-all duration-300 text-white/70 hover:text-blue-400"
+                                        aria-label={social.label}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: index * 0.1 }}
+                                        whileHover={{ scale: 1.1, y: -2 }}
+                                        whileTap={{ scale: 0.95 }}
+                                    >
+                                        <social.Icon size={20} />
+                                    </motion.a>
+                                ))}
+                            </div>
                         </div>
 
                         <p className="text-base sm:text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                             Software engineer with 3+ years of experience designing and maintaining scalable applications 
-                            across Web2 and Web3 environments. Skilled in <span className="text-blue-400 font-semibold">Java</span>, 
-                            <span className="text-green-400 font-semibold"> Python</span>, and 
-                            <span className="text-yellow-400 font-semibold"> JavaScript</span>, building solutions with 
+                            across Web2 and Web3 environments. Skilled in{" "}
+                            <span className="text-blue-400 font-semibold">Java</span>,{" "}
+                            <span className="text-green-400 font-semibold">Python</span>, and{" "}
+                            <span className="text-yellow-400 font-semibold">JavaScript</span>, building solutions with 
                             Spring Boot, Django, and React.js.
                         </p>
 
@@ -115,7 +165,6 @@ export default function Header() {
                                 <Mail className="w-5 h-5" />
                                 Contact Me
                             </a>
-
                             <a
                                 href="https://docs.google.com/document/d/1EaO2I89DpHW_YfcIw5gq7O0PkZSDPbBG/export?format=pdf"
                                 download="Bello_Afeez_Temitope_Resume.pdf"
@@ -128,11 +177,11 @@ export default function Header() {
                             </a>
                         </div>
 
-                        <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-6">
+                        <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-4">
                             {["React", "Django", "Spring Boot", "Node.js", "Web3"].map((tech) => (
                                 <span
                                     key={tech}
-                                    className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-sm rounded-full text-sm text-white/80 font-medium"
+                                    className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-sm rounded-full text-sm text-white/80 font-medium hover:bg-white/10 hover:border-white/20 transition-all duration-300"
                                 >
                                     {tech}
                                 </span>
@@ -145,7 +194,7 @@ export default function Header() {
                 <motion.div
                     variants={floatingVariants}
                     animate="animate"
-                    className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 text-white/50 cursor-pointer"
+                    className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 text-white/50 cursor-pointer hover:text-white/80 transition-colors"
                     onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
                 >
                     <span className="text-sm font-medium">Scroll Down</span>
