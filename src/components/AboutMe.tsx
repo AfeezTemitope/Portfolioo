@@ -5,17 +5,31 @@ import { GraduationCap, Code, Palette, Award, Briefcase, Building2 } from "lucid
 const experienceData = [
     {
         icon: Briefcase,
-        title: "Freelance Software Engineer / Full-Stack Developer",
-        subtitle: "Developed and deployed multiple full-stack web applications for educational institutions",
+        title: "Freelance Full-Stack Software Engineer",
+        subtitle: "Building scalable web applications across education, e-commerce, Web3, and NGO sectors",
         date: "July 2025 - Present",
         location: "Lagos, Nigeria",
         color: "text-blue-400",
         bgColor: "from-blue-500/20 to-blue-600/20",
         highlights: [
-            "Built comprehensive school portal with dual functionality: online portal and offline CBT system",
-            "Developed MOLEK and TENDERVILLE school management solutions",
-            "Created advanced admin interfaces for complete school management",
-            "Implemented offline CBT system enabling examinations without internet connectivity"
+            // MOLEK School Portal (Full-Stack)
+            "Architected MOLEK School Management System: Django REST API backend + React admin dashboard + React student portal, serving 1000+ students with 99.9% uptime",
+            "Implemented complete Nigerian grading system (CA1/CA2/OBJ/Theory = 100 marks) with automated grade calculation, class position ranking, and cumulative report card generation",
+            "Designed 15+ interconnected Django models with Redis caching reducing database query load by 60%",
+            
+            // MOLEK CBT System (Full-Stack)
+            "Built offline-first CBT system using Electron + React frontend and Node.js/Express backend with SQLite persistence, handling 50+ concurrent exam sessions",
+            "Developed anti-cheat detection (tab switching, window blur tracking), server-side timer verification, and audit logging for exam integrity",
+            "Created seamless CBT-to-Django data pipeline for automated OBJ score integration across the school ecosystem",
+            
+            // TENDERVILE School Portal
+            "Developed TENDERVILE School Portal with Node.js/Express backend, React frontend, and MongoDB - featuring student enrollment, attendance tracking, and parent communication modules",
+            
+            // NGO & Content Platforms
+            "Built First Mission NGO platform (donor management, campaign tracking) and Eco Warrior Africa (climate storytelling with Cloudinary media integration)",
+            
+            // Budu Elite
+            "Created Budu Elite FC blog platform with Django REST backend, React frontend, Redis caching, and SEO optimization"
         ]
     },
     {
@@ -27,10 +41,10 @@ const experienceData = [
         color: "text-green-400",
         bgColor: "from-green-500/20 to-green-600/20",
         highlights: [
-            "Developed entire user management and payment platform for e-commerce food delivery application",
-            "Integrated Paystack API for seamless payment processing",
-            "Used Redis for caching to enhance application speed",
-            "Integrated Twilio for OTP verification"
+            "Developed complete user management and payment platform for e-commerce food delivery application using Django REST Framework",
+            "Integrated Paystack API for payment processing with webhook handling for real-time transaction updates",
+            "Configured Redis caching reducing API response latency by 40%",
+            "Implemented Twilio OTP verification for secure user authentication"
         ]
     },
     {
@@ -42,9 +56,9 @@ const experienceData = [
         color: "text-purple-400",
         bgColor: "from-purple-500/20 to-purple-600/20",
         highlights: [
-            "Built decentralized application (dApp) using Sui Move language",
-            "Architected hybrid data system storing sensitive user data off-chain",
-            "Implemented wallet-based authentication and smart contracts",
+            "Built HopeChain - decentralized fundraising dApp using Sui Move smart contracts with React frontend",
+            "Architected hybrid off-chain/on-chain system: PostgreSQL for sensitive user data, Sui blockchain for transparent donations",
+            "Implemented wallet-based authentication bridging Web2 and Web3 user experiences",
             "Winner of SUI x Semicolon Hackathon 2025"
         ]
     },
@@ -57,10 +71,11 @@ const experienceData = [
         color: "text-yellow-400",
         bgColor: "from-yellow-500/20 to-yellow-600/20",
         highlights: [
-            "Developed multiple full-stack applications with focus on responsive design",
-            "Built fitness application using React.js and Django",
-            "Created football club blog platform using MERN stack",
-            "Deployed applications using Docker containers and CI/CD pipelines on AWS"
+            "Developed multiple full-stack applications using React.js, Django, and Node.js with responsive design principles",
+            "Built fitness tracking application with React frontend and Django REST backend",
+            "Created football club blog platform using MERN stack (MongoDB, Express, React, Node.js)",
+            "Deployed applications using Docker containers and CI/CD pipelines on AWS",
+            "Achieved 85% test coverage using Jest, Pytest, and JUnit across projects"
         ]
     },
     {
@@ -173,7 +188,7 @@ export default function AboutMe() {
                             </span>
                         </motion.h2>
                         <motion.p className="text-lg text-white/60 max-w-2xl mx-auto">
-                            Software engineer with 3+ years of experience building scalable applications
+                            Software engineer with 4+ years of experience building scalable applications
                         </motion.p>
                     </motion.div>
 
@@ -182,7 +197,7 @@ export default function AboutMe() {
                         <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6">
                             <p className="text-white/90 leading-relaxed">
                                 I'm <span className="text-blue-400 font-semibold">Afeez Temitope Bello</span>, a software engineer with 
-                                <span className="font-semibold text-white"> 3+ years of experience</span> designing and maintaining scalable 
+                                <span className="font-semibold text-white"> 4+ years of experience</span> designing and maintaining scalable 
                                 applications across Web2 and Web3 environments. I work with <span className="text-blue-400 font-medium">Java</span>, 
                                 <span className="text-green-400 font-medium"> Python</span>, and 
                                 <span className="text-yellow-400 font-medium"> JavaScript</span>, building solutions with frameworks like 

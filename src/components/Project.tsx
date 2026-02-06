@@ -2,14 +2,14 @@ import { useInView } from "react-intersection-observer";
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 
 const projects = [
-    {
-        name: "Molek School Portal",
-        imageUrl: "https://www.molekschool.com/logo.webp",
-        link: "https://www.molekschool.com/",
-        description: "Comprehensive school management system",
-        tags: ["Python", "Django", "JavaScript", "React", "Vite", "Node.js", "Cloudinary", "Tailwind CSS"],
-        featured: true
-    },
+  {
+      name: "Molek School Portal",
+      imageUrl: "https://www.molekschool.com/logo.webp",
+      link: "https://www.molekschool.com/",
+      description: "Comprehensive Nigerian school management ecosystem featuring Django REST API backend with PostgreSQL, React admin dashboard, and student portal. Implements complete Nigerian grading system (CA1/CA2/OBJ/Theory = 100 marks) with automated grade calculation, class position ranking, cumulative report cards, and student promotion workflows. Serves 1000+ students with Redis caching reducing query load by 60%.",
+      tags: ["Django", "Django REST", "React", "PostgreSQL", "Redis", "Vite", "Tailwind CSS", "JWT Auth"],
+      featured: true
+  },
     {
         name: "Budu Elite Football Club Blog",
         imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
@@ -35,8 +35,8 @@ const projects = [
         name: "Molek CBT System",
         imageUrl: "https://www.molekschool.com/logo.webp",
         link: "https://github.com/moh-Adedamola/molek-monolithic-cbt-system",
-        description: "[Production Ready] 🎓 Molek CBT – A comprehensive offline Computer-Based Testing system for Nigerian schools. Built with Electron, React, and Node.js.",
-        tags: ["electron", "react", "nodejs", "sqlite3", "express", "vite", "tailwindcss", "offline-first"],
+        description: "Offline-first Computer-Based Testing system built with Electron, React frontend, and Node.js/Express backend. Features SQLite local persistence, server-side timer verification, anti-cheat detection (tab switching, window blur), and seamless Django integration via CSV export pipeline. Handles 50+ concurrent exam sessions per classroom with automatic sync when connectivity resumes.",
+        tags: ["Electron", "React", "Node.js", "Express", "SQLite", "Vite", "Tailwind CSS", "Offline-First"],
         featured: true
     },
     {

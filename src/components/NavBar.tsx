@@ -74,7 +74,7 @@ export default function NavBar() {
                         >
                             <span className="flex items-center gap-2">
                                 <span className="text-2xl">💻</span>
-                                <span>Afeez Temitope B.</span>
+                                <span>Senior Software Engineer</span>
                             </span>
                             <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300" />
                         </motion.button>
