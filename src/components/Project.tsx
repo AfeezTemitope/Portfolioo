@@ -1,13 +1,14 @@
 import { useInView } from "react-intersection-observer";
-import { ArrowUpRight, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, Database, Server } from 'lucide-react';
 
 const projects = [
-  {
-      name: "Molek School Portal",
-      imageUrl: "https://www.molekschool.com/logo.webp",
-      link: "https://www.molekschool.com/",
-      description: "Comprehensive Nigerian school management ecosystem featuring Django REST API backend with PostgreSQL, React admin dashboard, and student portal. Implements complete Nigerian grading system (CA1/CA2/OBJ/Theory = 100 marks) with automated grade calculation, class position ranking, cumulative report cards, and student promotion workflows. Serves 1000+ students with Redis caching reducing query load by 60%.",
-      tags: ["Django", "Django REST", "React", "PostgreSQL", "Redis", "Vite", "Tailwind CSS", "JWT Auth"],
+{
+      name: "MOLEK School Management System - Full Stack",
+      terminalKey: "molek-school-portal",
+      description: "Built a production 4-application school management platform: Django REST API backend on Railway (single source of truth), React admin dashboard on Vercel with dark mode, paginated tables and CSV processing (admin.molekschool.com), React student portal with report card downloads and profile management, and offline Electron CBT system with anti-cheat and SQLite. Engineered the Nigerian grading pipeline with automated scoring, cumulative report cards matching physical recording sheets, bulk CSV import/export, and dual-portal JWT authentication. Optimized DB from 136 N+1 queries to 3 batched (98% reduction). Automated daily backups via GitHub Actions.",
+      tags: ["Django", "React", "Vite", "TypeScript", "PostgreSQL", "Redis", "Electron", "SQLite", "Railway"],
+      icon: Database,
+      backendRole: "Full-Stack Architecture — Solo Engineer",
       featured: true
   },
     {
@@ -32,13 +33,14 @@ const projects = [
         tags: ["node", "react", "tailwindcss", "cloudinary", "render", "vite"]
     },
     {
-        name: "Molek CBT System",
-        imageUrl: "https://www.molekschool.com/logo.webp",
-        link: "https://github.com/moh-Adedamola/molek-monolithic-cbt-system",
-        description: "Offline-first Computer-Based Testing system built with Electron, React frontend, and Node.js/Express backend. Features SQLite local persistence, server-side timer verification, anti-cheat detection (tab switching, window blur), and seamless Django integration via CSV export pipeline. Handles 50+ concurrent exam sessions per classroom with automatic sync when connectivity resumes.",
-        tags: ["Electron", "React", "Node.js", "Express", "SQLite", "Vite", "Tailwind CSS", "Offline-First"],
-        featured: true
-    },
+      name: "MOLEK CBT System - Desktop",
+      terminalKey: "molek-cbt-system",
+      description: "Offline-first Electron desktop application for Computer-Based Testing with React frontend and Node.js/SQLite backend. Features exam session management, server-verified timers, anti-cheat detection (tab switching, window blur tracking), bulk Excel question import with image support via Vite proxy, and CSV export pipeline for Django backend integration. Distributed as standalone desktop app to school computers.",
+      tags: ["React", "Electron", "Node.js", "SQLite", "Vite", "CSV Export"],
+      icon: Server,
+      backendRole: "Offline Desktop Application",
+      featured: true
+  },
     {
         name: "Tenderville School Portal",
         imageUrl: "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753304581/TVS_LOGOS_dlkdd4.jpg",
