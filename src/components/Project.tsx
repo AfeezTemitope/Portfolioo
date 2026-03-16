@@ -3,12 +3,13 @@ import { ArrowUpRight, ExternalLink, Database, Server } from 'lucide-react';
 
 const projects = [
 {
-      name: "MOLEK School Management System - Full Stack",
-      terminalKey: "molek-school-portal",
-      description: "Built a production 4-application school management platform: Django REST API backend on Railway (single source of truth), React admin dashboard on Vercel with dark mode, paginated tables and CSV processing (admin.molekschool.com), React student portal with report card downloads and profile management, and offline Electron CBT system with anti-cheat and SQLite. Engineered the Nigerian grading pipeline with automated scoring, cumulative report cards matching physical recording sheets, bulk CSV import/export, and dual-portal JWT authentication. Optimized DB from 136 N+1 queries to 3 batched (98% reduction). Automated daily backups via GitHub Actions.",
-      tags: ["Django", "React", "Vite", "TypeScript", "PostgreSQL", "Redis", "Electron", "SQLite", "Railway"],
+      name: "MOLEK School Management System",
+      link: "https://molekschool.com",
+      imageUrl: "/molek-admin.png",
+      description: "Production 4-application school platform serving a Nigerian secondary school. Django REST API backend (40+ endpoints, 15+ models), React admin dashboard with unified CSV score upload and results manager (admin.molekschool.com), React student portal with report card downloads matching physical recording sheet format, and offline Electron CBT desktop app with anti-cheat and SQLite. Nigerian grading system with automated scoring, cumulative reports, bulk CSV pipeline, and dual-portal JWT auth. Optimized cumulative queries from 2,100 to 3 (700x faster). Automated daily PostgreSQL backups via GitHub Actions.",
+      tags: ["Django", "React", "PostgreSQL", "Redis", "Electron", "SQLite", "Railway", "Vercel"],
       icon: Database,
-      backendRole: "Full-Stack Architecture — Solo Engineer",
+      backendRole: "Full-Stack — Solo Engineer",
       featured: true
   },
     {
@@ -29,14 +30,15 @@ const projects = [
         name: "Eco Warrior Africa",
         imageUrl: "https://eco-warrior-8041.onrender.com/logo.png",
         link: "https://eco-warrior-8041.onrender.com/",
-        description: "[Beta Testing Phase] 🌱 Eco Warrior – A MERN-based platform for climate-conscious storytelling.",
+        description: "[Beta Testing Phase] Eco Warrior – A MERN-based platform for climate-conscious storytelling.",
         tags: ["node", "react", "tailwindcss", "cloudinary", "render", "vite"]
     },
     {
-      name: "MOLEK CBT System - Desktop",
-      terminalKey: "molek-cbt-system",
-      description: "Offline-first Electron desktop application for Computer-Based Testing with React frontend and Node.js/SQLite backend. Features exam session management, server-verified timers, anti-cheat detection (tab switching, window blur tracking), bulk Excel question import with image support via Vite proxy, and CSV export pipeline for Django backend integration. Distributed as standalone desktop app to school computers.",
-      tags: ["React", "Electron", "Node.js", "SQLite", "Vite", "CSV Export"],
+      name: "MOLEK CBT System — Desktop",
+      link: "https://molekschool.com",
+      imageUrl: "/molek-cbt.png",
+      description: "Offline-first Electron desktop application for Computer-Based Testing with React frontend and Node.js/SQLite backend. Server-verified timers, anti-cheat detection (tab switching, window blur tracking), bulk Excel question import with image support, and CSV export pipeline that feeds directly into the Django backend for automated grading.",
+      tags: ["Electron", "React", "Node.js", "SQLite", "Vite", "CSV Export"],
       icon: Server,
       backendRole: "Offline Desktop Application",
       featured: true
@@ -138,7 +140,7 @@ export function Project() {
                                     {project.featured && (
                                         <div className="absolute top-4 right-4 z-20">
                                             <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
-                                                ⭐ Featured
+                                                Featured
                                             </span>
                                         </div>
                                     )}
@@ -167,11 +169,16 @@ export function Project() {
                                             <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300 leading-tight">
                                                 {project.name}
                                             </h3>
+                                            {project.backendRole && (
+                                                <span className="text-xs font-medium text-blue-300 bg-blue-500/15 px-2.5 py-1 rounded-md border border-blue-500/20 w-fit">
+                                                    {project.backendRole}
+                                                </span>
+                                            )}
                                             <p className="text-white/70 text-sm sm:text-base leading-relaxed flex-1">
                                                 {project.description}
                                             </p>
                                             <div className="flex flex-wrap gap-2">
-                                                {project.tags.slice(0, 4).map((tag, tagIndex) => (
+                                                {project.tags.slice(0, 5).map((tag, tagIndex) => (
                                                     <span
                                                         key={tagIndex}
                                                         className="px-2.5 py-1 bg-gradient-to-r from-blue-500/15 to-purple-500/15 text-blue-300 text-xs font-medium rounded-md border border-blue-500/20"
@@ -179,22 +186,24 @@ export function Project() {
                                                         {tag}
                                                     </span>
                                                 ))}
-                                                {project.tags.length > 4 && (
+                                                {project.tags.length > 5 && (
                                                     <span className="px-2.5 py-1 bg-white/10 text-white/60 text-xs font-medium rounded-md border border-white/20">
-                                                        +{project.tags.length - 4} more
+                                                        +{project.tags.length - 5} more
                                                     </span>
                                                 )}
                                             </div>
-                                            <a
-                                                href={project.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2"
-                                                aria-label={`View ${project.name} project live demo`}
-                                            >
-                                                <span>Explore Project</span>
-                                                <ArrowUpRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                                            </a>
+                                            {project.link && (
+                                                <a
+                                                    href={project.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+                                                    aria-label={`View ${project.name} project live demo`}
+                                                >
+                                                    <span>Explore Project</span>
+                                                    <ArrowUpRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                                                </a>
+                                            )}
                                         </div>
                                     </div>
                                 </article>
