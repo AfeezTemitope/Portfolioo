@@ -5,7 +5,7 @@ const projects = [
 {
       name: "MOLEK School Management System",
       link: "https://molekschool.com",
-      imageUrl: "/molek-admin.png",
+      imageUrl: "/molek-admin.webp",
       description: "Production 4-application school platform serving a Nigerian secondary school. Django REST API backend (40+ endpoints, 15+ models), React admin dashboard with unified CSV score upload and results manager (admin.molekschool.com), React student portal with report card downloads matching physical recording sheet format, and offline Electron CBT desktop app with anti-cheat and SQLite. Nigerian grading system with automated scoring, cumulative reports, bulk CSV pipeline, and dual-portal JWT auth. Optimized cumulative queries from 2,100 to 3 (700x faster). Automated daily PostgreSQL backups via GitHub Actions.",
       tags: ["Django", "React", "PostgreSQL", "Redis", "Electron", "SQLite", "Railway", "Vercel"],
       icon: Database,
@@ -36,7 +36,7 @@ const projects = [
     {
       name: "MOLEK CBT System — Desktop",
       link: "https://molekschool.com",
-      imageUrl: "/molek-cbt.png",
+      imageUrl: "/molek-cbt.webp",
       description: "Offline-first Electron desktop application for Computer-Based Testing with React frontend and Node.js/SQLite backend. Server-verified timers, anti-cheat detection (tab switching, window blur tracking), bulk Excel question import with image support, and CSV export pipeline that feeds directly into the Django backend for automated grading.",
       tags: ["Electron", "React", "Node.js", "SQLite", "Vite", "CSV Export"],
       icon: Server,
@@ -54,7 +54,7 @@ const projects = [
         name: "HopeChain: Web3 Fundraising",
         imageUrl: "https://img.freepik.com/premium-vector/heart-logo_1068907-159.jpg",
         link: "https://hope-chain-2025-sui-hackerton.vercel.app/",
-        description: "Decentralized fundraising platform built with Sui Move smart contracts. Ensures secure on-chain transactions while keeping user data private off-chain. Winner of SUI x Semicolon Hackathon 2025, designed for nonprofits and community empowerment.",
+        description: "Decentralized fundraising platform built with Sui Move smart contracts. Ensures secure on-chain transactions while keeping user data private off-chain.Designed for nonprofits and community empowerment.",
         tags: ["Web3", "Sui Move", "Blockchain", "React", "TypeScript", "Smart Contracts"],
         featured: true
     },
@@ -150,7 +150,7 @@ export function Project() {
                                         <div className="relative mb-6 rounded-xl overflow-hidden bg-white/5 aspect-video">
                                             <img
                                                 loading="lazy"
-                                                src={project.imageUrl || "/fallback.jpg"}
+                                                src={project.imageUrl || "/fallback.webp"}
                                                 alt={`${project.name} - Project screenshot showcasing features and interface`}
                                                 width="400"
                                                 height="225"

@@ -11,9 +11,9 @@ import {
   Github,
 } from "lucide-react"
 
-const IMAGE_URL =
-  "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg"
-const fallback = "./Afeez.png"
+const IMAGE_URL = "./fallback.webp"
+//   "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg"
+const fallback = "./fallback.webp"
 
 function TikTokIcon({ size = 20 }: { size?: number }) {
   return (
@@ -132,7 +132,7 @@ export default function Header() {
             <div className="relative">
               <motion.div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] rounded-3xl overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-1.5 shadow-2xl">
                 <img
-                  src={profileImage || fallback}
+                  src={IMAGE_URL}
                   alt="Afeez Temitope Bello"
                   className="w-full h-full object-cover rounded-3xl"
                 />
@@ -142,6 +142,12 @@ export default function Header() {
 
           {/* TEXT */}
           <div className="flex-1 text-center lg:text-left space-y-6">
+            {/* Klassrun badge */}
+            <div className="flex justify-center lg:justify-start mb-2">
+              <span className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm font-medium px-4 py-1.5 rounded-full">
+                🏢 Co-Founder — Klassrun Technologies Ltd
+              </span>
+            </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white/90">
               Afeez Temitope
             </h1>
@@ -164,7 +170,7 @@ export default function Header() {
               </a>
 
               <a
-                href="https://docs.google.com/document/d/1EaO2I89DpHW_YfcIw5gq7O0PkZSDPbBG/export?format=pdf"
+                href="https://docs.google.com/document/d/1MRlQZYz9GxsXZaXK5ZhWUwTtixQuCPtK/export?format=pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3"

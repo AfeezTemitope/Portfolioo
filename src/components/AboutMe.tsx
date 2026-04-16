@@ -1,6 +1,6 @@
 import { motion, easeOut } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { GraduationCap, Code, Palette, Award, Briefcase, Building2 } from "lucide-react"
+import { GraduationCap, Code, Palette, Award, Briefcase, Building2, Server } from "lucide-react"
 
 const experienceData = [
     {
@@ -59,7 +59,6 @@ const experienceData = [
             "Built HopeChain - decentralized fundraising dApp using Sui Move smart contracts with React frontend",
             "Architected hybrid off-chain/on-chain system: PostgreSQL for sensitive user data, Sui blockchain for transparent donations",
             "Implemented wallet-based authentication bridging Web2 and Web3 user experiences",
-            "Winner of SUI x Semicolon Hackathon 2025"
         ]
     },
     {
@@ -210,8 +209,7 @@ export default function AboutMe() {
                             <p className="text-white/90 leading-relaxed">
                                 Recently, I explored decentralized architectures using <span className="text-purple-400 font-semibold">Sui Move</span> and 
                                 the Sui blockchain, building <span className="text-blue-400 font-semibold">HopeChain</span>—a decentralized fundraising 
-                                platform that manages user data off-chain and executes transactions on-chain. This project won the 
-                                <span className="text-purple-400 font-semibold"> SUI x Semicolon Hackathon 2025</span>.
+                                platform that manages user data off-chain and executes transactions on-chain.
                             </p>
 
                             <p className="text-white/90 leading-relaxed">
