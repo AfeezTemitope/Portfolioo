@@ -45,7 +45,7 @@ const socialLinks = [
     },
     {
         icon: TikTokIcon,
-        link: "https://www.tiktok.com/@tbelzbby2?_t=ZS-8zm6Cxr4Hzu&_r=1",
+        link: "https://www.tiktok.com/@afeez_can_code",
         label: "TikTok",
         color: "hover:text-gray-300",
         hoverBg: "hover:bg-gray-500/10",
