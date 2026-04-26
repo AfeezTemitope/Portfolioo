@@ -58,7 +58,7 @@ const socialLinks = [
   },
   {
     Icon: TikTokIcon,
-    link: "https://www.tiktok.com/@tbelzbby2",
+    link: "https://www.tiktok.com/@afeez_can_code",
     label: "TikTok",
   },
   {

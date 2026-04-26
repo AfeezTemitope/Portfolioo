@@ -295,3 +295,70 @@ body {
         container-type: inline-size;
     }
 }
+/* ==================== ENHANCEMENTS BY UPGRADE SCRIPT ==================== */
+
+/* Hide initial loader once React mounts */
+#root:not(:empty) #initial-loader {
+  display: none;
+}
+
+/* 3D folder card perspective container */
+.folder-card {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.folder-card:hover {
+  box-shadow: 0 30px 60px -15px rgba(59, 130, 246, 0.35),
+              0 15px 30px -10px rgba(168, 85, 247, 0.25);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+/* Modal slide-up animation */
+@keyframes modalSlide {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Enhanced glassmorphism */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Line clamp utility (project descriptions) */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Will-change for GPU acceleration on transformed elements */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* Prevent layout shift from smooth scrollbar */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Prefers-reduced-motion respects 3D too */
+@media (prefers-reduced-motion: reduce) {
+  .folder-card {
+    transform: none !important;
+    transition: none !important;
+  }
+}

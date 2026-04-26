@@ -1,0 +1,39 @@
+{
+  "name": "Afeez Temitope Bello — Portfolio",
+  "short_name": "Afeez Bello",
+  "description": "Full Stack Software Engineer & Co-Founder of Klassrun Technologies Ltd. React, Node.js, Django, Sui Move.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#030712",
+  "theme_color": "#3B82F6",
+  "lang": "en-NG",
+  "categories": ["productivity", "developer", "portfolio"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "url": "/#projects",
+      "description": "Jump straight to project showcase"
+    },
+    {
+      "name": "Contact",
+      "url": "mailto:belloafeez28@gmail.com",
+      "description": "Send Afeez a message"
+    }
+  ]
+}
