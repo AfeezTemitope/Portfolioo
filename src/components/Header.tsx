@@ -171,8 +171,7 @@ export default function Header() {
 
               <a
                 href="https://docs.google.com/document/d/1MRlQZYz9GxsXZaXK5ZhWUwTtixQuCPtK/export?format=pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                download="Afeez-Temitope-Bello-fullstack-engineer-CV.pdf"
                 className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3"
               >
                 <Download className="w-5 h-5" />
