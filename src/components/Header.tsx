@@ -143,11 +143,11 @@ export default function Header() {
           {/* TEXT */}
           <div className="flex-1 text-center lg:text-left space-y-6">
             {/* Klassrun badge */}
-            <div className="flex justify-center lg:justify-start mb-2">
+            {/* <div className="flex justify-center lg:justify-start mb-2">
               <span className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm font-medium px-4 py-1.5 rounded-full">
                 🏢 Co-Founder — Klassrun Technologies Ltd
               </span>
-            </div>
+            </div> */}
             <h1 className="text-4xl lg:text-6xl font-bold text-white/90">
               Afeez Temitope
             </h1>

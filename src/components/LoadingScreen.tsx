@@ -65,9 +65,9 @@ export default function LoadingScreen({ show }: LoadingScreenProps) {
         </h1>
 
         {/* Tagline */}
-        <p className="text-sm sm:text-base text-white/70 mb-6 font-medium">
+        {/* <p className="text-sm sm:text-base text-white/70 mb-6 font-medium">
           Co-Founder, Klassrun Technologies Ltd.
-        </p>
+        </p> */}
 
         {/* Loading bar */}
         <div className="w-48 sm:w-56 h-1 bg-white/10 rounded-full overflow-hidden">
