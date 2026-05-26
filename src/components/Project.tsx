@@ -51,10 +51,10 @@ const projects = [
   {
     name: "Tenderville School Portal",
     imageUrl: "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753304581/TVS_LOGOS_dlkdd4.jpg",
-    link: "https://tenderville.onrender.com/",
+    link: "https://tendervilleng.net/",
     description:
       "Full-featured educational platform empowering students, staff, and parents in Lekki, Lagos. Features seamless authentication, dynamic dashboards, academic management, and real-time communication tools built with modern web technologies.",
-    tags: ["React", "TypeScript", "Node.js", "MongoDB", "Express", "Supabase", "Cloudinary", "Tailwind CSS", "IndexedDB"],
+    tags: ["Nextjs", "TypeScript", "Node.js", "MongoDB", "Express", "Cloudinary", "Tailwind CSS", "IndexedDB"],
   },
   {
     name: "HopeChain: Web3 Fundraising",
