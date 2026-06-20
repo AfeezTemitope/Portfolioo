@@ -22,14 +22,14 @@ const projects = [
       "Dynamic blog platform featuring club news, player highlights, match reports, and admin-controlled content management. Built with cloud-hosted database and optimized for SEO, currently in active testing phase.",
     tags: ["Django", "React", "Vite", "Render", "Netlify", "Cloudinary", "Redis", "Zustand", "Google SEO"],
   },
-  {
-    name: "First Mission NGO Portal",
-    imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/002/826/640/small_2x/ngos-concept-icon-development-program-abstract-idea-thin-line-illustration-community-mobilization-environment-protection-stimulating-employment-isolated-outline-color-drawing-vector.jpg",
-    link: "https://www.firstmission-ng.org",
-    description:
-      "Intuitive web platform designed for First Mission Humanitarian Aid NGO. Features donor management, campaign tracking, volunteer coordination, and impact reporting.",
-    tags: ["React", "TypeScript", "Vite", "Cloudinary", "Tailwind CSS", "namecheap", "Vercel"],
-  },
+  // {
+  //   name: "First Mission NGO Portal",
+  //   imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/002/826/640/small_2x/ngos-concept-icon-development-program-abstract-idea-thin-line-illustration-community-mobilization-environment-protection-stimulating-employment-isolated-outline-color-drawing-vector.jpg",
+  //   link: "https://www.firstmission-ng.org",
+  //   description:
+  //     "Intuitive web platform designed for First Mission Humanitarian Aid NGO. Features donor management, campaign tracking, volunteer coordination, and impact reporting.",
+  //   tags: ["React", "TypeScript", "Vite", "Cloudinary", "Tailwind CSS", "namecheap", "Vercel"],
+  // },
   {
     name: "Eco Warrior Africa",
     imageUrl: "https://eco-warrior-8041.onrender.com/logo.png",
@@ -236,9 +236,8 @@ function ProjectFolder({
         {/* Description — hover-reveal on web, hidden on mobile (modal handles it) */}
         {!isTouch && (
           <div
-            className={`overflow-hidden transition-all duration-500 ${
-              hovered ? "max-h-48 opacity-100 mt-1" : "max-h-0 opacity-0"
-            }`}
+            className={`overflow-hidden transition-all duration-500 ${hovered ? "max-h-48 opacity-100 mt-1" : "max-h-0 opacity-0"
+              }`}
           >
             <p className="text-white/75 text-xs leading-relaxed line-clamp-4">
               {project.description}
@@ -270,9 +269,8 @@ function ProjectFolder({
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className={`mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-2.5 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 text-sm transition-all duration-300 ${
-              isTouch ? "opacity-100" : hovered ? "opacity-100 translate-y-0" : "opacity-70"
-            }`}
+            className={`mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-2.5 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 text-sm transition-all duration-300 ${isTouch ? "opacity-100" : hovered ? "opacity-100 translate-y-0" : "opacity-70"
+              }`}
             aria-label={`Open ${project.name} live demo`}
           >
             <span>Open Project</span>
