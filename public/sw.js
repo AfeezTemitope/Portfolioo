@@ -1,7 +1,7 @@
 // Service Worker — Afeez Temitope Bello Portfolio
 // Strategy: Network-first for HTML, stale-while-revalidate for assets
 
-const CACHE_VERSION = "v1.0.0";
+const CACHE_VERSION = "v1.1.0";
 const STATIC_CACHE = `static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 const IMAGE_CACHE = `images-${CACHE_VERSION}`;
@@ -10,6 +10,8 @@ const PRECACHE_URLS = [
   "/",
   "/offline.html",
   "/fallback.webp",
+  "/icon-192.png",
+  "/icon-512.png",
   "/manifest.webmanifest",
 ];
 

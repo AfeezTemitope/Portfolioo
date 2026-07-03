@@ -1,6 +1,6 @@
 import { motion, easeOut } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { GraduationCap, Code, Palette, Award, Briefcase, Building2, Server } from "lucide-react"
+import { GraduationCap, Code, Palette, Award, Briefcase, Building2 } from "lucide-react"
 
 const experienceData = [
     {
@@ -22,8 +22,8 @@ const experienceData = [
             "Developed anti-cheat detection (tab switching, window blur tracking), server-side timer verification, and audit logging for exam integrity",
             "Created seamless CBT-to-Django data pipeline for automated OBJ score integration across the school ecosystem",
             
-            // TENDERVILE School Portal
-            "Developed TENDERVILE School Portal with Node.js/Express backend, React frontend, and MongoDB - featuring student enrollment, attendance tracking, and parent communication modules",
+            // Tenderville School Portal
+            "Developed Tenderville School Portal with Node.js/Express backend, React frontend, and MongoDB - featuring student enrollment, attendance tracking, and parent communication modules",
             
             // NGO & Content Platforms
             "Built First Mission NGO platform (donor management, campaign tracking) and Eco Warrior Africa (climate storytelling with Cloudinary media integration)",

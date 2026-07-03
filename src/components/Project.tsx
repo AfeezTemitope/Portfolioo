@@ -49,19 +49,19 @@ const projects = [
     featured: true,
   },
   {
-    name: "Tenderville School Portal",
-    imageUrl: "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753304581/TVS_LOGOS_dlkdd4.jpg",
-    link: "https://tendervilleng.net/",
+    name: "CS VAULT",
+    imageUrl: "https://www.pngall.com/wp-content/uploads/5/Bank-Vault-PNG-Picture.png",
+    link: "https://csvault.xyz/",
     description:
-      "Full-featured educational platform empowering students, staff, and parents in Lekki, Lagos. Features seamless authentication, dynamic dashboards, academic management, and real-time communication tools built with modern web technologies.",
-    tags: ["Nextjs", "TypeScript", "Node.js", "MongoDB", "Express", "Cloudinary", "Tailwind CSS", "IndexedDB"],
+      "Full-featured educational platform for computer student final year project, used to manage project evaluations and and more like a project database for computer sci students in LASU",
+    tags: ["Nextjs", "supabase", "TypeScript", "Node.js", "Express", "Tailwind CSS"],
   },
   {
     name: "HopeChain: Web3 Fundraising",
     imageUrl: "https://img.freepik.com/premium-vector/heart-logo_1068907-159.jpg",
     link: "https://hope-chain-2025-sui-hackerton.vercel.app/",
     description:
-      "Decentralized fundraising platform built with Sui Move smart contracts. Ensures secure on-chain transactions while keeping user data private off-chain.Designed for nonprofits and community empowerment.",
+      "Decentralized fundraising platform built with Sui Move smart contracts. Ensures secure on-chain transactions while keeping user data private off-chain. Designed for nonprofits and community empowerment.",
     tags: ["Web3", "Sui Move", "Blockchain", "React", "TypeScript", "Smart Contracts"],
     featured: true,
   },

@@ -1,6 +1,5 @@
-import { motion } from "framer-motion"
+import { motion, easeInOut } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { useEffect, useState } from "react"
 import {
   Download,
   Mail,
@@ -11,9 +10,7 @@ import {
   Github,
 } from "lucide-react"
 
-const IMAGE_URL = "./fallback.webp"
-//   "https://res.cloudinary.com/dgvjxhqjd/image/upload/v1753571024/DSC06734-2_e4ykmb.jpg"
-const fallback = "./fallback.webp"
+const IMAGE_URL = "/fallback.webp"
 
 function TikTokIcon({ size = 20 }: { size?: number }) {
   return (
@@ -70,11 +67,6 @@ const socialLinks = [
 
 export default function Header() {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true })
-  const [profileImage, setProfileImage] = useState("")
-
-  useEffect(() => {
-    setProfileImage(IMAGE_URL)
-  }, [])
 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.8, rotate: -5 },
@@ -89,7 +81,7 @@ export default function Header() {
   const floatingVariants = {
     animate: {
       y: [0, -20, 0],
-      transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+      transition: { duration: 3, repeat: Infinity, ease: easeInOut },
     },
   }
 
@@ -134,6 +126,10 @@ export default function Header() {
                 <img
                   src={IMAGE_URL}
                   alt="Afeez Temitope Bello"
+                  width={420}
+                  height={420}
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full h-full object-cover rounded-3xl"
                 />
               </motion.div>
@@ -142,12 +138,6 @@ export default function Header() {
 
           {/* TEXT */}
           <div className="flex-1 text-center lg:text-left space-y-6">
-            {/* Klassrun badge */}
-            {/* <div className="flex justify-center lg:justify-start mb-2">
-              <span className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm font-medium px-4 py-1.5 rounded-full">
-                🏢 Co-Founder — Klassrun Technologies Ltd
-              </span>
-            </div> */}
             <h1 className="text-4xl lg:text-6xl font-bold text-white/90">
               Afeez Temitope
             </h1>
@@ -159,11 +149,11 @@ export default function Header() {
               Boot, Django, and React.
             </p>
 
-            {/* ✅ CTA BUTTONS – FIXED */}
+            {/* CTA BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <a
                 href="mailto:belloafeez28@gmail.com"
-                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-3"
               >
                 <Mail className="w-5 h-5" />
                 Contact Me
@@ -172,7 +162,7 @@ export default function Header() {
               <a
                 href="https://docs.google.com/document/d/1MRlQZYz9GxsXZaXK5ZhWUwTtixQuCPtK/export?format=pdf"
                 download="Afeez-Temitope-Bello-fullstack-engineer-CV.pdf"
-                className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3"
+                className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-3"
               >
                 <Download className="w-5 h-5" />
                 Download Resume
@@ -180,13 +170,14 @@ export default function Header() {
             </div>
 
             {/* SOCIALS */}
-            <div className="flex gap-3 pt-4 justify-center lg:justify-start">
+            <div className="flex gap-3 pt-4 justify-center lg:justify-start flex-wrap">
               {socialLinks.map(({ Icon, link, label }) => (
                 <a
                   key={label}
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={label}
                   className="p-3 bg-white/10 rounded-full hover:bg-blue-500/20"
                 >
                   <Icon size={20} />
@@ -200,12 +191,8 @@ export default function Header() {
         <motion.div
           variants={floatingVariants}
           animate="animate"
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center text-white/50"
-          onClick={() =>
-            document
-              .getElementById("about")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center text-white/50 cursor-pointer"
+          onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
         >
           <span>Scroll Down</span>
           <ArrowDown />

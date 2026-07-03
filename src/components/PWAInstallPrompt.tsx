@@ -48,7 +48,7 @@ export default function PWAInstallPrompt() {
     <div
       role="dialog"
       aria-labelledby="pwa-prompt-title"
-      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm z-50 animate-fade-in-up"
+      className="fixed bottom-[calc(5rem+env(safe-area-inset-bottom))] md:bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm z-50 animate-fade-in-up"
     >
       <div className="bg-gradient-to-br from-gray-900/95 to-gray-950/95 border border-blue-500/30 backdrop-blur-2xl rounded-2xl shadow-2xl shadow-blue-500/20 p-5">
         <div className="flex items-start gap-3">
