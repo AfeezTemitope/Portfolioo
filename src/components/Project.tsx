@@ -22,14 +22,17 @@ const projects = [
       "Dynamic blog platform featuring club news, player highlights, match reports, and admin-controlled content management. Built with cloud-hosted database and optimized for SEO, currently in active testing phase.",
     tags: ["Django", "React", "Vite", "Render", "Netlify", "Cloudinary", "Redis", "Zustand", "Google SEO"],
   },
-  // {
-  //   name: "First Mission NGO Portal",
-  //   imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/002/826/640/small_2x/ngos-concept-icon-development-program-abstract-idea-thin-line-illustration-community-mobilization-environment-protection-stimulating-employment-isolated-outline-color-drawing-vector.jpg",
-  //   link: "https://www.firstmission-ng.org",
-  //   description:
-  //     "Intuitive web platform designed for First Mission Humanitarian Aid NGO. Features donor management, campaign tracking, volunteer coordination, and impact reporting.",
-  //   tags: ["React", "TypeScript", "Vite", "Cloudinary", "Tailwind CSS", "namecheap", "Vercel"],
-  // },
+{
+  name: "AYUR Healthcare Platform",
+  link: "",
+  imageUrl: "/ayur.webp",
+  description:
+    "Complete backend for a healthcare platform serving Flutter mobile and web clients through a unified REST API. Node.js/Express with PostgreSQL and Prisma (17 models, 40+ endpoints), multi-token step-locked patient auth (OTP to profile to PIN), Paystack wallet top-ups with webhook verification, healthcare savings goals with automated contributions, and a health records module on Cloudinary with permission-based sharing and signed download URLs.",
+  tags: ["Node.js", "Express", "PostgreSQL", "Prisma", "Paystack", "Cloudinary", "REST API"],
+  icon: Server,
+  backendRole: "Contract Backend Engineer",
+  featured: true,
+},
   {
     name: "Eco Warrior Africa",
     imageUrl: "https://eco-warrior-8041.onrender.com/logo.png",
