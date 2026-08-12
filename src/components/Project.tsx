@@ -4,6 +4,17 @@ import { ArrowUpRight, ExternalLink, Database, Server, X } from "lucide-react";
 
 const projects = [
   {
+    name: "Ibeju Lekki LGA",
+    link: "http://ibejulekki.lg.gov.ng/",
+    imageUrl: "/ibeju-lekki-logo.webp",
+    description:
+      "Official website for Ibeju Lekki Local Government Area, Lagos State, Nigeria. Built with Next.js and Tailwind CSS, featuring a dynamic content management system for local news, events, and administrative updates.",
+    tags: ["Next.js", "Tailwind CSS", "Netlify", "Content Management"],
+    icon: Database,
+    backendRole: "Full-Stack — Solo Engineer",
+    featured: false,
+  },
+  {
     name: "MOLEK School Management System",
     link: "https://molekschool.com",
     imageUrl: "/molek-admin.webp",
