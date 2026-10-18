@@ -16,7 +16,7 @@ const projects = [
   },
   {
     name: "MOLEK School Management System",
-    link: "https://molekschool.com",
+    link: "https://molekschools.com",
     imageUrl: "/molek-admin.webp",
     description:
       "Production 4-application school platform serving a Nigerian secondary school. Django REST API backend (40+ endpoints, 15+ models), React admin dashboard with unified CSV score upload and results manager (admin.molekschool.com), React student portal with report card downloads matching physical recording sheet format, and offline Electron CBT desktop app with anti-cheat and SQLite. Nigerian grading system with automated scoring, cumulative reports, bulk CSV pipeline, and dual-portal JWT auth. Optimized cumulative queries from 2,100 to 3 (700x faster). Automated daily PostgreSQL backups via GitHub Actions.",
@@ -53,7 +53,7 @@ const projects = [
   },
   {
     name: "MOLEK CBT System — Desktop",
-    link: "https://molekschool.com",
+    link: "https://molekschools.com",
     imageUrl: "/molek-cbt.webp",
     description:
       "Offline-first Electron desktop application for Computer-Based Testing with React frontend and Node.js/SQLite backend. Server-verified timers, anti-cheat detection (tab switching, window blur tracking), bulk Excel question import with image support, and CSV export pipeline that feeds directly into the Django backend for automated grading.",
