@@ -26,3 +26,6 @@ dist-ssr
 
 .backup_*/
 install-mobile-nav.sh
+
+# Local backups
+.backup_*/

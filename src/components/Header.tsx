@@ -144,9 +144,10 @@ export default function Header() {
             <h2 className="text-2xl text-white/80">Software Engineer</h2>
 
             <p className="text-lg text-white/70 max-w-2xl">
-              Software engineer with 4+ years experience across Web2 and Web3,
-              building scalable systems using Java, Python, JavaScript, Spring
-              Boot, Django, and React.
+              Full Stack Software Engineer building production applications across
+              edtech, healthcare, and fintech. React, Next.js, and TypeScript on the
+              front end; Node.js, Django, FastAPI, and Spring Boot on the back. Now
+              focused on AI-integrated products and co-founding Klassrun.
             </p>
 
             {/* CTA BUTTONS */}
@@ -160,7 +161,7 @@ export default function Header() {
               </a>
 
               <a
-                href="https://docs.google.com/document/d/1MRlQZYz9GxsXZaXK5ZhWUwTtixQuCPtK/export?format=pdf"
+                href="https://docs.google.com/document/d/15-AHyx19D3HnyV7xtSRJY2MaybjlgceVMSlIR6xzwLA/export?format=pdf"
                 download="Afeez-Temitope-Bello-fullstack-engineer-CV.pdf"
                 className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-3"
               >

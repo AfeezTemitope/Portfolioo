@@ -186,40 +186,13 @@ export default function AboutMe() {
                                 About Me
                             </span>
                         </motion.h2>
-                        <motion.p className="text-lg text-white/60 max-w-2xl mx-auto">
-                            Software engineer with 4+ years of experience building scalable applications
-                        </motion.p>
                     </motion.div>
 
                     {/* Professional Summary */}
                     <motion.div variants={itemVariants} className="space-y-6 text-base sm:text-lg leading-relaxed text-white/80 mb-20">
                         <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6">
                             <p className="text-white/90 leading-relaxed">
-                                I'm <span className="text-blue-400 font-semibold">Afeez Temitope Bello</span>, a software engineer with 
-                                <span className="font-semibold text-white"> 4+ years of experience</span> designing and maintaining scalable 
-                                applications across Web2 and Web3 environments. I work with <span className="text-blue-400 font-medium">Java</span>, 
-                                <span className="text-green-400 font-medium"> Python</span>, and 
-                                <span className="text-yellow-400 font-medium"> JavaScript</span>, building solutions with frameworks like 
-                                <span className="text-green-400 font-medium"> Spring Boot</span>, 
-                                <span className="text-green-400 font-medium"> Django</span>, 
-                                <span className="text-blue-400 font-medium"> React.js</span>, and 
-                                <span className="text-green-400 font-medium"> Node.js</span>.
-                            </p>
-
-                            <p className="text-white/90 leading-relaxed">
-                                Recently, I explored decentralized architectures using <span className="text-purple-400 font-semibold">Sui Move</span> and 
-                                the Sui blockchain, building <span className="text-blue-400 font-semibold">HopeChain</span>—a decentralized fundraising 
-                                platform that manages user data off-chain and executes transactions on-chain.
-                            </p>
-
-                            <p className="text-white/90 leading-relaxed">
-                                My work focuses on building performance-optimized solutions and ensuring application maintainability and scalability. 
-                                I'm skilled at working with cross-functional teams in Agile environments, deploying applications using 
-                                <span className="font-medium"> Docker</span>, <span className="font-medium">AWS</span>, and CI/CD pipelines. 
-                                I also have experience with databases like <span className="font-medium">PostgreSQL</span>, 
-                                <span className="font-medium"> MongoDB</span>, and <span className="font-medium">MySQL</span>, along with 
-                                testing frameworks including <span className="font-medium">JUnit</span>, 
-                                <span className="font-medium"> Pytest</span>, and <span className="font-medium">Jest</span>.
+                                Full Stack Software Engineer building and maintaining production applications across edtech, healthcare, and fintech, following intensive software engineering training at Semicolon Africa; now focused on AI-integrated products and applied data science. Frontend in React, Next.js, and TypeScript; backend depth in Node.js/Express, Django REST Framework, FastAPI, and Spring Boot on PostgreSQL, Redis, and Prisma. Comfortable owning products end to end — schema design, REST APIs, payments, LLM integration, deployment, and CI/CD — and collaborating with cross-functional teams in Agile environments, and mentoring early-stage developers. Currently co-founding Klassrun, an AI-powered school management SaaS, building LLM features and learning analytics on live student performance data.
                             </p>
                         </div>
                     </motion.div>

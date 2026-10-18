@@ -28,7 +28,7 @@ const projects = [
   {
     name: "Budu Elite Football Club Blog",
     imageUrl: "https://th.bing.com/th/id/R.590fe86a56bae1b5e7aa5989b793f3b6?rik=J5N9gCc97eh1mg&pid=ImgRaw&r=0",
-    link: "https://buduelite.netlify.app/",
+    link: "https://befa-five.vercel.app/",
     description:
       "Dynamic blog platform featuring club news, player highlights, match reports, and admin-controlled content management. Built with cloud-hosted database and optimized for SEO, currently in active testing phase.",
     tags: ["Django", "React", "Vite", "Render", "Netlify", "Cloudinary", "Redis", "Zustand", "Google SEO"],
