@@ -3,17 +3,18 @@ import { useState } from "react"
 import { motion, easeOut } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { Send, Check, AlertCircle } from "lucide-react"
-import emailjs from "@emailjs/browser"
 
 export default function ReviewForm() {
     const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
     const [review, setReview] = useState("")
+    const [company, setCompany] = useState("") // honeypot: hidden from humans, bots fill it
     const [isSubmitted, setIsSubmitted] = useState(false)
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [error, setError] = useState<string | null>(null)
     const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true })
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
 
         if (!name.trim() || !review.trim()) {
@@ -26,6 +27,11 @@ export default function ReviewForm() {
             return
         }
 
+        if (email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+            setError("Please enter a valid email address.")
+            return
+        }
+
         if (review.trim().length < 10) {
             setError("Please write a more detailed review (at least 10 characters).")
             return
@@ -34,34 +40,34 @@ export default function ReviewForm() {
         setIsSubmitting(true)
         setError(null)
 
-        const templateParams = {
-            from_name: name.trim(),
-            message: review.trim(),
-        }
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: name.trim(),
+                    email: email.trim(),
+                    message: review.trim(),
+                    company,
+                }),
+            })
 
-        emailjs
-            .send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID!,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID!,
-                templateParams,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY!,
-            )
-            .then(() => {
-                setIsSubmitted(true)
-                setName("")
-                setReview("")
-                setError(null)
-                setTimeout(() => {
-                    setIsSubmitted(false)
-                }, 5000)
-            })
-            .catch((err) => {
-                console.error("Email sending failed:", err)
-                setError("Oops! Something went wrong. Please try again or contact me directly via email.")
-            })
-            .finally(() => {
-                setIsSubmitting(false)
-            })
+            if (!res.ok) throw new Error(`Request failed with status ${res.status}`)
+
+            setIsSubmitted(true)
+            setName("")
+            setEmail("")
+            setReview("")
+            setError(null)
+            setTimeout(() => {
+                setIsSubmitted(false)
+            }, 5000)
+        } catch (err) {
+            console.error("Email sending failed:", err)
+            setError("Oops! Something went wrong. Please try again or contact me directly via email.")
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     const containerVariants = {
@@ -159,6 +165,35 @@ export default function ReviewForm() {
                                         maxLength={100}
                                     />
                                 </motion.div>
+
+                                {/* Email Input */}
+                                <motion.div variants={itemVariants} className="space-y-3">
+                                    <label htmlFor="email" className="block text-white/90 font-semibold text-lg">
+                                        Your Email <span className="text-white/40 text-sm font-normal">(so I can reply)</span>
+                                    </label>
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        className="w-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 focus:outline-none rounded-xl px-5 py-4 text-base transition-all duration-200"
+                                        placeholder="you@example.com"
+                                        disabled={isSubmitting}
+                                        maxLength={150}
+                                    />
+                                </motion.div>
+
+                                {/* Honeypot (hidden from humans) */}
+                                <input
+                                    type="text"
+                                    name="company"
+                                    value={company}
+                                    onChange={(e) => setCompany(e.target.value)}
+                                    tabIndex={-1}
+                                    autoComplete="off"
+                                    aria-hidden="true"
+                                    className="hidden"
+                                />
 
                                 {/* Review/Message Textarea */}
                                 <motion.div variants={itemVariants} className="space-y-3">
